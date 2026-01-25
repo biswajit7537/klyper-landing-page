@@ -355,7 +355,7 @@ a:hover {
     align-items: center;
     gap: 0.75rem;
     position: relative;
-    z-index: 10;
+    z-index: 1000;
 }
 
 /* Theme Toggle Button */
@@ -452,7 +452,6 @@ a:hover {
 
 /* Mobile Menu Overlay */
 .mobile-menu-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -462,11 +461,13 @@ a:hover {
     backdrop-filter: blur(4px);
     z-index: 998;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .mobile-menu-overlay.active {
     opacity: 1;
+    visibility: visible;
 }
 
 .theme-toggle svg {
@@ -3251,9 +3252,10 @@ a:hover {
     /* Mobile Navigation */
     .menu-toggle {
         display: flex;
+        z-index: 1001;
     }
     
-    .mobile-menu-overlay.active {
+    .mobile-menu-overlay {
         display: block;
     }
     
@@ -3265,7 +3267,7 @@ a:hover {
         width: 280px;
         max-width: 85%;
         flex-direction: column;
-        background: var(--card-bg);
+        background: #ffffff;
         box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
         padding: 80px 20px 20px;
         gap: 0.5rem;
@@ -3276,6 +3278,7 @@ a:hover {
     }
     
     [data-theme="dark"] .nav-menu {
+        background: #16213e;
         box-shadow: -4px 0 24px rgba(0, 0, 0, 0.5);
     }
     
@@ -3394,15 +3397,37 @@ a:hover {
     }
     
     .hero-floating-card {
-        padding: 12px 16px;
+        padding: 10px 14px;
+        font-size: 0.875rem;
     }
     
     .hero-floating-card .card-icon {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     
     .hero-floating-card .card-text {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+    }
+    
+    /* Adjust floating card positions for mobile */
+    .hero-floating-card.card-1 {
+        top: 5%;
+        left: -2%;
+    }
+    
+    .hero-floating-card.card-2 {
+        top: 25%;
+        right: -3%;
+    }
+    
+    .hero-floating-card.card-3 {
+        bottom: 35%;
+        left: -3%;
+    }
+    
+    .hero-floating-card.card-4 {
+        bottom: 8%;
+        right: -2%;
     }
     
     .hero-animated-shapes .shape-1,
