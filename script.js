@@ -21,9 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     
     if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
+        console.log('Theme toggle button found');
+        
+        // Function to toggle theme
+        function toggleTheme(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            console.log('Theme toggle clicked');
+            
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            console.log('Switching from', currentTheme, 'to', newTheme);
             
             // Update theme
             document.documentElement.setAttribute('data-theme', newTheme);
@@ -36,7 +48,14 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 themeToggle.style.transform = 'rotate(0deg)';
             }, 300);
-        });
+        }
+        
+        // Add multiple event listeners to ensure it works
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggle.addEventListener('touchstart', toggleTheme, { passive: false });
+        
+    } else {
+        console.error('Theme toggle button not found!');
     }
     
     // ============================================
@@ -59,45 +78,52 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
     
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
+        // Toggle menu function
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
-            
-            // Animate hamburger icon
-            const spans = menuToggle.querySelectorAll('span');
-            if (navMenu.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+            if (mobileOverlay) {
+                mobileOverlay.classList.toggle('active');
             }
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        // Close menu function
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            if (mobileOverlay) {
+                mobileOverlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+        }
+        
+        // Menu toggle click
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMenu();
         });
         
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('active');
-                const spans = menuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
-        });
+        // Overlay click to close
+        if (mobileOverlay) {
+            mobileOverlay.addEventListener('click', closeMenu);
+        }
         
-        // Close mobile menu when clicking a link
+        // Close menu when clicking nav links
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                const spans = menuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            });
+            link.addEventListener('click', closeMenu);
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
         });
     }
     

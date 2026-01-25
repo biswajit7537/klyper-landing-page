@@ -16,10 +16,51 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="index.html" class="logo">
-                        <!-- <img src="assets/images/logo.png" alt="Klyper Technology" class="logo-img"> -->
-                        <span class="logo-text">Klyper Technology</span>
+                        <div class="logo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="8" fill="url(#logoGradient)"/>
+                                <path d="M12 12V28M12 20L28 12M12 20L28 28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40">
+                                        <stop offset="0%" stop-color="#6366f1"/>
+                                        <stop offset="100%" stop-color="#3b82f6"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Klyper<span class="logo-suffix">Technology</span></span>
                     </a>
-                    <div>
+                    
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">
+                            <span>Home</span>
+                        </a></li>
+                        <li class="nav-item-dropdown">
+                            <a href="services.html" class="nav-link active">
+                                <span>Services</span>
+                                <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="products.html" class="nav-link">
+                            <span>Products</span>
+                        </a></li>
+                        <li><a href="industries.html" class="nav-link">
+                            <span>Industries</span>
+                        </a></li>
+                        <li><a href="about.html" class="nav-link">
+                            <span>About</span>
+                        </a></li>
+                        <li><a href="contact.html" class="btn-nav">
+                            <span>Contact Us</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
                         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                             <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
@@ -29,22 +70,15 @@
                             </svg>
                         </button>
                         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span class="menu-bar"></span>
+                            <span class="menu-bar"></span>
+                            <span class="menu-bar"></span>
                         </button>
-                        <ul class="nav-menu" id="navMenu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html" class="active">Services</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="industries.html">Industries</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html" class="btn-nav">Contact</a></li>
-                    </ul>
                     </div>
                 </div>
             </div>
         </nav>
+        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
     </header>
 
     <!-- Page Header -->
@@ -58,110 +92,112 @@
     <!-- Services Detail Section -->
     <section class="section services-detail">
         <div class="container">
-            <!-- Service 1: Custom Software Development -->
-            <div class="service-detail-card">
-                <div class="service-detail-content">
-                    <div class="service-icon-large">
-                        <img src="assets/images/service-icon-01.png" alt="Custom Software Development">
+            <div class="services-grid-modern">
+                <!-- Service 1: Custom Software Development -->
+                <div class="service-card-modern animate-on-scroll">
+                    <div class="service-card-header">
+                        <div class="service-icon-modern">💻</div>
+                        <h2 class="service-title-modern">Custom Software Development</h2>
                     </div>
-                    <h2 class="service-detail-title">Custom Software Development</h2>
-                    <p class="service-detail-description">We build tailored software solutions that perfectly align with your business processes and objectives. Our custom development approach ensures you get exactly what you need, not a one-size-fits-all solution.</p>
+                    <p class="service-desc-modern">We build tailored software solutions that perfectly align with your business processes and objectives.</p>
                     
-                    <h3 class="service-feature-heading">What We Offer:</h3>
-                    <ul class="service-features-list">
-                        <li>End-to-end custom application development</li>
-                        <li>Legacy system modernization and migration</li>
-                        <li>API development and integration</li>
-                        <li>Database design and optimization</li>
-                        <li>Scalable architecture planning</li>
-                    </ul>
+                    <div class="service-features-modern">
+                        <h3 class="features-title-modern">What We Offer</h3>
+                        <ul class="features-list-modern">
+                            <li>End-to-end custom application development</li>
+                            <li>Legacy system modernization</li>
+                            <li>API development and integration</li>
+                            <li>Database design and optimization</li>
+                            <li>Scalable architecture planning</li>
+                        </ul>
+                    </div>
 
-                    <h3 class="service-feature-heading">Key Benefits:</h3>
-                    <div class="benefits-grid">
-                        <div class="benefit-item">
-                            <strong>Perfect Fit:</strong> Software tailored to your exact requirements
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Competitive Edge:</strong> Unique features your competitors don't have
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Efficiency:</strong> Streamlined workflows and automation
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Scalability:</strong> Grows with your business needs
-                        </div>
+                    <div class="service-benefits-modern">
+                        <div class="benefit-tag">Perfect Fit</div>
+                        <div class="benefit-tag">Competitive Edge</div>
+                        <div class="benefit-tag">Efficiency</div>
+                        <div class="benefit-tag">Scalability</div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Service 2: Web & Mobile App Development -->
-            <div class="service-detail-card">
-                <div class="service-detail-content">
-                    <div class="service-icon-large">
-                        <img src="assets/images/service-icon-03.png" alt="Web & Mobile App Development">
+                <!-- Service 2: Building Custom AI Agents -->
+                <div class="service-card-modern animate-on-scroll">
+                    <div class="service-card-header">
+                        <div class="service-icon-modern">🤖</div>
+                        <h2 class="service-title-modern">Building Custom AI Agents</h2>
                     </div>
-                    <h2 class="service-detail-title">Web & Mobile App Development</h2>
-                    <p class="service-detail-description">Create engaging digital experiences that users love. We develop responsive web applications and native mobile apps that work flawlessly across all devices and platforms.</p>
+                    <p class="service-desc-modern">Harness the power of artificial intelligence with custom AI agents designed specifically for your business needs.</p>
                     
-                    <h3 class="service-feature-heading">What We Offer:</h3>
-                    <ul class="service-features-list">
-                        <li>Progressive Web Applications (PWA)</li>
-                        <li>Native iOS and Android app development</li>
-                        <li>Responsive web design and development</li>
-                        <li>E-commerce platforms and marketplaces</li>
-                        <li>Content management systems (CMS)</li>
-                    </ul>
+                    <div class="service-features-modern">
+                        <h3 class="features-title-modern">What We Offer</h3>
+                        <ul class="features-list-modern">
+                            <li>Custom chatbots and conversational AI</li>
+                            <li>Intelligent automation</li>
+                            <li>Machine learning model development</li>
+                            <li>Natural Language Processing (NLP)</li>
+                            <li>AI-powered data analysis</li>
+                        </ul>
+                    </div>
 
-                    <h3 class="service-feature-heading">Key Benefits:</h3>
-                    <div class="benefits-grid">
-                        <div class="benefit-item">
-                            <strong>User Engagement:</strong> Intuitive interfaces users love
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Mobile-First:</strong> Optimized for smartphones and tablets
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Performance:</strong> Fast loading and smooth interactions
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Cross-Platform:</strong> Works everywhere seamlessly
-                        </div>
+                    <div class="service-benefits-modern">
+                        <div class="benefit-tag">24/7 Availability</div>
+                        <div class="benefit-tag">Cost Efficiency</div>
+                        <div class="benefit-tag">Smart Decisions</div>
+                        <div class="benefit-tag">Scalability</div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Service 3: Software Maintenance & Support -->
-            <div class="service-detail-card">
-                <div class="service-detail-content">
-                    <div class="service-icon-large">
-                        <img src="assets/images/service-icon-04.png" alt="Software Maintenance & Support">
+                <!-- Service 3: Web & Mobile App Development -->
+                <div class="service-card-modern animate-on-scroll">
+                    <div class="service-card-header">
+                        <div class="service-icon-modern">📱</div>
+                        <h2 class="service-title-modern">Web & Mobile App Development</h2>
                     </div>
-                    <h2 class="service-detail-title">Software Maintenance & Support</h2>
-                    <p class="service-detail-description">Keep your software running at peak performance. Our comprehensive maintenance and support services ensure your applications remain secure, up-to-date, and bug-free.</p>
+                    <p class="service-desc-modern">Create engaging digital experiences that users love. We develop responsive web and native mobile apps.</p>
                     
-                    <h3 class="service-feature-heading">What We Offer:</h3>
-                    <ul class="service-features-list">
-                        <li>24/7 technical support and monitoring</li>
-                        <li>Regular security updates and patches</li>
-                        <li>Performance optimization and tuning</li>
-                        <li>Bug fixes and issue resolution</li>
-                        <li>Feature enhancements and upgrades</li>
-                    </ul>
+                    <div class="service-features-modern">
+                        <h3 class="features-title-modern">What We Offer</h3>
+                        <ul class="features-list-modern">
+                            <li>Progressive Web Applications (PWA)</li>
+                            <li>Native iOS and Android apps</li>
+                            <li>Responsive web design</li>
+                            <li>E-commerce platforms</li>
+                            <li>Content management systems</li>
+                        </ul>
+                    </div>
 
-                    <h3 class="service-feature-heading">Key Benefits:</h3>
-                    <div class="benefits-grid">
-                        <div class="benefit-item">
-                            <strong>Reliability:</strong> Minimize downtime and disruptions
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Security:</strong> Stay protected from threats
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Peace of Mind:</strong> Focus on your business, we handle the tech
-                        </div>
-                        <div class="benefit-item">
-                            <strong>Cost Effective:</strong> Prevent expensive emergencies
-                        </div>
+                    <div class="service-benefits-modern">
+                        <div class="benefit-tag">User Engagement</div>
+                        <div class="benefit-tag">Mobile-First</div>
+                        <div class="benefit-tag">Performance</div>
+                        <div class="benefit-tag">Cross-Platform</div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Software Maintenance & Support -->
+                <div class="service-card-modern animate-on-scroll">
+                    <div class="service-card-header">
+                        <div class="service-icon-modern">🛠️</div>
+                        <h2 class="service-title-modern">Software Maintenance & Support</h2>
+                    </div>
+                    <p class="service-desc-modern">Keep your software running at peak performance with comprehensive maintenance and support services.</p>
+                    
+                    <div class="service-features-modern">
+                        <h3 class="features-title-modern">What We Offer</h3>
+                        <ul class="features-list-modern">
+                            <li>24/7 technical support</li>
+                            <li>Security updates and patches</li>
+                            <li>Performance optimization</li>
+                            <li>Bug fixes and issue resolution</li>
+                            <li>Feature enhancements</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-benefits-modern">
+                        <div class="benefit-tag">Reliability</div>
+                        <div class="benefit-tag">Security</div>
+                        <div class="benefit-tag">Peace of Mind</div>
+                        <div class="benefit-tag">Cost Effective</div>
                     </div>
                 </div>
             </div>

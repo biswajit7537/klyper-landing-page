@@ -16,10 +16,51 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="index.html" class="logo">
-                        <!-- <img src="assets/images/logo.png" alt="Klyper Technology" class="logo-img"> -->
-                        <span class="logo-text">Klyper Technology</span>
+                        <div class="logo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="8" fill="url(#logoGradient)"/>
+                                <path d="M12 12V28M12 20L28 12M12 20L28 28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40">
+                                        <stop offset="0%" stop-color="#6366f1"/>
+                                        <stop offset="100%" stop-color="#3b82f6"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Klyper<span class="logo-suffix">Technology</span></span>
                     </a>
-                    <div>
+                    
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">
+                            <span>Home</span>
+                        </a></li>
+                        <li class="nav-item-dropdown">
+                            <a href="services.html" class="nav-link">
+                                <span>Services</span>
+                                <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="products.html" class="nav-link active">
+                            <span>Products</span>
+                        </a></li>
+                        <li><a href="industries.html" class="nav-link">
+                            <span>Industries</span>
+                        </a></li>
+                        <li><a href="about.html" class="nav-link">
+                            <span>About</span>
+                        </a></li>
+                        <li><a href="contact.html" class="btn-nav">
+                            <span>Contact Us</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
                         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                             <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
@@ -29,21 +70,15 @@
                             </svg>
                         </button>
                         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span class="menu-bar"></span>
+                            <span class="menu-bar"></span>
+                            <span class="menu-bar"></span>
                         </button>
-                        <ul class="nav-menu" id="navMenu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="products.html" class="active">Products</a></li>
-                            <li><a href="industries.html">Industries</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html" class="btn-nav">Contact</a></li>
-                        </ul>
                     </div>
                 </div>
+            </div>
         </nav>
+        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
     </header>
 
     <!-- Page Header -->
@@ -57,50 +92,45 @@
     <!-- Products Showcase -->
     <section class="section products-showcase">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header animate-on-scroll">
                 <h2 class="section-title">Explore Our Products</h2>
-                <p class="section-description">Click on any product to learn more</p>
+                <p class="section-description">Innovative SaaS solutions for modern businesses</p>
             </div>
             
-            <div class="products-cards-grid">
-                <div class="product-showcase-card" data-product="product-1">
-                    <div class="product-card-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="8.5" cy="7" r="4" />
-                            <polyline points="17 11 19 13 23 9" />
-                        </svg>
+            <div class="products-grid-modern">
+                <div class="product-card-modern animate-on-scroll">
+                    <div class="product-badge-modern featured">Featured</div>
+                    <div class="product-icon-modern">🏡</div>
+                    <h3 class="product-title-modern">Real-Estate Lead Management System</h3>
+                    <p class="product-desc-modern">Transform how you capture, manage, and convert real estate leads with intelligent automation and analytics.</p>
+                    <div class="product-features-modern">
+                        <div class="feature-item-modern">✓ Lead Capture & Distribution</div>
+                        <div class="feature-item-modern">✓ Advanced CRM Integration</div>
+                        <div class="feature-item-modern">✓ Real-time Analytics</div>
+                        <div class="feature-item-modern">✓ Mobile-friendly Interface</div>
                     </div>
-                    <div class="product-card-badge">Featured</div>
-                    <h3 class="product-card-title">Real-Estate Lead Management System</h3>
-                    <p class="product-card-description">Transform how you capture, manage, and convert real estate leads with intelligent automation and analytics.</p>
-                    <div class="product-card-tags">
-                        <span class="product-tag">Lead Capture</span>
-                        <span class="product-tag">CRM</span>
-                        <span class="product-tag">Analytics</span>
-                    </div>
-                    <div class="product-card-footer">
-                        <span class="product-card-link">Learn More →</span>
+                    <div class="product-tags-modern">
+                        <span class="tag-modern">CRM</span>
+                        <span class="tag-modern">Analytics</span>
+                        <span class="tag-modern">Automation</span>
                     </div>
                 </div>
 
-                <div class="product-showcase-card" data-product="product-2">
-                    <div class="product-card-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
+                <div class="product-card-modern animate-on-scroll">
+                    <div class="product-badge-modern new">Coming Soon</div>
+                    <div class="product-icon-modern">📦</div>
+                    <h3 class="product-title-modern">Real Estate Inventory Management</h3>
+                    <p class="product-desc-modern">Complete property inventory tracking and management solution with real-time updates and intelligent analytics.</p>
+                    <div class="product-features-modern">
+                        <div class="feature-item-modern">✓ Property Tracking</div>
+                        <div class="feature-item-modern">✓ Real-time Updates</div>
+                        <div class="feature-item-modern">✓ Smart Analytics</div>
+                        <div class="feature-item-modern">✓ Cloud-based Access</div>
                     </div>
-                    <div class="product-card-badge new">New</div>
-                    <h3 class="product-card-title">Real Estate Inventory Management</h3>
-                    <p class="product-card-description">Complete property inventory tracking and management solution with real-time updates and intelligent analytics.</p>
-                    <div class="product-card-tags">
-                        <span class="product-tag">Inventory</span>
-                        <span class="product-tag">Tracking</span>
-                        <span class="product-tag">Analytics</span>
-                    </div>
-                    <div class="product-card-footer">
-                        <span class="product-card-link">Learn More →</span>
+                    <div class="product-tags-modern">
+                        <span class="tag-modern">Inventory</span>
+                        <span class="tag-modern">Tracking</span>
+                        <span class="tag-modern">Cloud</span>
                     </div>
                 </div>
             </div>
