@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form values
@@ -208,11 +208,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Show success message (in production, this would send to backend)
-            showNotification('Thank you for your message! We\'ll get back to you within 24 hours.', 'success');
+            // Show loading state
+            const submitBtn = contactForm.querySelector('.btn-submit-modern');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Sending...</span>';
             
-            // Reset form
-            contactForm.reset();
+            try {
+                // Submit form using Fetch API
+                const formData = new FormData(contactForm);
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showNotification('Thank you for your message! We\'ll get back to you within 24 hours.', 'success');
+                    contactForm.reset();
+                } else {
+                    showNotification('Something went wrong. Please try again or email us directly.', 'error');
+                }
+            } catch (error) {
+                showNotification('Failed to send message. Please try again or email us directly at klypertechnology@gmail.com', 'error');
+                console.error('Form submission error:', error);
+            } finally {
+                // Restore button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
             
             // Log to console (for demo purposes)
             console.log('Form submitted:', {
