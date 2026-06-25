@@ -1,15 +1,33 @@
 /**
- * XYZ Technology Website - JavaScript
- * Minimal, lightweight functionality for modern UX
+ * Klyper Technology Website - JavaScript
+ * Premium interactions and modern UX
  */
 
 // ============================================
-// Theme Management (Runs immediately)
+// Theme Management (runs immediately)
 // ============================================
-(function() {
-    // Get saved theme or default to 'light'
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+(function () {
+    function getPreferredTheme() {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') return saved;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+
+        let meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+            meta = document.createElement('meta');
+            meta.name = 'theme-color';
+            document.head.appendChild(meta);
+        }
+        meta.content = theme === 'dark' ? '#020817' : '#fafbff';
+    }
+
+    applyTheme(getPreferredTheme());
+    window.KlyperTheme = { applyTheme, getPreferredTheme };
 })();
 
 // Wait for DOM to be fully loaded
@@ -21,41 +39,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     
     if (themeToggle) {
-        console.log('Theme toggle button found');
-        
-        // Function to toggle theme
         function toggleTheme(e) {
             if (e) {
                 e.preventDefault();
                 e.stopPropagation();
             }
-            
-            console.log('Theme toggle clicked');
-            
-            const currentTheme = document.documentElement.getAttribute('data-theme');
+
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            console.log('Switching from', currentTheme, 'to', newTheme);
-            
-            // Update theme
-            document.documentElement.setAttribute('data-theme', newTheme);
-            
-            // Save to localStorage
-            localStorage.setItem('theme', newTheme);
-            
-            // Add animation effect
+
+            if (window.KlyperTheme) {
+                window.KlyperTheme.applyTheme(newTheme);
+            } else {
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            }
+
             themeToggle.style.transform = 'rotate(360deg)';
             setTimeout(() => {
                 themeToggle.style.transform = 'rotate(0deg)';
             }, 300);
         }
-        
-        // Add multiple event listeners to ensure it works
+
         themeToggle.addEventListener('click', toggleTheme);
         themeToggle.addEventListener('touchstart', toggleTheme, { passive: false });
-        
-    } else {
-        console.error('Theme toggle button not found!');
     }
     
     // ============================================
@@ -64,13 +71,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerElement = document.querySelector('.header');
     
     if (headerElement) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
+        const scrollThreshold = document.body.classList.contains('page-home') ? 60 : 50;
+        
+        function updateHeaderScroll() {
+            if (window.scrollY > scrollThreshold) {
                 headerElement.classList.add('scrolled');
             } else {
                 headerElement.classList.remove('scrolled');
             }
-        });
+        }
+        
+        updateHeaderScroll();
+        window.addEventListener('scroll', updateHeaderScroll, { passive: true });
     }
     
     // ============================================
@@ -156,27 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // ============================================
-    // Sticky Header on Scroll (Enhanced)
-    // ============================================
-    const stickyHeader = document.querySelector('.header');
-    let lastScroll = 0;
-    
-    if (stickyHeader) {
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset;
-            
-            // Add/remove scrolled class for glass effect
-            if (currentScroll > 50) {
-                stickyHeader.classList.add('scrolled');
-            } else {
-                stickyHeader.classList.remove('scrolled');
-            }
-            
-            lastScroll = currentScroll;
-        });
-    }
     
     // ============================================
     // Contact Form Handling
@@ -331,33 +322,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
     
     // ============================================
-    // Fade-in Animation on Scroll
-    // ============================================
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements that should fade in
-    const fadeElements = document.querySelectorAll('.service-card, .reason-card, .industry-card, .feature-card-large, .process-step, .value-card, .pricing-card');
-    
-    fadeElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(element);
-    });
-    
-    // ============================================
     // Active Navigation Link Highlighting
     // ============================================
     const currentPath = window.location.pathname;
@@ -378,62 +342,91 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ============================================
-    // Back to Top Button (optional)
+    // Premium Cursor Glow (desktop)
+    // ============================================
+    function initCursorGlow() {
+        if (window.matchMedia('(hover: none)').matches || window.innerWidth < 1024) return;
+        
+        const glow = document.createElement('div');
+        glow.className = 'cursor-glow';
+        document.body.appendChild(glow);
+        
+        let mouseX = 0, mouseY = 0;
+        let glowX = 0, glowY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            document.body.classList.add('cursor-active');
+        });
+        
+        document.addEventListener('mouseleave', () => {
+            document.body.classList.remove('cursor-active');
+        });
+        
+        function animateGlow() {
+            glowX += (mouseX - glowX) * 0.08;
+            glowY += (mouseY - glowY) * 0.08;
+            glow.style.left = glowX + 'px';
+            glow.style.top = glowY + 'px';
+            requestAnimationFrame(animateGlow);
+        }
+        animateGlow();
+    }
+    initCursorGlow();
+    
+    // ============================================
+    // Hero Parallax Effect
+    // ============================================
+    const heroSection = document.querySelector('.hero');
+    const heroOrbs = document.querySelector('.hero-orbs');
+    const heroMainVisual = document.querySelector('.hero-main-visual');
+    
+    if (heroSection && window.matchMedia('(hover: hover)').matches) {
+        heroSection.addEventListener('mousemove', (e) => {
+            const rect = heroSection.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            
+            if (heroOrbs) {
+                heroOrbs.style.transform = `translate(${x * 24}px, ${y * 18}px)`;
+            }
+            
+            if (heroMainVisual) {
+                heroMainVisual.style.transform = `translate(calc(-50% + ${x * 12}px), calc(-50% + ${y * 10}px)) rotate(${x * 4}deg)`;
+            }
+        });
+        
+        heroSection.addEventListener('mouseleave', () => {
+            if (heroOrbs) heroOrbs.style.transform = '';
+            if (heroMainVisual) heroMainVisual.style.transform = '';
+        });
+    }
+    
+    // ============================================
+    // Back to Top Button
     // ============================================
     function createBackToTopButton() {
         const button = document.createElement('button');
         button.innerHTML = '↑';
         button.className = 'back-to-top';
-        button.style.position = 'fixed';
-        button.style.bottom = '30px';
-        button.style.right = '30px';
-        button.style.width = '50px';
-        button.style.height = '50px';
-        button.style.borderRadius = '50%';
-        button.style.backgroundColor = '#2563eb';
-        button.style.color = '#ffffff';
-        button.style.border = 'none';
-        button.style.fontSize = '1.5rem';
-        button.style.cursor = 'pointer';
-        button.style.opacity = '0';
-        button.style.visibility = 'hidden';
-        button.style.transition = 'all 0.3s ease';
-        button.style.zIndex = '1000';
-        button.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+        button.setAttribute('aria-label', 'Back to top');
         
         button.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         
         document.body.appendChild(button);
         
-        // Show/hide based on scroll position
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) {
-                button.style.opacity = '1';
-                button.style.visibility = 'visible';
+                button.classList.add('visible');
             } else {
-                button.style.opacity = '0';
-                button.style.visibility = 'hidden';
+                button.classList.remove('visible');
             }
-        });
-        
-        // Hover effect
-        button.addEventListener('mouseenter', function() {
-            button.style.transform = 'translateY(-5px)';
-            button.style.backgroundColor = '#1e40af';
-        });
-        
-        button.addEventListener('mouseleave', function() {
-            button.style.transform = 'translateY(0)';
-            button.style.backgroundColor = '#2563eb';
         });
     }
     
-    // Create back to top button
     createBackToTopButton();
     
     // ============================================
@@ -462,9 +455,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // Console Welcome Message
     // ============================================
-    console.log('%cXYZ Technology', 'color: #2563eb; font-size: 24px; font-weight: bold;');
-    console.log('%cWebsite developed with modern web technologies', 'color: #64748b; font-size: 14px;');
-    console.log('%cInterested in working with us? Visit: https://xyztechnology.com/contact', 'color: #10b981; font-size: 12px;');
+    console.log('%cKlyper Technology', 'color: #6366f1; font-size: 24px; font-weight: bold;');
+    console.log('%cPremium software solutions for the future', 'color: #64748b; font-size: 14px;');
     
 });
 
@@ -513,25 +505,46 @@ if (productShowcaseCards.length > 0) {
 // ============================================
 
 // Create intersection observer for scroll animations
-const observerOptions = {
+const scrollRevealOptions = {
     root: null,
-    rootMargin: '0px',
-    threshold: 0.1
+    rootMargin: '0px 0px -8%',
+    threshold: 0.12
 };
 
 const animateOnScroll = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animated');
-            // Optionally unobserve after animation
-            // animateOnScroll.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, scrollRevealOptions);
 
-// Observe all elements with animate-on-scroll class
 document.querySelectorAll('.animate-on-scroll').forEach(element => {
     animateOnScroll.observe(element);
+});
+
+// Fade-in for inner pages without animate-on-scroll class
+const innerPageFadeOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+};
+
+const innerPageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, innerPageFadeOptions);
+
+document.querySelectorAll('.feature-card-large, .process-step, .value-card, .pricing-card').forEach(element => {
+    if (!element.classList.contains('animate-on-scroll')) {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(24px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        innerPageObserver.observe(element);
+    }
 });
 
 // ============================================
@@ -563,9 +576,8 @@ const statsObserver = new IntersectionObserver((entries) => {
             statsObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, scrollRevealOptions);
 
-// Observe all stat numbers
 document.querySelectorAll('.stat-number').forEach(element => {
     if (element.dataset.target) {
         statsObserver.observe(element);
@@ -574,7 +586,7 @@ document.querySelectorAll('.stat-number').forEach(element => {
 
 // ============================================
 // ============================================
-window.XYZTechnology = {
+window.KlyperTechnology = {
     showNotification: function(message, type) {
         // Expose notification function globally if needed
         const event = new CustomEvent('showNotification', {

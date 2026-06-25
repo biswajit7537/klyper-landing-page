@@ -16,6 +16,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#fafbff" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) m.content = t === "dark" ? "#020817" : "#fafbff";
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="styles.css" />
     <!-- Google tag (gtag.js) -->
     <script
@@ -32,7 +44,7 @@
       gtag("config", "G-W1XLDPVDK4");
     </script>
   </head>
-  <body>
+  <body class="page-home">
     <!-- Header & Navigation -->
     <header class="header">
       <nav class="navbar">
@@ -159,6 +171,12 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-background">
+        <div class="hero-grid"></div>
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
         <div class="hero-gradient-overlay"></div>
         <div class="hero-animated-shapes">
           <div class="shape shape-1"></div>
@@ -343,6 +361,7 @@
       <div class="container">
         <div class="intro-grid">
           <div class="intro-content animate-on-scroll">
+            <span class="section-eyebrow">About Klyper</span>
             <h2 class="section-title">Leading the Digital Transformation</h2>
             <p>
               Klyper Technology is a premier IT services company specializing in
@@ -357,15 +376,15 @@
             </p>
           </div>
           <div class="intro-stats animate-on-scroll">
-            <div class="stat-card">
+            <div class="stat-card animate-on-scroll">
               <h3 class="stat-number" data-target="100" data-suffix="+">0+</h3>
               <p class="stat-label">Projects Delivered</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card animate-on-scroll">
               <h3 class="stat-number" data-target="50" data-suffix="+">0+</h3>
               <p class="stat-label">Happy Clients</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card animate-on-scroll">
               <h3 class="stat-number" data-target="5" data-suffix="+">0+</h3>
               <p class="stat-label">Industries Served</p>
             </div>
@@ -378,6 +397,7 @@
     <section class="section services-overview">
       <div class="container">
         <div class="section-header animate-on-scroll">
+          <span class="section-eyebrow">What We Do</span>
           <h2 class="section-title">Our Services</h2>
           <p class="section-description">
             Comprehensive IT solutions to power your business
@@ -429,6 +449,7 @@
       <div class="container">
         <div class="product-showcase animate-on-scroll">
           <div class="product-content">
+            <span class="section-eyebrow">Featured Product</span>
             <span class="product-badge">Featured SaaS Product</span>
             <h2 class="product-title">Real-Estate Lead Management System</h2>
             <p class="product-description">
@@ -471,6 +492,7 @@
     <section class="section industries">
       <div class="container">
         <div class="section-header animate-on-scroll">
+          <span class="section-eyebrow">Sectors</span>
           <h2 class="section-title">Industries We Serve</h2>
           <p class="section-description">
             Delivering specialized solutions across multiple sectors
@@ -519,6 +541,7 @@
     <section class="section why-choose">
       <div class="container">
         <div class="section-header animate-on-scroll">
+          <span class="section-eyebrow">Why Us</span>
           <h2 class="section-title">Why Choose Klyper Technology</h2>
           <p class="section-description">
             What sets us apart in the competitive IT landscape
