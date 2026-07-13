@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Klyper HRMS — a complete workforce management platform with face-verified attendance, live field-force tracking, leave management, payroll, and expense workflows. Web and mobile apps for modern teams."
+    />
+    <meta
+      name="keywords"
+      content="HRMS, HRMS Software, HR Management System, Attendance Management Software, Face Recognition Attendance, Employee Location Tracking, Field Force Tracking, Leave Management System, Payroll Software, HRMS in Bhubaneswar, HRMS in India, Employee Management App, Workforce Management Software"
+    />
+    <meta name="author" content="Klyper Technology" />
+    <title>Klyper HRMS — Attendance, Payroll & Workforce Management Platform | Klyper Technology</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#fafbff" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) m.content = t === "dark" ? "#020817" : "#fafbff";
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../../styles.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1XLDPVDK4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-W1XLDPVDK4");
+    </script>
+  </head>
+  <body class="page-products">
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="../../index.html" class="logo">
+              <div class="logo-icon">
+                <img
+                  src="../../assets/images/klyperlogo.png"
+                  alt="Klyper Technology Logo"
+                  class="logo-svg"
+                />
+              </div>
+              <span class="logo-text">Klyper Technology</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+              <li>
+                <a href="../../index.html" class="nav-link">
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="nav-item-dropdown">
+                <a href="../../services.html" class="nav-link">
+                  <span>Services</span>
+                  <svg
+                    class="dropdown-icon"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 4.5L6 7.5L9 4.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="../../products.html" class="nav-link active">
+                  <span>Products</span>
+                </a>
+              </li>
+              <li>
+                <a href="../../industries.html" class="nav-link">
+                  <span>Industries</span>
+                </a>
+              </li>
+              <li>
+                <a href="../../about.html" class="nav-link">
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a href="../../contact.html" class="btn-nav">
+                  <span>Contact Us</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav-actions">
+              <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
+                  />
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z"
+                  />
+                </svg>
+              </button>
+              <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    </header>
+
+    <!-- Product Hero -->
+    <section class="section product-hero" id="klyper-hrms">
+      <div class="container">
+        <div class="product-hero-content">
+          <span class="product-badge-large">Flagship Product</span>
+          <h1 class="product-hero-title">Klyper HRMS</h1>
+          <p class="product-hero-tagline">
+            One platform for attendance, leave, payroll, and field-force management —
+            with face-verified punches and real-time workforce visibility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="section product-overview">
+      <div class="container">
+        <div class="product-layout">
+          <div class="product-main">
+            <h2 class="section-subtitle">About the Product</h2>
+            <p class="product-intro">
+              Klyper HRMS is a complete workforce management platform built for modern
+              organizations — from office teams to distributed field forces. It combines
+              face-verified attendance, live location tracking, leave and shift management,
+              payroll processing, and expense workflows into a single system, available as a
+              web application for HR and administrators and a mobile app for every employee.
+            </p>
+
+            <div class="product-highlights">
+              <div class="highlight-item">
+                <h3>Built for Office & Field Teams</h3>
+                <p>
+                  Face-verified attendance punches for on-site staff, plus live location
+                  tracking and route history for field employees — all with clear consent
+                  and configurable working-hours policies.
+                </p>
+              </div>
+              <div class="highlight-item">
+                <h3>End-to-End HR Operations</h3>
+                <p>
+                  Onboarding, roles and permissions, shifts and weekly offs, leave
+                  balances, overtime, corrections, payroll, reimbursements, and salary
+                  advances — managed in one place with multi-level approvals.
+                </p>
+              </div>
+              <div class="highlight-item">
+                <h3>Dedicated Deployment, Customized for You</h3>
+                <p>
+                  Every organization gets its own dedicated, isolated deployment —
+                  customized to your policies and workflows — with encrypted
+                  communication, role-based access control, and full audit trails.
+                  Employees use one common mobile app across all deployments.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-sidebar">
+            <div class="product-info-card">
+              <h3>Product Details</h3>
+              <ul class="product-info-list">
+                <li><strong>Category:</strong> HR & Workforce Management</li>
+                <li><strong>Platforms:</strong> Web App + Android Mobile App</li>
+                <li><strong>Deployment:</strong> Dedicated Instance Per Client</li>
+                <li><strong>Customization:</strong> Tailored to Client Needs</li>
+                <li><strong>Pricing:</strong> Subscription Model</li>
+                <li><strong>Support:</strong> Dedicated Onboarding & Support</li>
+              </ul>
+              <a href="../../contact.html" class="btn btn-primary btn-block">Request Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section features-section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-eyebrow">Capabilities</span>
+          <h2 class="section-title">Key Features</h2>
+          <p class="section-description">
+            Everything you need to manage your workforce, end to end
+          </p>
+        </div>
+
+        <div class="features-grid-large">
+          <div class="feature-card-large animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Face-Verified Attendance</h3>
+            <p class="feature-card-description">
+              Employees punch in and out with a selfie verified by on-device face
+              recognition — preventing buddy punching without expensive biometric hardware.
+            </p>
+          </div>
+
+          <div class="feature-card-large animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Live Field-Force Tracking</h3>
+            <p class="feature-card-description">
+              Real-time location of on-duty field employees on a live map, with route
+              history, distance travelled, and tracking-quality insights — active only
+              during working hours with employee consent.
+            </p>
+          </div>
+
+          <div class="feature-card-large animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Leave Management</h3>
+            <p class="feature-card-description">
+              Configurable leave types, automatic monthly accruals, financial-year
+              balances, holiday calendars, and multi-level approval workflows.
+            </p>
+          </div>
+
+          <div class="feature-card-large animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Shifts & Weekly Offs</h3>
+            <p class="feature-card-description">
+              Day and night shifts (including cross-midnight), grace periods, late-arrival
+              rules, and flexible weekly-off patterns assigned per employee or in bulk.
+            </p>
+          </div>
+
+          <div class="feature-card-large animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Payroll & Compensation</h3>
+            <p class="feature-card-description">
+              Salary structures, overtime, attendance-linked payroll periods, compensation
+              revision history, and payroll-ready reports — all connected to attendance data.
+            </p>
+          </div>
+
+          <div class="feature-card-large animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                <line x1="1" y1="10" x2="23" y2="10" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Expenses & Advances</h3>
+            <p class="feature-card-description">
+              Expense reimbursement claims with receipt uploads, salary advance requests,
+              configurable policies, and approval chains that flow straight into payroll.
+            </p>
+          </div>
+
+          <div class="feature-card-large animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Roles & Access Control</h3>
+            <p class="feature-card-description">
+              Fine-grained, permission-based access for admins, HR, managers, and
+              employees — with protected super-admin accounts and full audit logging.
+            </p>
+          </div>
+
+          <div class="feature-card-large animate-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Reports & Analytics</h3>
+            <p class="feature-card-description">
+              Attendance, leave, overtime, correction, expense, and advance reports with
+              filters and exports — giving HR and management real operational insight.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile + Web Showcase -->
+    <section class="section featured-product">
+      <div class="container">
+        <div class="product-showcase animate-on-scroll">
+          <div class="product-content">
+            <span class="section-eyebrow">For Every Employee</span>
+            <span class="product-badge">Mobile + Web</span>
+            <h2 class="product-title">A Web Console for HR, a Mobile App for Everyone</h2>
+            <p class="product-description">
+              HR and administrators get a powerful web console for policies, approvals,
+              payroll, and live tracking. Employees get a fast mobile app for daily punches,
+              leave requests, expense claims, and their own records.
+            </p>
+            <ul class="product-features">
+              <li>Selfie punch with face verification and offline punch support</li>
+              <li>Apply for leave, corrections, overtime, and advances on the go</li>
+              <li>Live map, route history, and team dashboards for managers</li>
+              <li>Push notifications for approvals and important updates</li>
+            </ul>
+            <a href="../../contact.html" class="btn btn-primary">Book a Walkthrough</a>
+          </div>
+          <div class="product-visual">
+            <div class="product-mockup">
+              <div class="mockup-placeholder">
+                <div class="mockup-header">
+                  <div class="mockup-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="mockup-content">
+                  <div class="mockup-sidebar"></div>
+                  <div class="mockup-main">
+                    <div class="mockup-card"></div>
+                    <div class="mockup-card"></div>
+                    <div class="mockup-card"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Privacy -->
+    <section class="section why-choose">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-eyebrow">Trust</span>
+          <h2 class="section-title">Security & Privacy by Design</h2>
+          <p class="section-description">
+            Workforce data is sensitive. Klyper HRMS treats it that way.
+          </p>
+        </div>
+        <div class="reasons-grid">
+          <div class="reason-card animate-on-scroll">
+            <h3 class="reason-title">Consent-First Tracking</h3>
+            <p class="reason-description">
+              Location tracking runs only for on-duty field employees, with an in-app
+              disclosure and consent before it ever starts.
+            </p>
+          </div>
+          <div class="reason-card animate-on-scroll">
+            <h3 class="reason-title">On-Device Face Matching</h3>
+            <p class="reason-description">
+              Face verification runs on the employee's own device. Raw photos aren't used
+              for anything beyond attendance verification.
+            </p>
+          </div>
+          <div class="reason-card animate-on-scroll">
+            <h3 class="reason-title">Isolated Deployments</h3>
+            <p class="reason-description">
+              Each organization runs on its own isolated instance and database — your data
+              is never mixed with anyone else's.
+            </p>
+          </div>
+          <div class="reason-card animate-on-scroll">
+            <h3 class="reason-title">Encrypted & Audited</h3>
+            <p class="reason-description">
+              HTTPS everywhere, role-based access, session controls, and audit trails on
+              sensitive operations.
+            </p>
+          </div>
+        </div>
+        <div class="text-center animate-on-scroll" style="margin-top: 2rem">
+          <a href="privacy-policy/" class="btn btn-secondary">Read the Klyper HRMS Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta">
+      <div class="container">
+        <div class="cta-content animate-on-scroll">
+          <h2 class="cta-title">See Klyper HRMS in Action</h2>
+          <p class="cta-description">
+            Get a personalized demo for your organization — we'll walk you through
+            attendance, tracking, payroll, and everything in between.
+          </p>
+          <a href="../../contact.html" class="btn btn-white">Request a Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3 class="footer-title">Klyper Technology</h3>
+            <p class="footer-description">
+              Empowering businesses with innovative software solutions and cutting-edge
+              technology.
+            </p>
+            <div class="footer-social">
+              <h4 class="footer-social-title">Follow Us</h4>
+              <div class="social-icons">
+                <a
+                  href="https://www.linkedin.com/klypertechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  aria-label="LinkedIn"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/klypertechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  aria-label="Instagram"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.facebook.com/klypertechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  aria-label="Facebook"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://x.com/KlyperTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  aria-label="Twitter"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.youtube.com/@klypertechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  aria-label="YouTube"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../../services.html">Services</a></li>
+              <li><a href="../../products.html">Products</a></li>
+              <li><a href="../../about.html">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Klyper HRMS</h4>
+            <ul class="footer-links">
+              <li><a href="./">Product Overview</a></li>
+              <li><a href="privacy-policy/">Privacy Policy</a></li>
+              <li><a href="../../contact.html">Request Demo</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Contact Us</h4>
+            <ul class="footer-links">
+              <li><a href="tel:+917855079698">+91 78550 79698</a></li>
+              <li>
+                <a href="mailto:klypertechnology@gmail.com">klypertechnology@gmail.com</a>
+              </li>
+              <li><a href="../../contact.html">Contact Form</a></li>
+            </ul>
+            <div style="margin-top: 1.5rem">
+              <h4 class="footer-heading">Office Address</h4>
+              <p class="footer-address">
+                <span class="footer-address-icon">📍</span>
+                Plot No:- 2377/9633,<br />
+                Near SR Valley, Elegance Villa,<br />
+                Puri Bypass, NH-316, Badagada,<br />
+                Bhubaneswar, India, 751018
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Klyper Technology. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+  </body>
+</html>
