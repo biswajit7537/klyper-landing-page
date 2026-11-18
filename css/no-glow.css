@@ -1,0 +1,136 @@
+/* ============================================
+   Site-wide: remove blue / cyan glow & corner blooms
+   ============================================ */
+
+[class*="__glow"],
+[class*="-glow"],
+[class*="_glow"],
+.glow,
+[class*="art-glow"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  animation: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Corner / section decorative blue waves, blobs, curves, orbs.
+   NOTE: do NOT use [class*="__orb"] — it also matches __orbit rings. */
+[class*="__deco"],
+[class*="__decor"],
+[class*="__wave--tl"],
+[class*="__wave--tr"],
+[class*="__wave--br"],
+[class*="__wave--bl"],
+[class*="__curve--tl"],
+[class*="__curve--tr"],
+[class*="__curve--br"],
+[class*="__curve--bl"],
+[class*="__blob"],
+[class*="__corner"],
+[class*="__orb--"],
+[class$="__orb"],
+[class*="__wash"],
+[class*="hero__spark"],
+.products-explore__wave,
+.about-who__orb--a,
+.about-who__orb--b,
+.about-who__orb--c {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  background: none !important;
+  filter: none !important;
+}
+
+/* Product illustration orbit rings must stay visible */
+.ha-orbit,
+.inv-about__orbit,
+.inv-about__stage,
+[class*="__orbit"] {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  background: none !important;
+  filter: none !important;
+}
+
+/* Keep process-flow connectors visible (do NOT revert display/background —
+   that un-centers the arrow icons and strips the circle fill) */
+.svc-process__curve-svg,
+.svc-process__curve-arrow {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  filter: none !important;
+}
+
+.svc-process__curve-arrow {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #fff !important;
+}
+
+/* Heading underline / swoosh marks — hide sitewide */
+[class*="__title-underline"],
+[class*="title-underline"],
+[class*="__title-rule"],
+[class*="title-rule"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+
+.cv-card__title::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Common accent elements that used cyan bloom */
+[class*="title-accent"],
+[class*="__title-accent"],
+[class*="pill-mark"],
+[class*="hub__ring"],
+[class*="hub__core"],
+[class*="badge__ring"],
+[class*="feat__num"],
+[class*="meta-icon"],
+[class*="hero__badge"],
+[class*="hero__orb"],
+[class*="hero__spark"],
+[class*="wave"] svg,
+[class*="__ring"] {
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+.btn--primary,
+.about-apart__cta,
+.inv-cta__btn,
+.ecom-cta__btn--primary,
+.cv-card__icon-wrap,
+.mv-badge__disc,
+.mv-badge__icon,
+.ap-card__icon,
+.why-hub__core,
+.eco-hub__core,
+.eco-hub__node,
+.eco-node,
+.ho-card__icon,
+.ha-core__icon {
+  filter: none !important;
+  text-shadow: none !important;
+}

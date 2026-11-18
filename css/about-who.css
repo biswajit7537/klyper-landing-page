@@ -1,0 +1,405 @@
+﻿/* ============================================
+   About Us  -  Who We Are (premium)
+   ============================================ */
+
+.about-who {
+  --aw-navy: #0a1d37;
+  --aw-blue: #1d6bf5;
+  --aw-cyan: #22d3ee;
+  --aw-cyan-deep: #0ea5e9;
+  --aw-muted: #5a6f86;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(22px, 2.8vw, 36px) 0 clamp(56px, 6.5vw, 88px);
+  background:
+    radial-gradient(ellipse 42% 36% at 55% 45%, rgba(14, 165, 233, 0.08), transparent 60%),
+    linear-gradient(165deg, #f5faff 0%, #ffffff 38%, #eef5ff 72%, #f8fbff 100%);
+}
+
+/* Ambient decor layer */
+.about-who__atmos {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.about-who__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(48px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.about-who__orb--a,
+.about-who__orb--b,
+.about-who__orb--c {
+  display: none;
+  background: none;
+  opacity: 0;
+  animation: none;
+}
+
+.about-who__grid-fade {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(100, 140, 200, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 140, 200, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 75%);
+}
+
+.about-who__shine {
+  position: absolute;
+  top: -20%;
+  left: -30%;
+  width: 60%;
+  height: 80%;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.45) 48%,
+    transparent 62%
+  );
+  transform: rotate(12deg);
+  animation: aw-shine-sweep 11s ease-in-out infinite;
+  opacity: 0.35;
+}
+
+@keyframes aw-orb-drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(28px, 22px, 0) scale(1.08); }
+}
+
+@keyframes aw-orb-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.12); }
+}
+
+@keyframes aw-shine-sweep {
+  0%, 100% { transform: translateX(0) rotate(12deg); opacity: 0.2; }
+  50% { transform: translateX(45%) rotate(12deg); opacity: 0.4; }
+}
+
+.about-who > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-who__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+}
+
+/* ---- Left copy ---- */
+.about-who__copy {
+  max-width: 560px;
+}
+
+.about-who__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--aw-blue);
+}
+
+.about-who__eyebrow-line {
+  display: block;
+  width: 34px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--aw-cyan), var(--aw-blue));
+  box-shadow: none;
+  background-size: 200% 100%;
+  animation: aw-line-shimmer 3.2s ease-in-out infinite;
+}
+
+@keyframes aw-line-shimmer {
+  0%, 100% { background-position: 0% 50%; filter: brightness(1); }
+  50% { background-position: 100% 50%; filter: brightness(1.25); }
+}
+
+.about-who__title {
+  margin: 0 0 28px;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: clamp(1.9rem, 1.35rem + 2vw, 2.85rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: var(--aw-navy);
+}
+
+.about-who__title-accent {
+  background: linear-gradient(105deg, #1d4ed8 0%, #2563eb 38%, #0ea5e9 72%, #22d3ee 100%);
+  background-size: 180% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aw-accent-flow 6s ease-in-out infinite;
+}
+
+@keyframes aw-accent-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.about-who__text {
+  position: relative;
+  margin: 0;
+  padding-left: 18px;
+  font-size: clamp(0.94rem, 0.9rem + 0.18vw, 1.05rem);
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--aw-muted);
+}
+
+.about-who__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  bottom: 0.3em;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--aw-cyan), var(--aw-blue));
+  box-shadow: none;
+}
+
+.about-who__text strong {
+  color: var(--aw-blue);
+  font-weight: 700;
+}
+
+.about-who__text + .about-who__text {
+  margin-top: 18px;
+  padding-left: 0;
+  font-weight: 500;
+  color: #647990;
+}
+
+.about-who__text + .about-who__text::before {
+  display: none;
+}
+
+/* ---- Right visual ---- */
+.about-who__visual {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.about-who__visual::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 78%;
+  width: auto;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: none;
+  filter: none;
+  z-index: 0;
+  animation: none;
+  pointer-events: none;
+  display: none;
+}
+
+/* True circular dashed ring (not ellipse  -  image box is non-square) */
+.about-who__visual::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 94%;
+  width: auto;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed rgba(37, 99, 235, 0.5);
+  background: transparent;
+  box-shadow: none;
+  z-index: 0;
+  pointer-events: none;
+  animation: aw-orbit-spin 42s linear infinite;
+}
+
+@keyframes aw-glow-pulse {
+  0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+@keyframes aw-orbit-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.about-who__visual-img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  animation: none;
+  filter: drop-shadow(0 18px 36px rgba(37, 99, 235, 0.14));
+  transition: filter 0.45s ease, transform 0.45s ease;
+}
+
+.about-who__visual:hover .about-who__visual-img {
+  filter: drop-shadow(0 24px 44px rgba(37, 99, 235, 0.22));
+}
+
+@keyframes aw-visual-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Reveal */
+.about-who .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)),
+    transform 0.8s var(--ease, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+.about-who .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.about-who .reveal-delay-1 { transition-delay: 0.08s; }
+.about-who .reveal-delay-2 { transition-delay: 0.16s; }
+.about-who .reveal-delay-3 { transition-delay: 0.24s; }
+.about-who .reveal-delay-4 { transition-delay: 0.32s; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1100px) {
+  .about-who__visual {
+    max-width: 460px;
+  }
+
+  .about-who__title {
+    font-size: clamp(1.8rem, 1.3rem + 1.8vw, 2.45rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .about-who {
+    padding: clamp(20px, 3.5vw, 32px) 0 clamp(48px, 6vw, 72px);
+  }
+
+  .about-who__grid {
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 6vw, 48px);
+  }
+
+  .about-who__copy {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .about-who__visual {
+    max-width: min(440px, 92vw);
+    margin: 0 auto;
+  }
+
+  .about-who__orb--c {
+    left: 50%;
+    top: 55%;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-who {
+    padding: 18px 0 52px;
+  }
+
+  .about-who__eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+
+  .about-who__title {
+    margin-bottom: 22px;
+    font-size: clamp(1.65rem, 6.2vw, 2.05rem);
+  }
+
+  .about-who__text {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .about-who__text + .about-who__text {
+    margin-top: 14px;
+  }
+
+  .about-who__visual {
+    max-width: min(340px, 88vw);
+  }
+
+  .about-who__visual::after {
+    height: 92%;
+    border-width: 2px;
+    border-color: rgba(37, 99, 235, 0.45);
+  }
+
+  .about-who__grid-fade {
+    opacity: 0.22;
+    background-size: 36px 36px;
+  }
+
+  .about-who__shine {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-who__visual {
+    max-width: min(300px, 92vw);
+  }
+
+  .about-who__orb {
+    filter: blur(36px);
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-who__orb,
+  .about-who__shine,
+  .about-who__eyebrow-line,
+  .about-who__title-accent,
+  .about-who__visual-img,
+  .about-who__visual::before,
+  .about-who__visual::after {
+    animation: none;
+  }
+
+  .about-who .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

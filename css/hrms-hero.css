@@ -1,0 +1,321 @@
+/* ============================================
+   Klyper HRMS  -  hero (full-bleed product visual)
+   ============================================ */
+
+.hrms-hero {
+  --hh-navy: #050d1c;
+  --hh-cyan: #00e5ff;
+  --hh-blue: #2f7cf6;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(560px, 92vh, 780px);
+  display: flex;
+  align-items: center;
+  padding: calc(var(--header-h, 76px) + 28px) 0 48px;
+  background: var(--hh-navy);
+  color: #ffffff;
+}
+
+.hrms-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hrms-hero__media-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.hrms-hero__media-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 13, 28, 0.92) 0%,
+      rgba(5, 13, 28, 0.78) 28%,
+      rgba(5, 13, 28, 0.35) 52%,
+      rgba(5, 13, 28, 0.12) 72%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 13, 28, 0.45) 0%,
+      transparent 22%,
+      transparent 78%,
+      rgba(5, 13, 28, 0.55) 100%
+    );
+  pointer-events: none;
+}
+
+.hrms-hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hrms-hero__copy {
+  max-width: min(560px, 48%);
+}
+
+.hrms-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 20px;
+  padding: 9px 18px 9px 13px;
+  border-radius: 999px;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: #ffffff;
+  background: rgba(8, 24, 52, 0.45);
+  border: 1.5px solid rgba(56, 189, 248, 0.8);
+  box-shadow:
+    0 0 0 1px rgba(56, 189, 248, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hrms-hero__badge svg {
+  width: 17px;
+  height: 17px;
+  color: #7dd3fc;
+  filter: none;
+}
+
+.hrms-hero__title {
+  margin: 0 0 18px;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: clamp(2rem, 1.35rem + 2.2vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  color: #ffffff;
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+}
+
+.hrms-hero__title-accent {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.hrms-hero__title-text {
+  background: linear-gradient(105deg, #a5f3fc 0%, #22d3ee 42%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: none;
+}
+
+.hrms-hero__title-underline {
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  bottom: 0;
+  width: 96%;
+  height: 0.28em;
+  overflow: visible;
+  pointer-events: none;
+  filter: none;
+}
+
+.hrms-hero__lead {
+  margin: 0 0 28px;
+  max-width: 30rem;
+  font-size: clamp(0.92rem, 0.88rem + 0.18vw, 1.02rem);
+  line-height: 1.65;
+  font-weight: 500;
+  color: rgba(226, 236, 248, 0.92);
+}
+
+.hrms-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.hrms-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.25s ease,
+    filter 0.3s ease;
+}
+
+.hrms-hero__btn--primary {
+  color: #fff;
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 45%, #1d4ed8 100%);
+  border: 1px solid rgba(147, 197, 253, 0.4);
+  box-shadow:
+    0 16px 34px rgba(29, 78, 216, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.hrms-hero__btn--primary:hover {
+  transform: translateY(-3px) scale(1.015);
+  filter: brightness(1.05);
+  box-shadow:
+    0 20px 42px rgba(29, 78, 216, 0.48);
+}
+
+.hrms-hero__btn--ghost {
+  color: #ffffff;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hrms-hero__btn--ghost:hover {
+  transform: translateY(-3px);
+  border-color: #7dd3fc;
+  color: #e0f2fe;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hrms-hero__play {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+}
+
+.hrms-hero .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hrms-hero .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hrms-hero .reveal-delay-1 { transition-delay: 0.08s; }
+.hrms-hero .reveal-delay-2 { transition-delay: 0.16s; }
+.hrms-hero .reveal-delay-3 { transition-delay: 0.24s; }
+
+
+@media (max-width: 1100px) {
+  .hrms-hero__copy {
+    max-width: min(560px, 58%);
+  }
+}
+
+@media (max-width: 960px) {
+  .hrms-hero {
+    min-height: clamp(480px, 78vh, 640px);
+    align-items: flex-end;
+    padding: calc(var(--header-h, 76px) + 20px) 0 36px;
+  }
+
+  .hrms-hero__media-img {
+    object-position: 68% center;
+  }
+
+  .hrms-hero__media-shade {
+    background:
+      linear-gradient(180deg, rgba(3, 8, 18, 0.86) 0%, rgba(3, 8, 18, 0.8) 32%, rgba(3, 8, 18, 0.9) 100%), linear-gradient(90deg, rgba(3, 8, 18, 0.55) 0%, transparent 70%);
+  }
+
+  .hrms-hero__copy {
+    max-width: 100%;
+  }
+
+  .hrms-hero__title {
+    font-size: clamp(1.85rem, 4.2vw, 2.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .hrms-hero {
+    min-height: 0;
+    padding: calc(var(--header-h, 76px) + 16px) 0 28px;
+  }
+
+  .hrms-hero__badge {
+    margin-bottom: 14px;
+    padding: 7px 14px 7px 11px;
+    font-size: 0.76rem;
+  }
+
+  .hrms-hero__title {
+    margin-bottom: 12px;
+    font-size: clamp(1.55rem, 7vw, 2rem);
+  }
+
+  .hrms-hero__lead {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .hrms-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .hrms-hero__btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 20px;
+    font-size: 0.88rem;
+  }
+
+  .hrms-hero__media-img {
+    object-position: 72% center;
+  }
+}
+
+@media (max-width: 400px) {
+  .hrms-hero__title {
+    font-size: 1.45rem;
+  }
+
+  .hrms-hero__lead {
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hrms-hero .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hrms-hero__btn {
+    transition: none;
+  }
+}

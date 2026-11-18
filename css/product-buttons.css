@@ -1,0 +1,203 @@
+/* ===================================================
+   Shared product-page buttons — consistent / enterprise
+   =================================================== */
+
+.hrms-hero__btn,
+.lead-hero__btn,
+.inventory-hero__btn,
+.ecommerce-hero__btn,
+.inv-cta__btn,
+.ecom-cta__btn,
+.ecom-about__cta,
+.lead-about__details-cta,
+.hrms-platform__cta,
+.hrms-security__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 18px 12px 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: none;
+  filter: none;
+  transform: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hrms-hero__btn:hover,
+.lead-hero__btn:hover,
+.inventory-hero__btn:hover,
+.ecommerce-hero__btn:hover,
+.inv-cta__btn:hover,
+.ecom-cta__btn:hover,
+.ecom-about__cta:hover,
+.lead-about__details-cta:hover,
+.hrms-platform__cta:hover,
+.hrms-security__cta:hover {
+  transform: none;
+  filter: none;
+  box-shadow: none;
+}
+
+/* ---------- Primary / solid CTAs (light surfaces) ---------- */
+.hrms-hero__btn--primary,
+.lead-hero__btn--primary,
+.inventory-hero__btn--primary,
+.ecommerce-hero__btn--primary,
+.ecom-about__cta,
+.lead-about__details-cta,
+.hrms-security__cta {
+  background: #0a5c9c;
+  border-color: #0a5c9c;
+  color: #fff;
+}
+
+.hrms-hero__btn--primary:hover,
+.lead-hero__btn--primary:hover,
+.inventory-hero__btn--primary:hover,
+.ecommerce-hero__btn--primary:hover,
+.ecom-about__cta:hover,
+.lead-about__details-cta:hover,
+.hrms-security__cta:hover {
+  background: #084a7e;
+  border-color: #084a7e;
+  color: #fff;
+}
+
+.hrms-hero__btn--primary:focus-visible,
+.lead-hero__btn--primary:focus-visible,
+.inventory-hero__btn--primary:focus-visible,
+.ecommerce-hero__btn--primary:focus-visible,
+.ecom-about__cta:focus-visible,
+.lead-about__details-cta:focus-visible,
+.hrms-security__cta:focus-visible {
+  outline: 2px solid #0a5c9c;
+  outline-offset: 3px;
+}
+
+/* ---------- Primary on dark/blue bands (high contrast) ---------- */
+.hrms-platform__cta,
+.inv-cta__btn,
+.ecom-cta__btn--primary {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #0a1f46;
+}
+
+.hrms-platform__cta:hover,
+.inv-cta__btn:hover,
+.ecom-cta__btn--primary:hover {
+  background: #f3f7fc;
+  border-color: #f3f7fc;
+  color: #07182c;
+}
+
+.hrms-platform__cta:focus-visible,
+.inv-cta__btn:focus-visible,
+.ecom-cta__btn--primary:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* ---------- Ghost / secondary (dark heroes & dark CTA bands) ---------- */
+.hrms-hero__btn--ghost,
+.lead-hero__btn--ghost,
+.inventory-hero__btn--ghost,
+.ecommerce-hero__btn--ghost,
+.ecom-cta__btn--ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+  box-shadow: none;
+}
+
+.hrms-hero__btn--ghost:hover,
+.lead-hero__btn--ghost:hover,
+.inventory-hero__btn--ghost:hover,
+.ecommerce-hero__btn--ghost:hover,
+.ecom-cta__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #fff;
+}
+
+/* ---------- Inventory CTA arrow chip ---------- */
+.inv-cta__btn-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #0a5c9c;
+  color: #fff;
+}
+
+.inv-cta__btn:hover .inv-cta__btn-arrow {
+  background: #084a7e;
+}
+
+/* ---------- Inline arrow hints ---------- */
+.ecom-about__cta span,
+.lead-about__details-cta span,
+.ecom-cta__btn--primary span,
+.hrms-platform__cta span[aria-hidden="true"],
+.hrms-security__cta span[aria-hidden="true"] {
+  display: inline-flex;
+  transition: transform 0.2s ease;
+}
+
+.ecom-about__cta:hover span,
+.lead-about__details-cta:hover span,
+.ecom-cta__btn--primary:hover span,
+.hrms-platform__cta:hover span[aria-hidden="true"],
+.hrms-security__cta:hover span[aria-hidden="true"] {
+  transform: translateX(2px);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .hrms-hero__btn,
+  .lead-hero__btn,
+  .inventory-hero__btn,
+  .ecommerce-hero__btn,
+  .inv-cta__btn,
+  .ecom-cta__btn,
+  .ecom-about__cta,
+  .lead-about__details-cta,
+  .hrms-platform__cta,
+  .hrms-security__cta {
+    min-height: 46px;
+    padding: 11px 16px 11px 18px;
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hrms-hero__btn,
+  .lead-hero__btn,
+  .inventory-hero__btn,
+  .ecommerce-hero__btn,
+  .inv-cta__btn,
+  .ecom-cta__btn,
+  .ecom-about__cta,
+  .lead-about__details-cta,
+  .hrms-platform__cta,
+  .hrms-security__cta,
+  .ecom-about__cta span,
+  .lead-about__details-cta span,
+  .ecom-cta__btn--primary span,
+  .hrms-platform__cta span[aria-hidden="true"],
+  .hrms-security__cta span[aria-hidden="true"] {
+    transition: none;
+  }
+}

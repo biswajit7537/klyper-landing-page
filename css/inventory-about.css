@@ -1,0 +1,361 @@
+﻿/* ============================================
+   Inventory  -  About Product (HRMS-matched design)
+   ============================================ */
+
+/* Distinct Klyper section backgrounds (page-only) */
+.page-inventory .hrms-about {
+  background:
+    radial-gradient(ellipse 44% 38% at 92% 8%, rgba(11, 42, 92, 0.06), transparent 58%),
+    linear-gradient(165deg, #f7f8fb 0%, #eef1f6 48%, #f5f6f9 100%);
+}
+
+/* 3 benefit points (vs HRMS 4) */
+.page-inventory .hrms-about__points {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Lead with accent bar like reference */
+.page-inventory .hrms-about__lead {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 28px;
+  max-width: 36rem;
+}
+
+.page-inventory .hrms-about__lead::before {
+  content: "";
+  flex: 0 0 4px;
+  align-self: stretch;
+  width: 4px;
+  min-height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #38bdf8, #1d5eff);
+}
+
+/* Title can wrap longer inventory headline */
+.page-inventory .hrms-about__title {
+  font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.45rem);
+  max-width: 18ch;
+}
+
+/* 5 meta items (vs HRMS 6) */
+.page-inventory .hrms-overview__meta {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.page-inventory .ho-meta:nth-child(5n + 1)::before {
+  display: none;
+}
+
+/* ---------- Illustration: original icon art + HRMS-style orbit BEHIND ---------- */
+.page-inventory .inv-about__visual {
+  position: relative;
+  min-height: clamp(280px, 34vw, 420px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: -4px;
+  width: 100%;
+  min-width: 0;
+}
+
+.page-inventory .inv-about__eco {
+  position: relative;
+  width: 100%;
+  max-width: min(520px, 100%);
+  margin-left: auto;
+  overflow: visible;
+  isolation: isolate;
+}
+
+/* Same layering as HRMS: orbit z-index 1, content above */
+.page-inventory .inv-about__orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 92%;
+  width: auto;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.page-inventory .inv-about__ring {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.page-inventory .inv-about__ring--outer {
+  stroke: rgba(37, 99, 235, 0.28);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 8;
+  transform-origin: 200px 200px;
+  animation: inv-orbit-spin 48s linear infinite;
+}
+
+.page-inventory .inv-about__ring--mid {
+  stroke: rgba(29, 94, 255, 0.32);
+  stroke-width: 1.6;
+}
+
+.page-inventory .inv-about__ring--inner {
+  stroke: rgba(56, 140, 255, 0.24);
+  stroke-width: 1.3;
+  stroke-dasharray: 3 6;
+  transform-origin: 200px 200px;
+  animation: inv-orbit-spin-rev 36s linear infinite;
+}
+
+.page-inventory .inv-about__spokes line {
+  stroke: rgba(37, 99, 235, 0.3);
+  stroke-width: 1.35;
+  stroke-linecap: round;
+}
+
+.page-inventory .inv-about__nodes circle {
+  fill: #3b82f6;
+  opacity: 0.55;
+}
+
+.page-inventory .inv-about__art-img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 34px rgba(15, 40, 100, 0.16));
+  animation: none;
+}
+
+@keyframes inv-orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes inv-orbit-spin-rev {
+  to { transform: rotate(-360deg); }
+}
+
+.page-inventory .hrms-about__copy,
+.page-inventory .hrms-about__grid {
+  min-width: 0;
+}
+
+/* ---------- Large tablet / small desktop ---------- */
+@media (max-width: 1100px) {
+  .page-inventory .hrms-about__title {
+    max-width: 20ch;
+    font-size: clamp(1.55rem, 1.15rem + 1.3vw, 2.1rem);
+  }
+
+  .page-inventory .hrms-overview__meta {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 8px;
+  }
+
+  .page-inventory .ho-meta:nth-child(3n + 1)::before {
+    display: none;
+  }
+
+  .page-inventory .ho-meta:nth-child(4)::before,
+  .page-inventory .ho-meta:nth-child(5)::before {
+    display: block;
+  }
+
+  .page-inventory .inv-about__visual {
+    min-height: clamp(240px, 30vw, 340px);
+  }
+}
+
+/* ---------- Tablet stacked ---------- */
+@media (max-width: 960px) {
+  .page-inventory .hrms-about {
+    padding: clamp(32px, 4vw, 48px) 0 clamp(40px, 5vw, 56px);
+  }
+
+  .page-inventory .hrms-about__title {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-inventory .hrms-about__points {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px 12px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .page-inventory .hrms-about__lead {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    max-width: 36rem;
+  }
+
+  .page-inventory .inv-about__visual {
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    margin-left: 0;
+    order: 2;
+  }
+
+  .page-inventory .inv-about__eco {
+    max-width: min(440px, 86vw);
+    margin: 8px auto 0;
+  }
+
+  .page-inventory .hrms-about__features {
+    margin-top: clamp(28px, 4vw, 40px);
+  }
+}
+
+/* ---------- Compact tablet ---------- */
+@media (max-width: 768px) {
+  .page-inventory .hrms-about__points {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 14px;
+  }
+
+  .page-inventory .ha-point {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    column-gap: 12px;
+    align-items: center;
+  }
+
+  .page-inventory .hrms-overview__cards {
+    max-width: 100%;
+  }
+
+  .page-inventory .inv-about__eco {
+    max-width: min(400px, 90vw);
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .page-inventory .hrms-about {
+    padding: 28px 0 44px;
+  }
+
+  .page-inventory .hrms-about__badge {
+    font-size: 0.74rem;
+    padding: 7px 12px 7px 10px;
+  }
+
+  .page-inventory .hrms-about__title {
+    font-size: clamp(1.4rem, 6.2vw, 1.85rem);
+    line-height: 1.15;
+  }
+
+  .page-inventory .hrms-about__lead {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .page-inventory .hrms-about__points {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    gap: 12px;
+  }
+
+  .page-inventory .ha-point {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 12px;
+    align-items: center;
+  }
+
+  .page-inventory .ha-point__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .page-inventory .ha-point__title {
+    font-size: 0.86rem;
+  }
+
+  .page-inventory .inv-about__eco {
+    max-width: min(340px, 92vw);
+  }
+
+  .page-inventory .hrms-overview__meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 12px 8px;
+  }
+
+  .page-inventory .ho-meta + .ho-meta::before {
+    display: none !important;
+  }
+
+  .page-inventory .ho-meta:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .page-inventory .ho-card {
+    padding: 18px 16px 20px;
+  }
+
+  .page-inventory .ho-card__title {
+    font-size: 1.02rem;
+  }
+
+  .page-inventory .ho-card__desc {
+    font-size: 0.86rem;
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 480px) {
+  .page-inventory .hrms-about__lead::before {
+    flex-basis: 3px;
+    width: 3px;
+  }
+
+  .page-inventory .inv-about__eco {
+    max-width: min(300px, 94vw);
+  }
+
+  .page-inventory .hrms-about__features {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .page-inventory .hrms-overview__meta {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .page-inventory .ho-meta:last-child {
+    grid-column: auto;
+  }
+
+  .page-inventory .ho-meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .page-inventory .inv-about__eco {
+    max-width: min(270px, 96vw);
+  }
+
+  .page-inventory .hrms-about__title {
+    font-size: 1.3rem;
+  }
+
+  .page-inventory .hrms-about__lead {
+    font-size: 0.84rem;
+  }
+}

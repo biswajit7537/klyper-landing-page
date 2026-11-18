@@ -1,0 +1,182 @@
+/* ============================================
+   Klyper Contact  -  FAQ accordion
+   ============================================ */
+
+.contact-faq {
+  position: relative;
+  padding: 24px 0 110px;
+  background:
+    linear-gradient(180deg, #f7fafc 0%, #eef5fb 100%);
+  overflow: hidden;
+}
+
+.contact-faq__deco {
+  display: none;
+  background: none;
+  pointer-events: none;
+}
+
+.contact-faq__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.35fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+}
+
+.contact-faq__eyebrow {
+  margin: 0 0 14px;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #38bdf8;
+}
+
+.contact-faq__title {
+  margin: 0;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: clamp(2rem, 1.5rem + 1.8vw, 3.1rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  color: #0a1628;
+}
+
+.contact-faq__title-accent {
+  position: relative;
+  display: inline-block;
+  
+  color: #2563eb;
+}
+
+.contact-faq__title-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.28em;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.contact-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-faq__item {
+  border: 1.5px solid #d7e8f8;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  overflow: hidden;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.contact-faq__item.is-open {
+  border-color: #93c5fd;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.08);
+}
+
+.contact-faq__trigger {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 18px 18px 18px 16px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+}
+
+.contact-faq__num {
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.contact-faq__question {
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #0a1628;
+}
+
+.contact-faq__chevron {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.contact-faq__chevron svg {
+  width: 14px;
+  height: 14px;
+}
+
+.contact-faq__item.is-open .contact-faq__chevron {
+  transform: rotate(180deg);
+}
+
+.contact-faq__panel {
+  display: none;
+  padding: 0 18px 18px 52px;
+}
+
+.contact-faq__item.is-open .contact-faq__panel {
+  display: block;
+}
+
+.contact-faq__panel p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #5b6b82;
+}
+
+@media (max-width: 900px) {
+  .contact-faq__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-faq__head {
+    max-width: 28rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-faq {
+    padding-bottom: 80px;
+  }
+
+  .contact-faq__trigger {
+    gap: 10px;
+    padding: 16px 14px;
+  }
+
+  .contact-faq__panel {
+    padding: 0 14px 16px 14px;
+  }
+
+  .contact-faq__question {
+    font-size: 0.92rem;
+  }
+}

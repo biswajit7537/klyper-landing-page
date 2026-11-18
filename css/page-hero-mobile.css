@@ -1,0 +1,355 @@
+/* ===================================================
+   Shared page-hero mobile treatment
+   Matches home hero: centered, enterprise, readable
+   Load AFTER each page's *-hero.css
+   =================================================== */
+
+@media (max-width: 768px) {
+  .about-hero,
+  .services-hero,
+  .products-hero,
+  .contact-hero,
+  .hrms-hero,
+  .lead-hero,
+  .inventory-hero,
+  .ecommerce-hero {
+    min-height: 0;
+    height: auto;
+    max-height: none;
+  }
+
+  .about-hero__content,
+  .services-hero__content,
+  .products-hero__content,
+  .contact-hero__content,
+  .hrms-hero__content,
+  .lead-hero__content,
+  .inventory-hero__content,
+  .ecommerce-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-hero__copy,
+  .services-hero__copy,
+  .products-hero__copy,
+  .contact-hero__copy,
+  .hrms-hero__copy,
+  .lead-hero__copy,
+  .inventory-hero__copy,
+  .ecommerce-hero__copy {
+    width: 100%;
+    max-width: 36rem;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-hero__badge,
+  .services-hero__eyebrow,
+  .products-hero__badge,
+  .contact-hero__eyebrow,
+  .hrms-hero__badge,
+  .lead-hero__badge,
+  .inventory-hero__badge,
+  .ecommerce-hero__badge {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .about-hero__title,
+  .services-hero__title,
+  .products-hero__title,
+  .contact-hero__title,
+  .hrms-hero__title,
+  .lead-hero__title,
+  .inventory-hero__title,
+  .ecommerce-hero__title {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-wrap: balance;
+  }
+
+  .about-hero__lead,
+  .services-hero__lead,
+  .products-hero__lead,
+  .contact-hero__lead,
+  .hrms-hero__lead,
+  .lead-hero__lead,
+  .inventory-hero__lead,
+  .ecommerce-hero__lead {
+    width: 100%;
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-hero__actions,
+  .services-hero__actions,
+  .hrms-hero__actions,
+  .lead-hero__actions,
+  .inventory-hero__actions,
+  .ecommerce-hero__actions {
+    width: 100%;
+    max-width: 22rem;
+    margin-inline: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .about-hero__btn,
+  .services-hero__btn,
+  .hrms-hero__btn,
+  .lead-hero__btn,
+  .inventory-hero__btn,
+  .ecommerce-hero__btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .services-hero__features,
+  .products-hero__features {
+    width: 100%;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .services-hero__feature,
+  .products-hero__feature {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    padding: 0 !important;
+    border-right: none !important;
+  }
+
+  .services-hero__feature-icon,
+  .products-hero__feature-icon {
+    margin-inline: auto;
+  }
+
+  .services-hero__feature-label,
+  .products-hero__feature-label {
+    text-align: center;
+    width: 100%;
+    max-width: none;
+  }
+
+  .lead-hero__meta,
+  .ecommerce-hero__meta {
+    width: 100%;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .lead-hero__meta-item,
+  .ecommerce-hero__meta-item {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    padding: 0 !important;
+    border-right: none !important;
+  }
+
+  .lead-hero__meta-icon,
+  .ecommerce-hero__meta-icon {
+    margin-inline: auto;
+  }
+
+  .lead-hero__meta-label,
+  .ecommerce-hero__meta-label {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Stronger mobile readability overlays for busy product visuals */
+  .about-hero__media-shade,
+  .services-hero__media-shade,
+  .products-hero__media-shade,
+  .contact-hero__media-shade,
+  .hrms-hero__media-shade,
+  .lead-hero__media-shade,
+  .inventory-hero__media-shade,
+  .ecommerce-hero__media-shade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 8, 18, 0.88) 0%,
+        rgba(3, 8, 18, 0.84) 34%,
+        rgba(3, 8, 18, 0.9) 68%,
+        rgba(3, 8, 18, 0.94) 100%
+      ) !important;
+  }
+
+  .products-hero__title,
+  .hrms-hero__title,
+  .lead-hero__title,
+  .inventory-hero__title,
+  .ecommerce-hero__title,
+  .services-hero__title,
+  .about-hero__title,
+  .contact-hero__title {
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .products-hero__lead,
+  .hrms-hero__lead,
+  .lead-hero__lead,
+  .inventory-hero__lead,
+  .ecommerce-hero__lead,
+  .services-hero__lead,
+  .about-hero__lead,
+  .contact-hero__lead {
+    color: rgba(255, 255, 255, 0.92) !important;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .products-hero__feature span,
+  .services-hero__feature-label,
+  .lead-hero__meta-label,
+  .ecommerce-hero__meta-label {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero,
+  .services-hero,
+  .products-hero,
+  .contact-hero,
+  .hrms-hero,
+  .lead-hero,
+  .inventory-hero,
+  .ecommerce-hero {
+    padding-top: calc(var(--header-h, 68px) + 16px + env(safe-area-inset-top, 0px));
+  }
+
+  /* Keep room below About CTAs for floating stats card */
+  .about-hero {
+    padding-bottom: 72px !important;
+  }
+
+  .about-hero__actions {
+    margin-bottom: 10px;
+  }
+
+  .about-hero__title,
+  .services-hero__title,
+  .products-hero__title,
+  .contact-hero__title,
+  .hrms-hero__title,
+  .lead-hero__title,
+  .inventory-hero__title,
+  .ecommerce-hero__title {
+    font-size: clamp(1.55rem, 6.6vw, 2.05rem);
+    line-height: 1.16;
+    letter-spacing: -0.03em;
+  }
+
+  .about-hero__lead,
+  .services-hero__lead,
+  .products-hero__lead,
+  .contact-hero__lead,
+  .hrms-hero__lead,
+  .lead-hero__lead,
+  .inventory-hero__lead,
+  .ecommerce-hero__lead {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .lead-hero__meta,
+  .ecommerce-hero__meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 12px;
+    text-align: center;
+  }
+
+  .lead-hero__meta-item,
+  .ecommerce-hero__meta-item {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .services-hero__features,
+  .products-hero__features {
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .services-hero__feature,
+  .products-hero__feature {
+    align-items: center !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero__title,
+  .services-hero__title,
+  .products-hero__title,
+  .contact-hero__title,
+  .hrms-hero__title,
+  .lead-hero__title,
+  .inventory-hero__title,
+  .ecommerce-hero__title {
+    font-size: clamp(1.45rem, 7vw, 1.85rem);
+  }
+
+  .about-hero__lead,
+  .services-hero__lead,
+  .products-hero__lead,
+  .contact-hero__lead,
+  .hrms-hero__lead,
+  .lead-hero__lead,
+  .inventory-hero__lead,
+  .ecommerce-hero__lead {
+    font-size: 0.88rem;
+  }
+
+  .about-hero__actions,
+  .services-hero__actions,
+  .hrms-hero__actions,
+  .lead-hero__actions,
+  .inventory-hero__actions,
+  .ecommerce-hero__actions {
+    max-width: none;
+  }
+}
+
+/* Kill left-only leftovers that fight centering */
+@media (max-width: 768px) {
+  .products-hero__lead {
+    text-align: center !important;
+  }
+
+  .products-hero__lead::before,
+  .products-hero__copy::before {
+    display: none !important;
+  }
+
+  .products-hero__features {
+    text-align: left;
+  }
+}

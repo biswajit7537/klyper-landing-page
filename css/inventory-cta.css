@@ -1,0 +1,329 @@
+/* ============================================
+   Inventory  -  CTA band (glass panel)
+   ============================================ */
+
+.inv-cta {
+  --ic-navy: #06152e;
+  --ic-navy-2: #0a1f45;
+  --ic-royal: #1d5eff;
+  --ic-cyan: #38bdf8;
+  --ic-cyan-2: #67e8f9;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(40px, 5vw, 68px) 0 clamp(48px, 5.5vw, 80px);
+  background: linear-gradient(180deg, #040d1a 0%, #0a1d37 46%, #0e2f5c 100%);
+  color: #fff;
+}
+
+.inv-cta__deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.inv-cta__wave {
+  display: none;
+  background: none;
+  opacity: 0;
+  filter: none;
+}
+
+.inv-cta__wave::before {
+  content: "";
+  position: absolute;
+  inset: 18% 8% 0;
+  border-radius: 55% 45% 48% 52% / 65% 55% 45% 50%;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.22), rgba(29, 94, 255, 0.38));
+  opacity: 0.85;
+}
+
+.inv-cta__building {
+  position: absolute;
+  left: max(0px, calc(50% - 560px));
+  bottom: 0;
+  width: min(240px, 24vw);
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.inv-cta__building img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left bottom;
+  filter: none;
+}
+
+.inv-cta__skyline {
+  position: absolute;
+  right: max(0px, calc(50% - 540px));
+  bottom: 12%;
+  width: min(320px, 34vw);
+  height: auto;
+  z-index: 1;
+  opacity: 0.45;
+  color: #7dd3fc;
+  pointer-events: none;
+}
+
+.inv-cta > .container {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+}
+
+/* Glass panel */
+.inv-cta__panel {
+  position: relative;
+  text-align: center;
+  padding: clamp(28px, 3.8vw, 44px) clamp(22px, 4.5vw, 56px) clamp(24px, 3.5vw, 36px);
+  border-radius: 26px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.06) 42%,
+    rgba(10, 40, 90, 0.28) 100%
+  );
+  border: 1.5px solid rgba(186, 230, 253, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.inv-cta__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    transparent 34%,
+    transparent 62%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.inv-cta__badge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 8px 16px 8px 12px;
+  border-radius: 999px;
+  background: rgba(7, 20, 40, 0.55);
+  border: 1px solid rgba(147, 197, 253, 0.45);
+  color: #e8f4ff;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+}
+
+.inv-cta__badge svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.inv-cta__title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.inv-cta__title-accent {
+  position: relative;
+  display: inline-block;
+  color: var(--ic-cyan-2);
+  background: linear-gradient(90deg, #67e8f9, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.inv-cta__title-underline {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: -7px;
+  width: 92%;
+  height: 12px;
+  overflow: visible;
+}
+
+.inv-cta__lead {
+  position: relative;
+  z-index: 1;
+  margin: 14px auto 22px;
+  max-width: 560px;
+  font-size: clamp(0.92rem, 1.3vw, 1.02rem);
+  line-height: 1.65;
+  color: rgba(226, 239, 255, 0.9);
+}
+
+.inv-cta__btn {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px 12px 26px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #eef4fb 100%);
+  color: #0a1f46;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: none;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.inv-cta__btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #ffffff 0%, #e2edf9 100%);
+}
+
+.inv-cta__btn-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #1d5eff;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.inv-cta__btn-arrow svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Reveal */
+.inv-cta .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.inv-cta .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .inv-cta {
+    padding: clamp(36px, 5vw, 56px) 0 clamp(44px, 5.5vw, 68px);
+  }
+
+  .inv-cta__building {
+    left: -4%;
+    width: min(220px, 34vw);
+    opacity: 0.9;
+  }
+
+  .inv-cta__skyline {
+    right: -6%;
+    width: min(240px, 40vw);
+    opacity: 0.35;
+  }
+
+  .inv-cta__panel {
+    border-radius: 24px;
+    padding: 32px 22px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .inv-cta {
+    padding: 32px 0 44px;
+  }
+
+  .inv-cta__building {
+    width: 42vw;
+    left: -10%;
+    bottom: -2%;
+    opacity: 0.55;
+  }
+
+  .inv-cta__skyline {
+    display: none;
+  }
+
+  .inv-cta__wave {
+    height: 180px;
+  }
+
+  .inv-cta__panel {
+    padding: 28px 18px 24px;
+    border-radius: 20px;
+  }
+
+  .inv-cta__badge {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+
+  .inv-cta__title {
+    font-size: clamp(1.35rem, 6.5vw, 1.75rem);
+  }
+
+  .inv-cta__lead {
+    margin: 14px auto 22px;
+    font-size: 0.95rem;
+  }
+
+  .inv-cta__btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .inv-cta__building {
+    opacity: 0.4;
+  }
+
+  .inv-cta__panel {
+    padding: 24px 14px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inv-cta .reveal,
+  .inv-cta .reveal.is-visible,
+  .inv-cta__btn:hover {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+[data-theme="dark"] .inv-cta {
+  background: linear-gradient(180deg, #050d1a 0%, #071428 50%, #0a1f46 100%);
+}

@@ -1,0 +1,197 @@
+/* ============================================
+   About Us  -  Stats Bar (floating under hero)
+   ============================================ */
+
+.about-stats {
+  --as-navy: #071428;
+  --as-royal: #2f7cf6;
+  --as-cyan: #00e5ff;
+  position: relative;
+  z-index: 3;
+  margin: -28px 0 8px;
+  padding: 0;
+  background: transparent;
+}
+
+.about-stats > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-stats__deco {
+  display: none;
+}
+
+.about-stats__panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 0;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 10px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #0b1a33 0%, #071428 100%);
+  border: 1.5px solid rgba(0, 229, 255, 0.75);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(0, 229, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.about-stats__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 16px;
+  min-width: 0;
+}
+
+.about-stats__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 18%;
+  right: 0;
+  bottom: 18%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(148, 180, 220, 0.35) 18%,
+    rgba(148, 180, 220, 0.35) 82%,
+    transparent
+  );
+}
+
+.about-stats__icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: linear-gradient(165deg, #0a1834 0%, #0d2248 55%, #081428 100%);
+  border: 1px solid rgba(0, 229, 255, 0.45);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.about-stats__icon svg {
+  width: 20px;
+  height: 20px;
+  color: #00e5ff;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: none;
+}
+
+.about-stats__copy {
+  min-width: 0;
+}
+
+.about-stats__value {
+  margin: 0;
+  font-family: var(--font-display, "Poppins", sans-serif);
+  font-size: clamp(1.2rem, 1.05rem + 0.55vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--as-royal);
+}
+
+.about-stats__label {
+  margin: 2px 0 0;
+  font-size: clamp(0.75rem, 0.72rem + 0.12vw, 0.86rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.about-stats .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-stats .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.about-stats .reveal-delay-1 { transition-delay: 0.06s; }
+.about-stats .reveal-delay-2 { transition-delay: 0.1s; }
+.about-stats .reveal-delay-3 { transition-delay: 0.14s; }
+.about-stats .reveal-delay-4 { transition-delay: 0.18s; }
+
+@media (max-width: 960px) {
+  .about-stats {
+    margin: -28px 0 6px;
+  }
+
+  .about-stats__panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 22px;
+    padding: 10px 8px;
+  }
+
+  .about-stats__item {
+    padding: 8px 12px;
+  }
+
+  .about-stats__item:nth-child(2)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-stats {
+    margin: -36px 0 8px;
+  }
+
+  .about-stats__panel {
+    grid-template-columns: 1fr;
+    border-radius: 18px;
+    padding: 6px 8px;
+  }
+
+  .about-stats__item {
+    padding: 10px 8px;
+  }
+
+  .about-stats__item:not(:last-child)::after {
+    top: auto;
+    right: 8%;
+    left: 8%;
+    bottom: 0;
+    width: auto;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(148, 180, 220, 0.35) 20%,
+      rgba(148, 180, 220, 0.35) 80%,
+      transparent
+    );
+  }
+
+  .about-stats__icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-stats .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
