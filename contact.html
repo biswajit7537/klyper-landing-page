@@ -1,439 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Klyper Technology - Get in touch for custom software development, SaaS solutions, and IT services. We're here to help your business grow.">
-    <meta name="keywords" content="contact Klyper Technology, software development inquiry, IT services contact, get quote">
-    <meta name="author" content="Klyper Technology">
-    <title>Contact Us - Klyper Technology</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
-    <meta name="theme-color" content="#fafbff" />
-    <script>
-      (function () {
-        var t = localStorage.getItem("theme");
-        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", t);
-        var m = document.querySelector('meta[name="theme-color"]');
-        if (m) m.content = t === "dark" ? "#020817" : "#fafbff";
-      })();
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Klyper Technology</title>
+  <meta name="description" content="Contact Klyper Technology &mdash; get in touch for demos, partnerships, support, or custom software solutions. We're ready to help." />
+  <script>
+    (function () {
+      document.documentElement.setAttribute("data-theme", "light");
+      try { localStorage.setItem("klyper-theme", "light"); } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css?v=88" />
+  <link rel="stylesheet" href="css/ote-hero.css?v=210" />
+  <link rel="stylesheet" href="css/site-nav.css?v=6" />
+  <link rel="stylesheet" href="css/contact-hero.css?v=220" />
+  <link rel="stylesheet" href="css/page-hero-mobile.css?v=5" />
+  <link rel="stylesheet" href="css/contact-panel.css?v=4" />
+  <link rel="stylesheet" href="css/contact-why.css?v=1" />
+  <link rel="stylesheet" href="css/contact-faq.css?v=1" />
+  <link rel="stylesheet" href="css/theme.css?v=213" />
+  <link rel="stylesheet" href="css/no-glow.css?v=15" />
+  <link rel="icon" href="assets/images/klyperlogo.webp" type="image/webp" />
+  <style>
+    html, body { overflow-x: hidden; max-width: 100%; }
+    .page-contact { width: 100%; max-width: 100%; overflow-x: hidden; }
+    .page-contact main { width: 100%; max-width: 100%; overflow-x: hidden; }
+    .page-contact .container { width: 100%; max-width: 1140px; margin-left: auto; margin-right: auto; padding-left: clamp(16px, 4vw, 24px); padding-right: clamp(16px, 4vw, 24px); box-sizing: border-box; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; color: #0a1628; }
+    .site-footer .logo-text, .site-footer .logo__text { color: #fff; }
+    @media (max-width: 480px) {
+}
+  </style>
 </head>
-<body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="index.html" class="logo">
-                        <div class="logo-icon">
-                            <img src="assets/images/klyperlogo.png" alt="Klyper Technology Logo" class="logo-svg">
-                        </div>
-                        <span class="logo-text">Klyper Technology</span>
-                    </a>
-                    
-                    <ul class="nav-menu" id="navMenu">
-                        <li><a href="index.html" class="nav-link">
-                            <span>Home</span>
-                        </a></li>
-                        <li class="nav-item-dropdown">
-                            <a href="services.html" class="nav-link">
-                                <span>Services</span>
-                                <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li><a href="products.html" class="nav-link">
-                            <span>Products</span>
-                        </a></li>
-                        <li><a href="industries.html" class="nav-link">
-                            <span>Industries</span>
-                        </a></li>
-                        <li><a href="about.html" class="nav-link">
-                            <span>About</span>
-                        </a></li>
-                        <li><a href="contact.html" class="btn-nav active">
-                            <span>Contact Us</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a></li>
-                    </ul>
-                    
-                    <div class="nav-actions">
-                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
-                            </svg>
-                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z"/>
-                            </svg>
-                        </button>
-                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                            <span class="menu-bar"></span>
-                            <span class="menu-bar"></span>
-                            <span class="menu-bar"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
-    </header>
+<body class="page-contact">
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="index.html" aria-label="Klyper Technology Home">
+          <img class="logo-icon" src="assets/images/klyperlogo.webp" alt="Klyper Technology Logo" />
+          <span class="logo-text">Klyper Technology</span>
+        </a>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Get In Touch</h1>
-            <p class="page-subtitle">Let's discuss how we can help transform your business with technology</p>
+        <ul class="nav-links" id="navLinks">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li class="has-dropdown">
+            <a href="products.html" class="nav-link">Products
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="products.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 3.5 7.5v9L12 21l8.5-4.5v-9L12 3Z"/><path d="M12 12 3.5 7.5M12 12l8.5-4.5M12 12v9"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">All Products</span>
+                    <span class="dropdown-desc">Explore our full product suite.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-hrms.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper HRMS</span>
+                    <span class="dropdown-desc">Attendance, payroll &amp; workforce ops.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-crm.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v4H4V4Zm2 6h12l-2 10H8L6 10Z"/><path d="M9 14h6"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper CRM</span>
+                    <span class="dropdown-desc">Capture, track &amp; convert leads.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-inventory-manager.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper Inventory Manager</span>
+                    <span class="dropdown-desc">Inventory &amp; stock management.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-ecommerce.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H7"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper E-commerce</span>
+                    <span class="dropdown-desc">Online store &amp; ecommerce platform.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+          <li><a class="nav-link active" href="contact.html">Contact Us</a></li>
+          <li class="nav-mobile-cta"><a href="contact.html">Get in Touch</a></li>
+        </ul>
+
+        <a class="btn btn-nav" href="contact.html">
+          Get in Touch
+          <span class="btn-arrow-circle" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero" id="contactHero" aria-labelledby="contactHeroHeading">
+      <div class="contact-hero__media" aria-hidden="true">
+        <img
+          class="contact-hero__media-img"
+          src="assets/images/products/contact_hero_bg.webp"
+          alt=""
+          width="1754"
+          height="897"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="contact-hero__media-shade"></div>
+      </div>
+
+      <div class="container contact-hero__content">
+        <div class="contact-hero__copy">
+          <p class="contact-hero__eyebrow reveal">Contact</p>
+
+          <h1 class="contact-hero__title reveal reveal-delay-1" id="contactHeroHeading">
+            Get in Touch
+          </h1>
+
+          <p class="contact-hero__lead reveal reveal-delay-2">
+            Tell us about your project &mdash; we will respond within 24 hours.
+          </p>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section contact-section-modern">
-        <div class="container">
-            <div class="contact-layout-modern">
-                <!-- Contact Form -->
-                <div class="contact-form-wrapper-modern animate-on-scroll">
-                    <div class="form-header-modern">
-                        <h2 class="form-title-modern">Send Us a Message</h2>
-                        <p class="form-subtitle-modern">Fill out the form below and we'll get back to you within 24 hours.</p>
-                    </div>
-                    
-                    <form class="contact-form-modern" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                        <!-- Web3Forms Access Key -->
-                        <input type="hidden" name="access_key" value="56937c98-91f2-4651-88ad-addbc51ca821">
-                        <input type="hidden" name="subject" value="New Contact Form Submission from Klyper Technology Website">
-                        <input type="hidden" name="from_name" value="Klyper Technology Contact Form">
-                        <input type="hidden" name="redirect" value="https://klypertechnology.com/contact.html?success=true">
-                        
-                        <div class="form-row-modern">
-                            <div class="form-group-modern">
-                                <label for="name" class="form-label-modern">Full Name *</label>
-                                <input 
-                                    type="text" 
-                                    id="name" 
-                                    name="name" 
-                                    class="form-input-modern" 
-                                    placeholder="John Doe"
-                                    required
-                                >
-                            </div>
+    <section class="contact-panel" id="contactPanel" aria-labelledby="contactFormHeading">
+      <div class="container">
+        <div class="contact-panel__shell reveal">
+          <div class="contact-panel__form-wrap">
+            <header class="contact-panel__form-head">
+              <h2 class="contact-panel__form-title" id="contactFormHeading">
+                Send Us a <span>Message</span>
+              </h2>
+              <p class="contact-panel__form-lead">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
+            </header>
 
-                            <div class="form-group-modern">
-                                <label for="email" class="form-label-modern">Email Address *</label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email" 
-                                    class="form-input-modern" 
-                                    placeholder="john@example.com"
-                                    required
-                                >
-                            </div>
-                        </div>
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="56937c98-91f2-4651-88ad-addbc51ca821" />
+              <input type="hidden" name="subject" value="New Contact Form Submission from Klyper Technology Website" />
+              <input type="hidden" name="from_name" value="Klyper Technology Contact Form" />
+              <input type="checkbox" name="botcheck" class="contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-                        <div class="form-row-modern">
-                            <div class="form-group-modern">
-                                <label for="phone" class="form-label-modern">Phone Number</label>
-                                <input 
-                                    type="tel" 
-                                    id="phone" 
-                                    name="phone" 
-                                    class="form-input-modern" 
-                                    placeholder="+1 (555) 123-4567"
-                                >
-                            </div>
+              <div class="contact-form__status" id="contactFormStatus" role="status" aria-live="polite" hidden></div>
 
-                            <div class="form-group-modern">
-                                <label for="company" class="form-label-modern">Company Name</label>
-                                <input 
-                                    type="text" 
-                                    id="company" 
-                                    name="company" 
-                                    class="form-input-modern" 
-                                    placeholder="Your Company"
-                                >
-                            </div>
-                        </div>
+              <div class="contact-form__grid">
+                <label class="contact-form__field">
+                  <span class="contact-form__label">Full Name *</span>
+                  <span class="contact-form__control">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+                    <input type="text" name="name" placeholder="Enter your full name" required autocomplete="name" />
+                  </span>
+                </label>
 
-                        <div class="form-row-modern">
-                            <div class="form-group-modern">
-                                <label for="service" class="form-label-modern">Service Interested In</label>
-                                <select id="service" name="service" class="form-input-modern">
-                                    <option value="">Select a service...</option>
-                                    <option value="custom-software">Custom Software Development</option>
-                                    <option value="ai-agents">Building Custom AI Agents</option>
-                                    <option value="web-mobile">Web & Mobile App Development</option>
-                                    <option value="maintenance">Software Maintenance & Support</option>
-                                    <option value="consultation">General Consultation</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
+                <label class="contact-form__field">
+                  <span class="contact-form__label">Email Address *</span>
+                  <span class="contact-form__control">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5v-11Z" stroke="currentColor" stroke-width="1.6"/><path d="m5.5 7.5 6.5 5 6.5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <input type="email" name="email" placeholder="Enter your email" required autocomplete="email" />
+                  </span>
+                </label>
 
-                            <div class="form-group-modern">
-                                <label for="product" class="form-label-modern">Product Interested In</label>
-                                <select id="product" name="product" class="form-input-modern">
-                                    <option value="">Select a product...</option>
-                                    <option value="real-estate-lead">Real-Estate Lead Management System</option>
-                                    <option value="real-estate-inventory">Real Estate Inventory Management</option>
-                                    <option value="custom-product">Custom Product Development</option>
-                                    <option value="not-applicable">Not Applicable</option>
-                                </select>
-                            </div>
-                        </div>
+                <label class="contact-form__field">
+                  <span class="contact-form__label">Phone Number</span>
+                  <span class="contact-form__control">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 4.5h3.2l1.2 3.2-2 1.2a12.5 12.5 0 0 0 5.2 5.2l1.2-2 3.2 1.2v3.2a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4.5 6.7a2 2 0 0 1 2-2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    <input type="tel" name="phone" placeholder="Enter your contact number" autocomplete="tel" />
+                  </span>
+                </label>
 
-                        <div class="form-group-modern">
-                            <label for="message" class="form-label-modern">Your Message *</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                class="form-textarea-modern" 
-                                rows="6"
-                                placeholder="Tell us about your project or inquiry..."
-                                required
-                            ></textarea>
-                        </div>
+                <label class="contact-form__field">
+                  <span class="contact-form__label">Company Name</span>
+                  <span class="contact-form__control">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20h16M6 20V9.5l6-4.5 6 4.5V20M10 20v-5h4v5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    <input type="text" name="company" placeholder="Your Company" autocomplete="organization" />
+                  </span>
+                </label>
 
-                        <button type="submit" class="btn-submit-modern">
-                            <span>Send Message</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="22" y1="2" x2="11" y2="13"></line>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                            </svg>
-                        </button>
-                        
-                        <p class="form-note-modern">* Required fields</p>
-                    </form>
-                </div>
+                <label class="contact-form__field">
+                  <span class="contact-form__label">Service Interested In</span>
+                  <span class="contact-form__control contact-form__control--select">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <select name="service">
+                      <option value="">Select a service</option>
+                      <option>Custom Software Development</option>
+                      <option>SaaS Product Development</option>
+                      <option>Web &amp; Mobile Development</option>
+                      <option>Custom AI Agents</option>
+                      <option>Business Automation</option>
+                      <option>Software Maintenance</option>
+                    </select>
+                  </span>
+                </label>
 
-                <!-- Contact Information -->
-                <div class="contact-info-wrapper-modern animate-on-scroll">
-                    <div class="contact-info-card-modern">
-                        <h2 class="contact-info-title-modern">Contact Information</h2>
-                        <p class="contact-info-subtitle-modern">Reach out to us through any of these channels</p>
+                <label class="contact-form__field">
+                  <span class="contact-form__label">Product Interested In</span>
+                  <span class="contact-form__control contact-form__control--select">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 3.5 7.5v9L12 21l8.5-4.5v-9L12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M12 12 3.5 7.5M12 12l8.5-4.5M12 12v9" stroke="currentColor" stroke-width="1.6"/></svg>
+                    <select name="product">
+                      <option value="">Select a product</option>
+                      <option>Klyper HRMS</option>
+                      <option>Klyper CRM</option>
+                      <option>Klyper Inventory Manager</option>
+                      <option>Klyper E-commerce</option>
+                      <option>Other</option>
+                    </select>
+                  </span>
+                </label>
+              </div>
 
-                        <div class="contact-info-items-modern">
-                            <div class="contact-info-item-modern">
-                                <div class="contact-icon-modern">📧</div>
-                                <div class="contact-info-content-modern">
-                                    <h3 class="contact-label-modern">Email</h3>
-                                    <a href="mailto:info@klypertechnology.com" class="contact-value-modern">info@klypertechnology.com</a>
-                                </div>
-                            </div>
+              <label class="contact-form__field contact-form__field--full">
+                <span class="contact-form__label">Your Message *</span>
+                <span class="contact-form__control contact-form__control--textarea">
+                  <textarea name="message" rows="3" placeholder="Tell us about your project or inquiry..." required></textarea>
+                </span>
+              </label>
 
-                            <div class="contact-info-item-modern">
-                                <div class="contact-icon-modern">📞</div>
-                                <div class="contact-info-content-modern">
-                                    <h3 class="contact-label-modern">Phone</h3>
-                                    <p class="contact-value-modern">Available via contact form</p>
-                                </div>
-                            </div>
+              <div class="contact-form__footer">
+                <p class="contact-form__hint">* Required fields</p>
+                <button class="contact-form__submit" type="submit" id="contactFormSubmit">
+                  <span class="contact-form__submit-label">Send Message</span>
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5 20 4l-4.5 16-3.2-6.2L4 11.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </form>
+          </div>
 
-                            <div class="contact-info-item-modern">
-                                <div class="contact-icon-modern">⏰</div>
-                                <div class="contact-info-content-modern">
-                                    <h3 class="contact-label-modern">Business Hours</h3>
-                                    <p class="contact-value-modern">Mon - Fri: 9:00 AM - 6:00 PM</p>
-                                    <p class="contact-value-sub-modern">Support: 24/7</p>
-                                </div>
-                            </div>
+          <aside class="contact-panel__info" aria-labelledby="contactInfoHeading">
+            <h2 class="contact-panel__info-title" id="contactInfoHeading">
+              Contact <span>Information</span>
+            </h2>
 
-                            <div class="contact-info-item-modern">
-                                <div class="contact-icon-modern">🌍</div>
-                                <div class="contact-info-content-modern">
-                                    <h3 class="contact-label-modern">Location</h3>
-                                    <p class="contact-value-modern">Serving clients worldwide</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-features-modern">
-                        <div class="contact-feature-item-modern">
-                            <div class="feature-icon-modern">✓</div>
-                            <div class="feature-text-modern">
-                                <strong>Fast Response</strong>
-                                <p>Within 24 hours</p>
-                            </div>
-                        </div>
-                        <div class="contact-feature-item-modern">
-                            <div class="feature-icon-modern">✓</div>
-                            <div class="feature-text-modern">
-                                <strong>Free Consultation</strong>
-                                <p>No cost assessment</p>
-                            </div>
-                        </div>
-                        <div class="contact-feature-item-modern">
-                            <div class="feature-icon-modern">✓</div>
-                            <div class="feature-text-modern">
-                                <strong>No Obligations</strong>
-                                <p>Ask freely</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ul class="contact-info" role="list">
+              <li class="contact-info__item">
+                <span class="contact-info__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5v-11Z" stroke="currentColor" stroke-width="1.7"/><path d="m5.5 7.5 6.5 5 6.5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="contact-info__copy">
+                  <span class="contact-info__label">Email</span>
+                  <a class="contact-info__value" href="mailto:info@klypertechnology.com">info@klypertechnology.com</a>
+                </span>
+              </li>
+              <li class="contact-info__item">
+                <span class="contact-info__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M6.5 4.5h3.2l1.2 3.2-2 1.2a12.5 12.5 0 0 0 5.2 5.2l1.2-2 3.2 1.2v3.2a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4.5 6.7a2 2 0 0 1 2-2.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="contact-info__copy">
+                  <span class="contact-info__label">Phone</span>
+                  <a class="contact-info__value" href="tel:+917855079698">+91 78550 79698</a>
+                </span>
+              </li>
+              <li class="contact-info__item">
+                <span class="contact-info__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="15" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 3.5v3M16 3.5v3M3.5 10h17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                </span>
+                <span class="contact-info__copy">
+                  <span class="contact-info__label">Business Hours</span>
+                  <span class="contact-info__value">Mon - Fri: 9:00 AM - 6:00 PM</span>
+                </span>
+              </li>
+              <li class="contact-info__item">
+                <span class="contact-info__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 14.2h2.6a1.8 1.8 0 0 1 1.8 1.8v2.4A1.8 1.8 0 0 1 6.6 20.2H5.4A1.8 1.8 0 0 1 3.6 18.4v-6.2a8.4 8.4 0 0 1 16.8 0v6.2a1.8 1.8 0 0 1-1.8 1.8h-1.2a1.8 1.8 0 0 1-1.8-1.8v-2.4a1.8 1.8 0 0 1 1.8-1.8H20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="contact-info__copy">
+                  <span class="contact-info__label">Support</span>
+                  <span class="contact-info__value">24/7</span>
+                </span>
+              </li>
+              <li class="contact-info__item">
+                <span class="contact-info__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+                </span>
+                <span class="contact-info__copy">
+                  <span class="contact-info__label">Location</span>
+                  <address class="contact-info__value contact-info__address">
+                    Plot No:- 2377/9633,<br />
+                    Near SR Valley, Elegance Villa,<br />
+                    Puri Bypass, NH-316, Badagada,<br />
+                    Bhubaneswar, India, 751018
+                  </address>
+                  <span class="contact-info__note">Serving clients worldwide</span>
+                </span>
+              </li>
+            </ul>
+          </aside>
         </div>
+      </div>
     </section>
 
-    <!-- Why Contact Us -->
-    <section class="section why-contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Reach Out to Us?</h2>
-                <p class="section-description">Here's what you can expect when you contact XYZ Technology</p>
-            </div>
-            
-            <div class="why-contact-grid">
-                <div class="why-contact-card">
-                    <div class="why-contact-icon">✓</div>
-                    <h3 class="why-contact-title">Fast Response</h3>
-                    <p class="why-contact-description">We respond to all inquiries within 24 hours on business days.</p>
-                </div>
+    <section class="contact-why" id="whyReachOut" aria-labelledby="contactWhyHeading">
+      <div class="container">
+        <header class="contact-why__head reveal">
+          <h2 class="contact-why__title" id="contactWhyHeading">
+            Why <span>Reach Out</span> to Us?
+          </h2>
+          <p class="contact-why__lead">
+            Here's what you can expect when you contact Klyper Technology.
+          </p>
+        </header>
 
-                <div class="why-contact-card">
-                    <div class="why-contact-icon">✓</div>
-                    <h3 class="why-contact-title">Free Consultation</h3>
-                    <p class="why-contact-description">Get expert advice and project assessment at no cost.</p>
-                </div>
+        <div class="contact-why__grid">
+          <article class="contact-why__card reveal">
+            <span class="contact-why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M13 3 5.5 13.5H12l-.8 7.5L18.5 10H12l1-7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="contact-why__card-title">Fast Response</h3>
+            <p class="contact-why__card-text">We respond to all inquiries within 24 hours on business days.</p>
+          </article>
 
-                <div class="why-contact-card">
-                    <div class="why-contact-icon">✓</div>
-                    <h3 class="why-contact-title">No Obligations</h3>
-                    <p class="why-contact-description">Feel free to ask questions without any commitment.</p>
-                </div>
+          <article class="contact-why__card reveal reveal-delay-1">
+            <span class="contact-why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+            <h3 class="contact-why__card-title">Free Consultation</h3>
+            <p class="contact-why__card-text">Get expert advice and project assessment at no cost.</p>
+          </article>
 
-                <div class="why-contact-card">
-                    <div class="why-contact-icon">✓</div>
-                    <h3 class="why-contact-title">Transparent Pricing</h3>
-                    <p class="why-contact-description">Clear, detailed quotes with no hidden costs.</p>
-                </div>
-            </div>
+          <article class="contact-why__card reveal reveal-delay-2">
+            <span class="contact-why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 19.5 7v5.2c0 4.3-3.1 7.8-7.5 8.8-4.4-1-7.5-4.5-7.5-8.8V7L12 3.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9.2 12.1 1.9 1.9 3.8-3.9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="contact-why__card-title">No Obligations</h3>
+            <p class="contact-why__card-text">Feel free to ask questions without any commitment.</p>
+          </article>
+
+          <article class="contact-why__card reveal reveal-delay-3">
+            <span class="contact-why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.2 20.2 7.4 12 11.6 3.8 7.4 12 3.2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m3.8 11.2 8.2 4.2 8.2-4.2M3.8 15 12 19.2 20.2 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="contact-why__card-title">Transparent Pricing</h3>
+            <p class="contact-why__card-text">Clear, detailed quotes with no hidden costs.</p>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-description">Quick answers to common questions</p>
+    <section class="contact-faq" id="contactFaq" aria-labelledby="contactFaqHeading">
+      <div class="contact-faq__deco" aria-hidden="true"></div>
+      <div class="container contact-faq__grid">
+        <header class="contact-faq__head reveal">
+          <p class="contact-faq__eyebrow">// FAQ</p>
+          <h2 class="contact-faq__title" id="contactFaqHeading">
+            Frequently Asked
+            <span class="contact-faq__title-accent">
+              Questions
+            </span>
+          </h2>
+        </header>
+
+        <div class="contact-faq__list" id="contactFaqList">
+          <article class="contact-faq__item is-open reveal">
+            <button class="contact-faq__trigger" type="button" aria-expanded="true">
+              <span class="contact-faq__num">01</span>
+              <span class="contact-faq__question">How long does it take to develop a custom software solution?</span>
+              <span class="contact-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="contact-faq__panel">
+              <p>Project timelines vary based on complexity and scope. A simple web application might take 6-8 weeks, while complex enterprise solutions can take 3-6 months or more. We'll provide a detailed timeline during our initial consultation.</p>
             </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3 class="faq-question">How long does it take to develop a custom software solution?</h3>
-                    <p class="faq-answer">Project timelines vary based on complexity and scope. A simple web application might take 6-8 weeks, while complex enterprise solutions can take 3-6 months or more. We'll provide a detailed timeline during our initial consultation.</p>
-                </div>
+          </article>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">What is your development process?</h3>
-                    <p class="faq-answer">We follow an agile development methodology with six key phases: Discovery, Design, Development, Testing, Deployment, and Support. We keep you involved throughout the process with regular updates and feedback sessions.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="faq-question">Do you provide ongoing support after launch?</h3>
-                    <p class="faq-answer">Yes! We offer comprehensive maintenance and support packages including bug fixes, security updates, feature enhancements, and 24/7 technical support to ensure your software runs smoothly.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="faq-question">Can you work with our existing systems?</h3>
-                    <p class="faq-answer">Absolutely. We specialize in integrating new solutions with existing systems, databases, and third-party APIs. We'll assess your current infrastructure and design seamless integrations.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="faq-question">What industries do you serve?</h3>
-                    <p class="faq-answer">We serve multiple industries including Real Estate, Education, Healthcare, Retail & E-commerce, and Startups & SMEs. Our team has deep domain expertise across these sectors.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="faq-question">How do you ensure project quality?</h3>
-                    <p class="faq-answer">We maintain high quality through code reviews, comprehensive testing (unit, integration, and user acceptance testing), security audits, and adherence to industry best practices and coding standards.</p>
-                </div>
+          <article class="contact-faq__item reveal">
+            <button class="contact-faq__trigger" type="button" aria-expanded="false">
+              <span class="contact-faq__num">02</span>
+              <span class="contact-faq__question">What is your development process?</span>
+              <span class="contact-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="contact-faq__panel">
+              <p>We follow an agile development methodology with six key phases: Discovery, Design, Development, Testing, Deployment, and Support. We keep you involved throughout the process with regular updates and feedback sessions.</p>
             </div>
+          </article>
+
+          <article class="contact-faq__item reveal">
+            <button class="contact-faq__trigger" type="button" aria-expanded="false">
+              <span class="contact-faq__num">03</span>
+              <span class="contact-faq__question">Do you provide ongoing support after launch?</span>
+              <span class="contact-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="contact-faq__panel">
+              <p>Yes! We offer comprehensive maintenance and support packages including bug fixes, security updates, feature enhancements, and 24/7 technical support to ensure your software runs smoothly.</p>
+            </div>
+          </article>
+
+          <article class="contact-faq__item reveal">
+            <button class="contact-faq__trigger" type="button" aria-expanded="false">
+              <span class="contact-faq__num">04</span>
+              <span class="contact-faq__question">Can you work with our existing systems?</span>
+              <span class="contact-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="contact-faq__panel">
+              <p>Absolutely. We specialize in integrating new solutions with existing systems, databases, and third-party APIs. We'll assess your current infrastructure and design seamless integrations.</p>
+            </div>
+          </article>
+
+          <article class="contact-faq__item reveal">
+            <button class="contact-faq__trigger" type="button" aria-expanded="false">
+              <span class="contact-faq__num">05</span>
+              <span class="contact-faq__question">What industries do you serve?</span>
+              <span class="contact-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="contact-faq__panel">
+              <p>We serve multiple industries including Real Estate, Education, Healthcare, Retail &amp; E-commerce, and Startups &amp; SMEs. Our team has deep domain expertise across these sectors.</p>
+            </div>
+          </article>
+
+          <article class="contact-faq__item reveal">
+            <button class="contact-faq__trigger" type="button" aria-expanded="false">
+              <span class="contact-faq__num">06</span>
+              <span class="contact-faq__question">How do you ensure project quality?</span>
+              <span class="contact-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="contact-faq__panel">
+              <p>We maintain high quality through code reviews, comprehensive testing (unit, integration, and user acceptance testing), security audits, and adherence to industry best practices and coding standards.</p>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="footer-title">Klyper Technology</h3>
-                    <p class="footer-description">Empowering businesses with innovative software solutions and cutting-edge technology.</p>
-                    <div class="footer-social">
-                        <h4 class="footer-social-title">Follow Us</h4>
-                         <div class="social-icons">
-                            <a href="https://www.linkedin.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            </a>
-                            <a href="https://www.instagram.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            </a>
-                            <a href="https://www.facebook.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                            </a>
-                            <a href="https://x.com/KlyperTech" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                            </a>
-                            <a href="https://www.youtube.com/@klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">Custom Software</a></li>
-                        <li><a href="services.html">SaaS Development</a></li>
-                        <li><a href="services.html">Web & Mobile Apps</a></li>
-                        <li><a href="services.html">Support & Maintenance</a></li>
-                        <li><a href="services.html">Custom AI Agents</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><a href="tel:+917855079698">+91 78550 79698</a></li>
-                        <li><a href="mailto:klypertechnology@gmail.com">klypertechnology@gmail.com</a></li>
-                        <li><a href="contact.html">Contact Form</a></li>
-                    </ul>
-                    <div style="margin-top: 1.5rem;">
-                        <h4 class="footer-heading">Office Address</h4>
-                        <p class="footer-address">
-                            <span class="footer-address-icon">📍</span>
-                            Plot No:- 2377/9633,<br>
-                            Near SR Valley, Elegance Villa,<br>
-                            Puri Bypass, NH-316, Badagada,<br>
-                            Bhubaneswar, India, 751018
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Klyper Technology. All rights reserved.</p>
-            </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/images/klyperlogo.webp" alt="" width="48" height="48" />
+            <span class="logo__text">Klyper Technology</span>
+          </a>
+          <p>Empowering businesses with innovative software solutions and cutting-edge technology.</p>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#customSoftware">Custom Software</a></li>
+            <li><a href="services.html#webMobile">Web &amp; Mobile Apps</a></li>
+            <li><a href="services.html#aiAgents">Custom AI Agents</a></li>
+            <li><a href="services.html#automation">Business Automation</a></li>
+            <li><a href="services.html#maintenance">Support &amp; Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:+917855079698">+91 78550 79698</a></li>
+            <li><a href="mailto:info@klypertechnology.com">info@klypertechnology.com</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+          <address style="margin-top: 1rem;">
+            Plot No:- 2377/9633,<br />
+            Near SR Valley, Elegance Villa,<br />
+            Puri Bypass, NH-316, Badagada,<br />
+            Bhubaneswar, India, 751018
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Klyper Technology. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=167"></script>
+  <script src="js/contact-faq.js?v=1"></script>
+  <script src="js/contact-form.js?v=1"></script>
 </body>
 </html>
-

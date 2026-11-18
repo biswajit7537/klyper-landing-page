@@ -1,427 +1,963 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Klyper Technology - Leading IT services company specializing in custom software development and SaaS solutions. Learn about our mission, vision, and values.">
-    <meta name="keywords" content="about Klyper Technology, IT company, software development company, mission vision">
-    <meta name="author" content="Klyper Technology">
-    <title>About Us - Klyper Technology</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
-    <meta name="theme-color" content="#fafbff" />
-    <script>
-      (function () {
-        var t = localStorage.getItem("theme");
-        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", t);
-        var m = document.querySelector('meta[name="theme-color"]');
-        if (m) m.content = t === "dark" ? "#020817" : "#fafbff";
-      })();
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Klyper Technology</title>
+  <meta name="description" content="About Klyper Technology &mdash; empowering businesses through innovative, scalable software solutions that help teams grow and work smarter." />
+  <script>
+    (function () {
+      document.documentElement.setAttribute("data-theme", "light");
+      try { localStorage.setItem("klyper-theme", "light"); } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css?v=88" />
+  <link rel="stylesheet" href="css/ote-hero.css?v=210" />
+  <link rel="stylesheet" href="css/site-nav.css?v=6" />
+  <link rel="stylesheet" href="css/about-hero.css?v=131" />
+  <link rel="stylesheet" href="css/page-hero-mobile.css?v=5" />
+  <link rel="stylesheet" href="css/about-stats.css?v=159" />
+  <link rel="stylesheet" href="css/about-who.css?v=130" />
+  <link rel="stylesheet" href="css/about-mission.css?v=147" />
+  <link rel="stylesheet" href="css/about-values.css?v=12" />
+  <link rel="stylesheet" href="css/about-apart.css?v=156" />
+  <link rel="stylesheet" href="css/theme.css?v=213" />
+  <link rel="stylesheet" href="css/no-glow.css?v=15" />
+  <link rel="icon" href="assets/images/klyperlogo.webp" type="image/webp" />
+  <style>
+    html, body { overflow-x: hidden; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; color: #0a1628; }
+    .site-footer .logo-text, .site-footer .logo__text { color: #fff; }
+  </style>
 </head>
-<body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="index.html" class="logo">
-                        <div class="logo-icon">
-                            <img src="assets/images/klyperlogo.png" alt="Klyper Technology Logo" class="logo-svg">
-                        </div>
-                        <span class="logo-text">Klyper Technology</span>
-                    </a>
-                    
-                    <ul class="nav-menu" id="navMenu">
-                        <li><a href="index.html" class="nav-link">
-                            <span>Home</span>
-                        </a></li>
-                        <li class="nav-item-dropdown">
-                            <a href="services.html" class="nav-link">
-                                <span>Services</span>
-                                <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li><a href="products.html" class="nav-link">
-                            <span>Products</span>
-                        </a></li>
-                        <li><a href="industries.html" class="nav-link">
-                            <span>Industries</span>
-                        </a></li>
-                        <li><a href="about.html" class="nav-link active">
-                            <span>About</span>
-                        </a></li>
-                        <li><a href="contact.html" class="btn-nav">
-                            <span>Contact Us</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a></li>
-                    </ul>
-                    
-                    <div class="nav-actions">
-                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
-                            </svg>
-                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z"/>
-                            </svg>
-                        </button>
-                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                            <span class="menu-bar"></span>
-                            <span class="menu-bar"></span>
-                            <span class="menu-bar"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
-    </header>
+<body class="page-about">
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="index.html" aria-label="Klyper Technology Home">
+          <img class="logo-icon" src="assets/images/klyperlogo.webp" alt="Klyper Technology Logo" />
+          <span class="logo-text">Klyper Technology</span>
+        </a>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">About Klyper Technology</h1>
-            <p class="page-subtitle">Empowering businesses through innovative technology solutions</p>
+        <ul class="nav-links" id="navLinks">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li class="has-dropdown">
+            <a href="products.html" class="nav-link">Products
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="products.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 3.5 7.5v9L12 21l8.5-4.5v-9L12 3Z"/><path d="M12 12 3.5 7.5M12 12l8.5-4.5M12 12v9"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">All Products</span>
+                    <span class="dropdown-desc">Explore our full product suite.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-hrms.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper HRMS</span>
+                    <span class="dropdown-desc">Attendance, payroll &amp; workforce ops.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-crm.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v4H4V4Zm2 6h12l-2 10H8L6 10Z"/><path d="M9 14h6"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper CRM</span>
+                    <span class="dropdown-desc">Capture, track &amp; convert leads.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-inventory-manager.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper Inventory Manager</span>
+                    <span class="dropdown-desc">Inventory &amp; stock management.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-ecommerce.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H7"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper E-commerce</span>
+                    <span class="dropdown-desc">Online store &amp; ecommerce platform.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link active" href="about.html">About Us</a></li>
+          <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-mobile-cta"><a href="contact.html">Get in Touch</a></li>
+        </ul>
+
+        <a class="btn btn-nav" href="contact.html">
+          Get in Touch
+          <span class="btn-arrow-circle">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero" id="aboutHero" aria-labelledby="aboutHeroHeading">
+      <div class="about-hero__media" aria-hidden="true">
+        <img
+          class="about-hero__media-img"
+          src="assets/images/about/about-hero-bg.webp?v=112"
+          alt=""
+          width="1920"
+          height="960"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="about-hero__media-shade"></div>
+      </div>
+
+      <div class="container about-hero__content">
+        <div class="about-hero__copy">
+          <p class="about-hero__badge reveal">
+            <span class="about-hero__badge-dot" aria-hidden="true"></span>
+            About Klyper Technology
+          </p>
+
+          <h1 class="about-hero__title reveal reveal-delay-1" id="aboutHeroHeading">
+            <span class="about-hero__title-line">Empowering Businesses</span>
+            <span class="about-hero__rule" aria-hidden="true"></span>
+            <span class="about-hero__title-line">
+              Through <span class="about-hero__title-accent">Technology</span>
+            </span>
+          </h1>
+
+          <p class="about-hero__lead reveal reveal-delay-2">
+            We build innovative, scalable software solutions that help businesses grow and work smarter.
+          </p>
+
+          <div class="about-hero__actions reveal reveal-delay-3">
+            <a class="about-hero__btn about-hero__btn--primary" href="#who-we-are">Our Story</a>
+            <a class="about-hero__btn about-hero__btn--ghost" href="contact.html">Get in Touch</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Company Overview -->
-    <section class="section about-overview">
-        <div class="container">
-            <div class="about-intro-modern animate-on-scroll">
-                <h2 class="section-title">Who We Are</h2>
-                <p class="about-lead-text">Klyper Technology is a leading IT services and software development company dedicated to helping businesses transform through technology.</p>
+    <div class="about-stats" id="about-stats" aria-label="Klyper Technology key statistics">
+      <div class="container">
+        <div class="about-stats__panel reveal">
+          <article class="about-stats__item reveal reveal-delay-1">
+            <span class="about-stats__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3.2 20.2 7.4 12 11.6 3.8 7.4 12 3.2z"/>
+                <path d="m3.8 11.2 8.2 4.2 8.2-4.2"/>
+                <path d="m3.8 15 8.2 4.2 8.2-4.2"/>
+              </svg>
+            </span>
+            <div class="about-stats__copy">
+              <p class="about-stats__value">100+</p>
+              <p class="about-stats__label">Projects Completed</p>
             </div>
-            <div class="about-stats-modern">
-                <div class="stat-card-modern animate-on-scroll">
-                    <div class="stat-icon-modern">🎯</div>
-                    <div class="stat-number-modern">100+</div>
-                    <div class="stat-label-modern">Projects Delivered</div>
-                </div>
-                <div class="stat-card-modern animate-on-scroll">
-                    <div class="stat-icon-modern">🤝</div>
-                    <div class="stat-number-modern">50+</div>
-                    <div class="stat-label-modern">Happy Clients</div>
-                </div>
-                <div class="stat-card-modern animate-on-scroll">
-                    <div class="stat-icon-modern">🏆</div>
-                    <div class="stat-number-modern">5+</div>
-                    <div class="stat-label-modern">Years Experience</div>
-                </div>
-                <div class="stat-card-modern animate-on-scroll">
-                    <div class="stat-icon-modern">🌍</div>
-                    <div class="stat-number-modern">5+</div>
-                    <div class="stat-label-modern">Industries Served</div>
-                </div>
+          </article>
+
+          <article class="about-stats__item reveal reveal-delay-2">
+            <span class="about-stats__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="7.2" r="2.4"/>
+                <circle cx="6.2" cy="8.2" r="2"/>
+                <circle cx="17.8" cy="8.2" r="2"/>
+                <path d="M12 10.4c-2.5 0-4.4 1.5-4.8 3.6"/>
+                <path d="M12 10.4c2.5 0 4.4 1.5 4.8 3.6"/>
+                <path d="M6.2 11.1c-2.05.2-3.5 1.35-3.85 3.05"/>
+                <path d="M17.8 11.1c2.05.2 3.5 1.35 3.85 3.05"/>
+              </svg>
+            </span>
+            <div class="about-stats__copy">
+              <p class="about-stats__value">50+</p>
+              <p class="about-stats__label">Happy Clients</p>
             </div>
-            <div class="about-content-modern animate-on-scroll">
-                <p class="about-text-modern">We specialize in creating tailored software solutions for small to mid-size businesses, startups, and enterprises across various industries including real estate, education, healthcare, retail, and more. Our team of experienced developers, designers, and technology consultants work collaboratively to understand your unique challenges and deliver solutions that exceed expectations.</p>
-                <p class="about-text-modern">With a strong focus on quality, innovation, and customer satisfaction, our commitment to excellence and continuous improvement has made us a trusted technology partner for businesses looking to scale and succeed in the digital age.</p>
+          </article>
+
+          <article class="about-stats__item reveal reveal-delay-3">
+            <span class="about-stats__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20h16"/>
+                <path d="M6 20V9.5l6-4.5 6 4.5V20"/>
+                <path d="M10 20v-5h4v5"/>
+                <path d="M9 12h1.5M13.5 12H15M9 15h1.5M13.5 15H15"/>
+              </svg>
+            </span>
+            <div class="about-stats__copy">
+              <p class="about-stats__value">5+</p>
+              <p class="about-stats__label">Industries Served</p>
             </div>
+          </article>
+
+          <article class="about-stats__item reveal reveal-delay-4">
+            <span class="about-stats__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 14.2h2.6a1.8 1.8 0 0 1 1.8 1.8v2.4A1.8 1.8 0 0 1 6.6 20.2H5.4A1.8 1.8 0 0 1 3.6 18.4v-6.2a8.4 8.4 0 0 1 16.8 0v6.2a1.8 1.8 0 0 1-1.8 1.8h-1.2a1.8 1.8 0 0 1-1.8-1.8v-2.4a1.8 1.8 0 0 1 1.8-1.8H20"/>
+              </svg>
+            </span>
+            <div class="about-stats__copy">
+              <p class="about-stats__value">24/7</p>
+              <p class="about-stats__label">Support Available</p>
+            </div>
+          </article>
         </div>
+      </div>
+    </div>
+
+
+        <section class="about-who" id="who-we-are" aria-labelledby="whoWeAreHeading">
+    <div class="about-who__atmos" aria-hidden="true">
+        <span class="about-who__orb about-who__orb--a"></span>
+        <span class="about-who__orb about-who__orb--b"></span>
+        <span class="about-who__orb about-who__orb--c"></span>
+        <span class="about-who__grid-fade"></span>
+        <span class="about-who__shine"></span>
+      </div>
+      <div class="container">
+        <div class="about-who__grid">
+          <div class="about-who__copy">
+            <p class="about-who__eyebrow reveal">
+              <span class="about-who__eyebrow-line" aria-hidden="true"></span>
+              Who We Are
+            </p>
+
+            <h2 class="about-who__title reveal reveal-delay-1" id="whoWeAreHeading">
+              Building Technology That Moves<br />
+              <span class="about-who__title-accent">Businesses Forward</span>
+            </h2>
+
+            <p class="about-who__text reveal reveal-delay-2">
+              <strong>Klyper Technology</strong> is a premier IT services company specializing in custom software development
+              and innovative SaaS solutions. We help businesses of all sizes leverage technology to achieve
+              their strategic goals.
+            </p>
+            <p class="about-who__text reveal reveal-delay-2">
+              With expertise spanning multiple industries, we deliver scalable, secure, and user-friendly
+              software that drives real business results.
+            </p>
+            <p class="about-who__text reveal reveal-delay-3">
+              Our team of experienced developers and designers is passionate about creating exceptional digital
+              experiences that transform how businesses operate and compete in the modern marketplace.
+            </p>
+          </div>
+
+          <div class="about-who__visual reveal reveal-delay-2">
+            <img
+              class="about-who__visual-img"
+              src="assets/images/about/who-we-are-stats.webp?v=122"
+              alt="Klyper Technology highlights &mdash; 100+ projects delivered, 50+ happy clients, 5+ years experience, 5+ industries served"
+              width="900"
+              height="900"
+              decoding="async"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <section class="section mission-vision">
-        <div class="container">
-            <div class="mv-grid">
-                <div class="mv-card">
-                    <div class="mv-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 6v6l4 2" />
-                        </svg>
-                    </div>
-                    <h2 class="mv-title">Our Mission</h2>
-                    <p class="mv-description">To empower businesses of all sizes with innovative, scalable, and user-friendly software solutions that drive growth, efficiency, and competitive advantage. We strive to make enterprise-grade technology accessible to every business, regardless of size or budget.</p>
-                </div>
+    <section class="about-mv" id="mission-vision" aria-labelledby="purposeHeading">
+      <div class="container">
+        <header class="about-mv__header reveal">
+          <p class="about-mv__eyebrow">
+            <span class="about-mv__eyebrow-line" aria-hidden="true"></span>
+            Our Purpose
+            <span class="about-mv__eyebrow-line" aria-hidden="true"></span>
+          </p>
+          <h2 class="about-mv__title" id="purposeHeading">
+            Our <span class="about-mv__title-accent">Mission</span>,
+            Our <span class="about-mv__title-accent">Vision</span>
+            &amp; Our <span class="about-mv__title-accent">Values</span>
+          </h2>
+        </header>
 
-                <div class="mv-card">
-                    <div class="mv-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                            <circle cx="12" cy="12" r="3" />
-                        </svg>
-                    </div>
-                    <h2 class="mv-title">Our Vision</h2>
-                    <p class="mv-description">To become a global leader in software innovation, recognized for delivering transformative technology solutions that shape the future of business. We envision a world where every business has access to powerful software tools that enable them to thrive in the digital economy.</p>
-                </div>
+        <div class="about-mv__grid">
+          <article class="mv-pillar reveal" aria-labelledby="missionHeading">
+            <div class="mv-badge">
+              <svg class="mv-badge__ring" viewBox="0 0 120 120" aria-hidden="true">
+                <defs>
+                  <linearGradient id="mvRingGrad1" x1="1" y1="0" x2="0" y2="1">
+                    <stop stop-color="#38bdf8"/><stop offset="0.45" stop-color="#2563eb"/><stop offset="1" stop-color="#1e3a8a"/>
+                  </linearGradient>
+                </defs>
+                <path class="mv-badge__ring-dots" d="M60 11 A49 49 0 0 0 60 109" fill="none"/>
+                <path class="mv-badge__ring-solid" d="M60 11 A49 49 0 0 1 60 109" fill="none" stroke="url(#mvRingGrad1)"/>
+              </svg>
+              <span class="mv-badge__disc" aria-hidden="true">
+                <svg class="mv-badge__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="mvMissionG" x1="8" y1="6" x2="40" y2="42" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#38bdf8"/><stop offset="0.55" stop-color="#2563eb"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="22" cy="24" r="14" stroke="url(#mvMissionG)" stroke-width="2.4"/>
+                  <circle cx="22" cy="24" r="8.5" stroke="url(#mvMissionG)" stroke-width="2.2"/>
+                  <circle cx="22" cy="24" r="3.2" fill="url(#mvMissionG)"/>
+                  <path d="M30.5 15.5 42 8l-2.2 12.2-3.4-3.4-6.6 6.6-2.2-2.2 6.6-6.6-3.7-3.1Z" fill="url(#mvMissionG)"/>
+                </svg>
+              </span>
             </div>
+            <h3 class="mv-pillar__label" id="missionHeading">Our Mission</h3>
+            <span class="mv-pillar__sep" aria-hidden="true">
+              <span class="mv-pillar__sep-line"></span>
+              <span class="mv-pillar__sep-dot"></span>
+              <span class="mv-pillar__sep-line"></span>
+            </span>
+            <p class="mv-pillar__text">
+              To empower businesses of all sizes with innovative, scalable, and user-friendly software solutions that drive growth, efficiency, and competitive advantage.
+            </p>
+          </article>
+
+          <article class="mv-pillar reveal reveal-delay-1" aria-labelledby="visionHeading">
+            <div class="mv-badge">
+              <svg class="mv-badge__ring" viewBox="0 0 120 120" aria-hidden="true">
+                <defs>
+                  <linearGradient id="mvRingGrad2" x1="1" y1="0" x2="0" y2="1">
+                    <stop stop-color="#38bdf8"/><stop offset="0.45" stop-color="#2563eb"/><stop offset="1" stop-color="#1e3a8a"/>
+                  </linearGradient>
+                </defs>
+                <path class="mv-badge__ring-dots" d="M60 11 A49 49 0 0 0 60 109" fill="none"/>
+                <path class="mv-badge__ring-solid" d="M60 11 A49 49 0 0 1 60 109" fill="none" stroke="url(#mvRingGrad2)"/>
+              </svg>
+              <span class="mv-badge__disc" aria-hidden="true">
+                <svg class="mv-badge__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="mvVisionG" x1="6" y1="8" x2="42" y2="40" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#38bdf8"/><stop offset="0.55" stop-color="#2563eb"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M24 12c-7.2 0-13.2 4.2-17.2 10.8a2.2 2.2 0 0 0 0 2.4C10.8 31.8 16.8 36 24 36s13.2-4.2 17.2-10.8a2.2 2.2 0 0 0 0-2.4C37.2 16.2 31.2 12 24 12Z" stroke="url(#mvVisionG)" stroke-width="2.4" stroke-linejoin="round"/>
+                  <circle cx="24" cy="24" r="6.5" stroke="url(#mvVisionG)" stroke-width="2.2"/>
+                  <circle cx="24" cy="24" r="2.8" fill="url(#mvVisionG)"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="mv-pillar__label" id="visionHeading">Our Vision</h3>
+            <span class="mv-pillar__sep" aria-hidden="true">
+              <span class="mv-pillar__sep-line"></span>
+              <span class="mv-pillar__sep-dot"></span>
+              <span class="mv-pillar__sep-line"></span>
+            </span>
+            <p class="mv-pillar__text">
+              To become a global leader in software innovation, recognized for delivering transformative technology solutions that shape the future of business.
+            </p>
+          </article>
+
+          <article class="mv-pillar reveal reveal-delay-2" aria-labelledby="valuesHeading">
+            <div class="mv-badge">
+              <svg class="mv-badge__ring" viewBox="0 0 120 120" aria-hidden="true">
+                <defs>
+                  <linearGradient id="mvRingGrad3" x1="1" y1="0" x2="0" y2="1">
+                    <stop stop-color="#38bdf8"/><stop offset="0.45" stop-color="#2563eb"/><stop offset="1" stop-color="#1e3a8a"/>
+                  </linearGradient>
+                </defs>
+                <path class="mv-badge__ring-dots" d="M60 11 A49 49 0 0 0 60 109" fill="none"/>
+                <path class="mv-badge__ring-solid" d="M60 11 A49 49 0 0 1 60 109" fill="none" stroke="url(#mvRingGrad3)"/>
+              </svg>
+              <span class="mv-badge__disc" aria-hidden="true">
+                <svg class="mv-badge__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="mvValuesG" x1="8" y1="6" x2="40" y2="42" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#38bdf8"/><stop offset="0.55" stop-color="#2563eb"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M24 8 30.5 18H17.5L24 8Z" stroke="url(#mvValuesG)" stroke-width="2.2" stroke-linejoin="round"/>
+                  <path d="M17.5 18h13L36 24.5 24 40 12 24.5 17.5 18Z" stroke="url(#mvValuesG)" stroke-width="2.2" stroke-linejoin="round"/>
+                  <path d="M17.5 18 24 40 30.5 18" stroke="url(#mvValuesG)" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M12 24.5h24" stroke="url(#mvValuesG)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="mv-pillar__label" id="valuesHeading">Our Values</h3>
+            <span class="mv-pillar__sep" aria-hidden="true">
+              <span class="mv-pillar__sep-line"></span>
+              <span class="mv-pillar__sep-dot"></span>
+              <span class="mv-pillar__sep-line"></span>
+            </span>
+            <p class="mv-pillar__text">
+              Customer-centricity, Innovation, Integrity, Collaboration, Excellence, and Sustainability drive everything we build and the relationships we create.
+            </p>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Core Values -->
-    <section class="section core-values">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Core Values</h2>
-                <p class="section-description">The principles that guide everything we do</p>
-            </div>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-number">01</div>
-                    <h3 class="value-title">Innovation</h3>
-                    <p class="value-description">We constantly explore new technologies and approaches to deliver cutting-edge solutions that give our clients a competitive edge.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-number">02</div>
-                    <h3 class="value-title">Quality</h3>
-                    <p class="value-description">Excellence is non-negotiable. We maintain the highest standards in every line of code, every design, and every client interaction.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-number">03</div>
-                    <h3 class="value-title">Client Success</h3>
-                    <p class="value-description">Your success is our success. We're not just vendors; we're partners invested in your long-term growth and achievement.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-number">04</div>
-                    <h3 class="value-title">Integrity</h3>
-                    <p class="value-description">We operate with transparency, honesty, and ethical practices in all our business dealings and relationships.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-number">05</div>
-                    <h3 class="value-title">Collaboration</h3>
-                    <p class="value-description">Great solutions emerge from teamwork. We work closely with clients and within our teams to achieve common goals.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-number">06</div>
-                    <h3 class="value-title">Agility</h3>
-                    <p class="value-description">We adapt quickly to changing requirements and market conditions, ensuring our solutions remain relevant and effective.</p>
-                </div>
-            </div>
+    <section class="about-values" id="core-values" aria-labelledby="coreValuesHeading">
+      <div class="about-values__deco" aria-hidden="true">
+        <svg class="about-values__wave about-values__wave--tl" viewBox="0 0 480 280" fill="none">
+          <path d="M-20 180 C60 40, 140 220, 220 90 C300 -20, 380 160, 500 40" stroke="url(#cvWaveGrad)" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M-10 210 C70 70, 150 250, 230 120 C310 10, 390 190, 510 70" stroke="url(#cvWaveGrad)" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+          <path d="M0 240 C80 100, 160 280, 240 150 C320 40, 400 220, 520 100" stroke="url(#cvWaveGrad)" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+          <defs>
+            <linearGradient id="cvWaveGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#38bdf8"/><stop offset="0.5" stop-color="#2f7cf6"/><stop offset="1" stop-color="#1d4ed8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <svg class="about-values__wave about-values__wave--br" viewBox="0 0 480 280" fill="none">
+          <path d="M-20 180 C60 40, 140 220, 220 90 C300 -20, 380 160, 500 40" stroke="url(#cvWaveGrad2)" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M-10 210 C70 70, 150 250, 230 120 C310 10, 390 190, 510 70" stroke="url(#cvWaveGrad2)" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+          <path d="M0 240 C80 100, 160 280, 240 150 C320 40, 400 220, 520 100" stroke="url(#cvWaveGrad2)" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+          <defs>
+            <linearGradient id="cvWaveGrad2" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#38bdf8"/><stop offset="0.5" stop-color="#2f7cf6"/><stop offset="1" stop-color="#1d4ed8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="about-values__dots about-values__dots--tr">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
         </div>
+        <div class="about-values__dots about-values__dots--bl">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="container">
+        <header class="about-values__header reveal">
+          <p class="about-values__eyebrow">
+            <span class="about-values__eyebrow-line" aria-hidden="true"></span>
+            What Guides Us
+            <span class="about-values__eyebrow-line" aria-hidden="true"></span>
+          </p>
+          <h2 class="about-values__title" id="coreValuesHeading">
+            Our <span class="about-values__title-accent">Core Values</span>
+          </h2>
+          <p class="about-values__lead">The principles that guide everything we do.</p>
+        </header>
+
+        <div class="about-values__grid">
+          <article class="cv-card reveal" aria-labelledby="cvInnovation">
+            <span class="cv-card__swoosh" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none" preserveAspectRatio="xMaxYMax meet">
+                <path d="M18 140 C28 88, 58 58, 108 42 C128 36, 146 40, 160 48 L160 140 Z" fill="url(#cvSwooshA1)" opacity="0.9"/>
+                <path d="M48 140 C56 100, 82 78, 122 68 C138 64, 150 70, 160 78 L160 140 Z" fill="url(#cvSwooshB1)" opacity="0.85"/>
+                <defs>
+                  <linearGradient id="cvSwooshA1" x1="0.1" y1="0.2" x2="1" y2="1">
+                    <stop stop-color="#bae6fd"/><stop offset="0.45" stop-color="#7dd3fc"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <linearGradient id="cvSwooshB1" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <div class="cv-card__top">
+              <div class="cv-card__badge">
+                <svg class="cv-card__ring" viewBox="0 0 76 76" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cvRing1" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#67e8f9"/><stop offset="0.4" stop-color="#2f7cf6"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="rgba(191,219,254,0.7)" stroke-width="3"/>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="url(#cvRing1)" stroke-width="4.8" stroke-dasharray="155 52" stroke-linecap="round" transform="rotate(125 38 38)"/>
+                </svg>
+                <span class="cv-card__icon-wrap" aria-hidden="true">
+                  <svg class="cv-card__icon" viewBox="0 0 24 24">
+                    <path d="M9 18h6"/><path d="M10 21h4"/>
+                    <path d="M12 3a6 6 0 0 1 4.2 10.2c-.7.7-1.2 1.6-1.4 2.6H9.2c-.2-1-.7-1.9-1.4-2.6A6 6 0 0 1 12 3z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="cv-card__heading">
+                <span class="cv-card__num">01</span>
+                <h3 class="cv-card__title" id="cvInnovation">Innovation</h3>
+              </div>
+            </div>
+            <p class="cv-card__text">
+              We constantly explore new technologies and approaches to deliver cutting-edge solutions that give our clients a competitive edge.
+            </p>
+          </article>
+          <article class="cv-card reveal reveal-delay-1" aria-labelledby="cvQuality">
+            <span class="cv-card__swoosh" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none" preserveAspectRatio="xMaxYMax meet">
+                <path d="M18 140 C28 88, 58 58, 108 42 C128 36, 146 40, 160 48 L160 140 Z" fill="url(#cvSwooshA2)" opacity="0.9"/>
+                <path d="M48 140 C56 100, 82 78, 122 68 C138 64, 150 70, 160 78 L160 140 Z" fill="url(#cvSwooshB2)" opacity="0.85"/>
+                <defs>
+                  <linearGradient id="cvSwooshA2" x1="0.1" y1="0.2" x2="1" y2="1">
+                    <stop stop-color="#bae6fd"/><stop offset="0.45" stop-color="#7dd3fc"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <linearGradient id="cvSwooshB2" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <div class="cv-card__top">
+              <div class="cv-card__badge">
+                <svg class="cv-card__ring" viewBox="0 0 76 76" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cvRing2" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#67e8f9"/><stop offset="0.4" stop-color="#2f7cf6"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="rgba(191,219,254,0.7)" stroke-width="3"/>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="url(#cvRing2)" stroke-width="4.8" stroke-dasharray="155 52" stroke-linecap="round" transform="rotate(125 38 38)"/>
+                </svg>
+                <span class="cv-card__icon-wrap" aria-hidden="true">
+                  <svg class="cv-card__icon" viewBox="0 0 24 24">
+                    <path d="M6 3h12l3 6-9 12L3 9l3-6z"/>
+                    <path d="M3 9h18"/><path d="M12 21 8.5 9"/><path d="m12 21 3.5-12"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="cv-card__heading">
+                <span class="cv-card__num">02</span>
+                <h3 class="cv-card__title" id="cvQuality">Quality</h3>
+              </div>
+            </div>
+            <p class="cv-card__text">
+              Excellence is non-negotiable. We maintain the highest standards in every line of code, every design, and every client interaction.
+            </p>
+          </article>
+          <article class="cv-card reveal reveal-delay-2" aria-labelledby="cvClient">
+            <span class="cv-card__swoosh" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none" preserveAspectRatio="xMaxYMax meet">
+                <path d="M18 140 C28 88, 58 58, 108 42 C128 36, 146 40, 160 48 L160 140 Z" fill="url(#cvSwooshA3)" opacity="0.9"/>
+                <path d="M48 140 C56 100, 82 78, 122 68 C138 64, 150 70, 160 78 L160 140 Z" fill="url(#cvSwooshB3)" opacity="0.85"/>
+                <defs>
+                  <linearGradient id="cvSwooshA3" x1="0.1" y1="0.2" x2="1" y2="1">
+                    <stop stop-color="#bae6fd"/><stop offset="0.45" stop-color="#7dd3fc"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <linearGradient id="cvSwooshB3" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <div class="cv-card__top">
+              <div class="cv-card__badge">
+                <svg class="cv-card__ring" viewBox="0 0 76 76" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cvRing3" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#67e8f9"/><stop offset="0.4" stop-color="#2f7cf6"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="rgba(191,219,254,0.7)" stroke-width="3"/>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="url(#cvRing3)" stroke-width="4.8" stroke-dasharray="155 52" stroke-linecap="round" transform="rotate(125 38 38)"/>
+                </svg>
+                <span class="cv-card__icon-wrap" aria-hidden="true">
+                  <svg class="cv-card__icon" viewBox="0 0 24 24">
+                    <path d="M8.5 14.5 6 12a1.8 1.8 0 0 1 2.5-2.5l1.2 1.2"/>
+                    <path d="m15.5 14.5 2.5-2.5a1.8 1.8 0 0 0-2.5-2.5l-1.2 1.2"/>
+                    <path d="M9.8 11 8 9.2a1.7 1.7 0 1 1 2.4-2.4L12 10"/>
+                    <path d="M14.2 11 16 9.2a1.7 1.7 0 1 0-2.4-2.4L12 10"/>
+                    <path d="M8.2 14.8c1.1 1.8 2.6 2.7 3.8 2.7s2.7-.9 3.8-2.7"/>
+                    <path d="M7 17.5c1.5 1.6 3.1 2.3 5 2.3s3.5-.7 5-2.3"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="cv-card__heading">
+                <span class="cv-card__num">03</span>
+                <h3 class="cv-card__title" id="cvClient">Client Success</h3>
+              </div>
+            </div>
+            <p class="cv-card__text">
+              Your success is our success. We're not just vendors; we're partners invested in your long-term growth and achievement.
+            </p>
+          </article>
+          <article class="cv-card reveal reveal-delay-3" aria-labelledby="cvIntegrity">
+            <span class="cv-card__swoosh" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none" preserveAspectRatio="xMaxYMax meet">
+                <path d="M18 140 C28 88, 58 58, 108 42 C128 36, 146 40, 160 48 L160 140 Z" fill="url(#cvSwooshA4)" opacity="0.9"/>
+                <path d="M48 140 C56 100, 82 78, 122 68 C138 64, 150 70, 160 78 L160 140 Z" fill="url(#cvSwooshB4)" opacity="0.85"/>
+                <defs>
+                  <linearGradient id="cvSwooshA4" x1="0.1" y1="0.2" x2="1" y2="1">
+                    <stop stop-color="#bae6fd"/><stop offset="0.45" stop-color="#7dd3fc"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <linearGradient id="cvSwooshB4" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <div class="cv-card__top">
+              <div class="cv-card__badge">
+                <svg class="cv-card__ring" viewBox="0 0 76 76" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cvRing4" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#67e8f9"/><stop offset="0.4" stop-color="#2f7cf6"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="rgba(191,219,254,0.7)" stroke-width="3"/>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="url(#cvRing4)" stroke-width="4.8" stroke-dasharray="155 52" stroke-linecap="round" transform="rotate(125 38 38)"/>
+                </svg>
+                <span class="cv-card__icon-wrap" aria-hidden="true">
+                  <svg class="cv-card__icon" viewBox="0 0 24 24">
+                    <path d="M12 3 5 6v5c0 4.5 3 8.2 7 9.5 4-1.3 7-5 7-9.5V6l-7-3z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="cv-card__heading">
+                <span class="cv-card__num">04</span>
+                <h3 class="cv-card__title" id="cvIntegrity">Integrity</h3>
+              </div>
+            </div>
+            <p class="cv-card__text">
+              We operate with transparency, honesty, and ethical practices in all our business dealings and relationships.
+            </p>
+          </article>
+          <article class="cv-card reveal reveal-delay-4" aria-labelledby="cvCollab">
+            <span class="cv-card__swoosh" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none" preserveAspectRatio="xMaxYMax meet">
+                <path d="M18 140 C28 88, 58 58, 108 42 C128 36, 146 40, 160 48 L160 140 Z" fill="url(#cvSwooshA5)" opacity="0.9"/>
+                <path d="M48 140 C56 100, 82 78, 122 68 C138 64, 150 70, 160 78 L160 140 Z" fill="url(#cvSwooshB5)" opacity="0.85"/>
+                <defs>
+                  <linearGradient id="cvSwooshA5" x1="0.1" y1="0.2" x2="1" y2="1">
+                    <stop stop-color="#bae6fd"/><stop offset="0.45" stop-color="#7dd3fc"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <linearGradient id="cvSwooshB5" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <div class="cv-card__top">
+              <div class="cv-card__badge">
+                <svg class="cv-card__ring" viewBox="0 0 76 76" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cvRing5" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#67e8f9"/><stop offset="0.4" stop-color="#2f7cf6"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="rgba(191,219,254,0.7)" stroke-width="3"/>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="url(#cvRing5)" stroke-width="4.8" stroke-dasharray="155 52" stroke-linecap="round" transform="rotate(125 38 38)"/>
+                </svg>
+                <span class="cv-card__icon-wrap" aria-hidden="true">
+                  <svg class="cv-card__icon" viewBox="0 0 24 24">
+                    <circle cx="9" cy="8" r="2.5"/><circle cx="15" cy="8" r="2.5"/><circle cx="12" cy="14.5" r="2.5"/>
+                    <path d="M4.5 18.5c.8-2 2.4-3 4.5-3"/><path d="M19.5 18.5c-.8-2-2.4-3-4.5-3"/>
+                    <path d="M8.2 19.5c1-1.4 2.3-2 3.8-2s2.8.6 3.8 2"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="cv-card__heading">
+                <span class="cv-card__num">05</span>
+                <h3 class="cv-card__title" id="cvCollab">Collaboration</h3>
+              </div>
+            </div>
+            <p class="cv-card__text">
+              Great solutions emerge from teamwork. We work closely with clients and within our teams to achieve common goals.
+            </p>
+          </article>
+          <article class="cv-card reveal reveal-delay-5" aria-labelledby="cvAgility">
+            <span class="cv-card__swoosh" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none" preserveAspectRatio="xMaxYMax meet">
+                <path d="M18 140 C28 88, 58 58, 108 42 C128 36, 146 40, 160 48 L160 140 Z" fill="url(#cvSwooshA6)" opacity="0.9"/>
+                <path d="M48 140 C56 100, 82 78, 122 68 C138 64, 150 70, 160 78 L160 140 Z" fill="url(#cvSwooshB6)" opacity="0.85"/>
+                <defs>
+                  <linearGradient id="cvSwooshA6" x1="0.1" y1="0.2" x2="1" y2="1">
+                    <stop stop-color="#bae6fd"/><stop offset="0.45" stop-color="#7dd3fc"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <linearGradient id="cvSwooshB6" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <div class="cv-card__top">
+              <div class="cv-card__badge">
+                <svg class="cv-card__ring" viewBox="0 0 76 76" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cvRing6" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#67e8f9"/><stop offset="0.4" stop-color="#2f7cf6"/><stop offset="1" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="rgba(191,219,254,0.7)" stroke-width="3"/>
+                  <circle cx="38" cy="38" r="33" fill="none" stroke="url(#cvRing6)" stroke-width="4.8" stroke-dasharray="155 52" stroke-linecap="round" transform="rotate(125 38 38)"/>
+                </svg>
+                <span class="cv-card__icon-wrap" aria-hidden="true">
+                  <svg class="cv-card__icon" viewBox="0 0 24 24">
+                    <path d="M17 6.2A7 7 0 1 0 19.2 12"/>
+                    <path d="M17 6.2V9.5H20.4"/>
+                    <path d="m11.2 8.5 1.3 4.2h2.6L12 18.2l-.7-3.6H9.2L11.2 8.5z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="cv-card__heading">
+                <span class="cv-card__num">06</span>
+                <h3 class="cv-card__title" id="cvAgility">Agility</h3>
+              </div>
+            </div>
+            <p class="cv-card__text">
+              We adapt quickly to changing requirements and market conditions, ensuring our solutions remain relevant and effective.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="section why-xyz">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose XYZ Technology</h2>
-                <p class="section-description">What sets us apart from other IT service providers</p>
+    <section class="about-apart" id="what-sets-us-apart" aria-labelledby="apartHeading">
+      <div class="about-apart__bg" aria-hidden="true">
+        <div class="about-apart__techgrid"></div>
+        <svg class="about-apart__waves" viewBox="0 0 1440 160" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="apWaveGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop stop-color="#00f2ff" stop-opacity="0"/>
+              <stop offset="0.3" stop-color="#00f2ff" stop-opacity="0.95"/>
+              <stop offset="0.6" stop-color="#2f7cf6" stop-opacity="0.9"/>
+              <stop offset="1" stop-color="#0066ff" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 110 C240 70, 420 140, 720 95 C980 55, 1200 120, 1440 80" stroke="url(#apWaveGrad)" stroke-width="2.2"/>
+          <path d="M0 130 C280 90, 480 150, 760 110 C1020 75, 1240 135, 1440 100" stroke="url(#apWaveGrad)" stroke-width="1.5" opacity="0.55"/>
+          <path d="M0 145 C260 115, 520 155, 800 125 C1080 95, 1280 145, 1440 120" stroke="url(#apWaveGrad)" stroke-width="1.1" opacity="0.35"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <header class="about-apart__header reveal">
+          <p class="about-apart__pill">
+            <span class="about-apart__pill-mark" aria-hidden="true">K</span>
+            Why Choose Klyper
+          </p>
+          <h2 class="about-apart__title" id="apartHeading">
+            What Sets Us <span class="about-apart__title-accent">Apart?</span>
+          </h2>
+        </header>
+
+        <div class="about-apart__grid">
+          <article class="ap-card reveal" aria-labelledby="apTeam">
+                        <span class="ap-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="7.2" r="2.4"/>
+                <circle cx="6.2" cy="8.2" r="2"/>
+                <circle cx="17.8" cy="8.2" r="2"/>
+                <path d="M12 10.4c-2.5 0-4.4 1.5-4.8 3.6"/>
+                <path d="M12 10.4c2.5 0 4.4 1.5 4.8 3.6"/>
+                <path d="M6.2 11.1c-2.05.2-3.5 1.35-3.85 3.05"/>
+                <path d="M17.8 11.1c2.05.2 3.5 1.35 3.85 3.05"/>
+              </svg>
+            </span>
+            <span class="ap-card__divider" aria-hidden="true"></span>
+            <div class="ap-card__body">
+              <h3 class="ap-card__title" id="apTeam">Experienced Team</h3>
+              <p class="ap-card__text">Seasoned developers, designers and consultants with proven industry experience.</p>
             </div>
-            
-            <div class="why-xyz-grid">
-                <div class="why-xyz-item">
-                    <div class="why-xyz-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
-                    </div>
-                    <h3 class="why-xyz-title">Experienced Team</h3>
-                    <p class="why-xyz-description">Our team comprises seasoned developers, designers, and consultants with years of experience in building successful software products.</p>
-                </div>
+          </article>
 
-                <div class="why-xyz-item">
-                    <div class="why-xyz-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                    </div>
-                    <h3 class="why-xyz-title">Proven Track Record</h3>
-                    <p class="why-xyz-description">With 100+ successfully delivered projects and 50+ satisfied clients, we have a demonstrated history of delivering results.</p>
-                </div>
-
-                <div class="why-xyz-item">
-                    <div class="why-xyz-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                        </svg>
-                    </div>
-                    <h3 class="why-xyz-title">Security First</h3>
-                    <p class="why-xyz-description">We build security into every layer of our solutions, ensuring your data and your customers' data remain protected.</p>
-                </div>
-
-                <div class="why-xyz-item">
-                    <div class="why-xyz-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 20V10" />
-                            <path d="M12 20V4" />
-                            <path d="M6 20v-6" />
-                        </svg>
-                    </div>
-                    <h3 class="why-xyz-title">Scalable Solutions</h3>
-                    <p class="why-xyz-description">Our architectures are designed to grow with your business, from startup to enterprise scale.</p>
-                </div>
-
-                <div class="why-xyz-item">
-                    <div class="why-xyz-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                    </div>
-                    <h3 class="why-xyz-title">On-Time Delivery</h3>
-                    <p class="why-xyz-description">We respect your time and deadlines. Our agile methodology ensures timely delivery without compromising quality.</p>
-                </div>
-
-                <div class="why-xyz-item">
-                    <div class="why-xyz-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg>
-                    </div>
-                    <h3 class="why-xyz-title">Ongoing Support</h3>
-                    <p class="why-xyz-description">Our relationship doesn't end at deployment. We provide continuous support, maintenance, and improvements.</p>
-                </div>
-
-                <div class="why-xyz-item">
-                    <div class="why-xyz-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="1" x2="12" y2="23" />
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                        </svg>
-                    </div>
-                    <h3 class="why-xyz-title">Cost-Effective</h3>
-                    <p class="why-xyz-description">We deliver enterprise-grade solutions at competitive prices, ensuring you get maximum value for your investment.</p>
-                </div>
-
-                <div class="why-xyz-item">
-                    <div class="why-xyz-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="17 8 12 3 7 8" />
-                            <line x1="12" y1="3" x2="12" y2="15" />
-                        </svg>
-                    </div>
-                    <h3 class="why-xyz-title">Transparent Process</h3>
-                    <p class="why-xyz-description">We keep you informed every step of the way with clear communication and regular progress updates.</p>
-                </div>
+          <article class="ap-card reveal reveal-delay-1" aria-labelledby="apTrack">
+                        <span class="ap-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 21h8"/>
+                <path d="M12 17.2V21"/>
+                <path d="M7.2 4h9.6v4.8a4.8 4.8 0 0 1-9.6 0V4z"/>
+                <path d="M16.8 8.8h1.7A2.4 2.4 0 0 0 20.9 6.4 2.4 2.4 0 0 0 18.5 4h-1.7"/>
+                <path d="M7.2 8.8H5.5A2.4 2.4 0 0 1 3.1 6.4 2.4 2.4 0 0 1 5.5 4h1.7"/>
+                <path d="m12 7.1.55 1.15 1.25.18-.9.9.22 1.25L12 9.95l-1.12.58.22-1.25-.9-.9 1.25-.18z"/>
+              </svg>
+            </span>
+            <span class="ap-card__divider" aria-hidden="true"></span>
+            <div class="ap-card__body">
+              <h3 class="ap-card__title" id="apTrack">Proven Track Record</h3>
+              <p class="ap-card__text">100+ successfully delivered projects and 50+ satisfied clients.</p>
             </div>
+          </article>
+
+          <article class="ap-card reveal reveal-delay-2" aria-labelledby="apSecurity">
+                        <span class="ap-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s7.5-3.8 7.5-9.6V5.2L12 2.5 4.5 5.2v7.2C4.5 18.2 12 22 12 22z"/>
+                <circle cx="12" cy="11.2" r="2.15"/>
+                <path d="M12 13.35v2.4"/>
+              </svg>
+            </span>
+            <span class="ap-card__divider" aria-hidden="true"></span>
+            <div class="ap-card__body">
+              <h3 class="ap-card__title" id="apSecurity">Security First</h3>
+              <p class="ap-card__text">Security built into every layer to protect business and customer data.</p>
+            </div>
+          </article>
+
+          <article class="ap-card reveal reveal-delay-3" aria-labelledby="apScale">
+                        <span class="ap-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3.2 20.2 7.4 12 11.6 3.8 7.4 12 3.2z"/>
+                <path d="m3.8 11.2 8.2 4.2 8.2-4.2"/>
+                <path d="m3.8 15 8.2 4.2 8.2-4.2"/>
+              </svg>
+            </span>
+            <span class="ap-card__divider" aria-hidden="true"></span>
+            <div class="ap-card__body">
+              <h3 class="ap-card__title" id="apScale">Scalable Solutions</h3>
+              <p class="ap-card__text">Architectures designed to grow from startup to enterprise scale.</p>
+            </div>
+          </article>
+
+          <article class="ap-card reveal reveal-delay-4" aria-labelledby="apTime">
+                        <span class="ap-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3.2" y="4.8" width="14.2" height="13.6" rx="2"/>
+                <path d="M3.2 9.2h14.2"/>
+                <path d="M7.2 3.2v3.2"/>
+                <path d="M13.4 3.2v3.2"/>
+                <circle cx="18.2" cy="17.2" r="3.35" fill="#0b1a36" stroke="currentColor"/>
+                <path d="m16.85 17.2.9.9 1.7-1.7"/>
+              </svg>
+            </span>
+            <span class="ap-card__divider" aria-hidden="true"></span>
+            <div class="ap-card__body">
+              <h3 class="ap-card__title" id="apTime">On-Time Delivery</h3>
+              <p class="ap-card__text">Agile delivery that respects deadlines without compromising quality.</p>
+            </div>
+          </article>
+
+          <article class="ap-card reveal reveal-delay-5" aria-labelledby="apSupport">
+                        <span class="ap-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 14.2h2.6a1.8 1.8 0 0 1 1.8 1.8v2.4A1.8 1.8 0 0 1 6.6 20.2H5.4A1.8 1.8 0 0 1 3.6 18.4v-6.2a8.4 8.4 0 0 1 16.8 0v6.2a1.8 1.8 0 0 1-1.8 1.8h-1.2a1.8 1.8 0 0 1-1.8-1.8v-2.4a1.8 1.8 0 0 1 1.8-1.8H20"/>
+                <path d="M12 5.6v1.4"/>
+              </svg>
+            </span>
+            <span class="ap-card__divider" aria-hidden="true"></span>
+            <div class="ap-card__body">
+              <h3 class="ap-card__title" id="apSupport">Ongoing Support</h3>
+              <p class="ap-card__text">Continuous support, maintenance and improvements after deployment.</p>
+            </div>
+          </article>
+
+          <article class="ap-card reveal reveal-delay-6" aria-labelledby="apCost">
+                        <span class="ap-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="9" cy="16.6" rx="4.2" ry="1.55"/>
+                <path d="M4.8 16.6v-2.1c0-.85 1.88-1.55 4.2-1.55s4.2.7 4.2 1.55v2.1"/>
+                <path d="M4.8 14.5v-2.1c0-.85 1.88-1.55 4.2-1.55s4.2.7 4.2 1.55v2.1"/>
+                <ellipse cx="15.2" cy="11.4" rx="3.6" ry="1.35"/>
+                <path d="M11.6 11.4V9.6c0-.75 1.6-1.35 3.6-1.35s3.6.6 3.6 1.35v1.8"/>
+                <path d="M11.6 9.6V7.8c0-.75 1.6-1.35 3.6-1.35s3.6.6 3.6 1.35v1.8"/>
+                <path d="M11.6 7.8V6c0-.75 1.6-1.35 3.6-1.35s3.6.6 3.6 1.35v1.8"/>
+              </svg>
+            </span>
+            <span class="ap-card__divider" aria-hidden="true"></span>
+            <div class="ap-card__body">
+              <h3 class="ap-card__title" id="apCost">Cost-Effective</h3>
+              <p class="ap-card__text">Enterprise-grade solutions at competitive prices and strong value.</p>
+            </div>
+          </article>
+
+          <article class="ap-card reveal reveal-delay-7" aria-labelledby="apProcess">
+                        <span class="ap-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20.5a8.2 8.2 0 1 0-7.05-4.05L3.2 20.5l4.2-.85A8.15 8.15 0 0 0 12 20.5z"/>
+                <circle cx="8.4" cy="11.6" r="0.95" fill="currentColor" stroke="none"/>
+                <circle cx="12" cy="11.6" r="0.95" fill="currentColor" stroke="none"/>
+                <circle cx="15.6" cy="11.6" r="0.95" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+            <span class="ap-card__divider" aria-hidden="true"></span>
+            <div class="ap-card__body">
+              <h3 class="ap-card__title" id="apProcess">Transparent Process</h3>
+              <p class="ap-card__text">Clear communication and regular progress updates throughout the project.</p>
+            </div>
+          </article>
         </div>
+
+        <div class="about-apart__cta-wrap reveal reveal-delay-3">
+          <a class="about-apart__cta" href="contact.html">
+            Start a Project with Klyper
+            <span class="about-apart__cta-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Statistics -->
-    <section class="section stats-section">
-        <div class="container">
-            <div class="stats-grid-large">
-                <div class="stat-item-large">
-                    <h3 class="stat-number-large">100+</h3>
-                    <p class="stat-label-large">Projects Completed</p>
-                    <p class="stat-description">Successfully delivered projects across various industries and technologies</p>
-                </div>
-                <div class="stat-item-large">
-                    <h3 class="stat-number-large">50+</h3>
-                    <p class="stat-label-large">Happy Clients</p>
-                    <p class="stat-description">Businesses that trust us with their technology needs</p>
-                </div>
-                <div class="stat-item-large">
-                    <h3 class="stat-number-large">5+</h3>
-                    <p class="stat-label-large">Industries Served</p>
-                    <p class="stat-description">Specialized solutions across multiple business sectors</p>
-                </div>
-                <div class="stat-item-large">
-                    <h3 class="stat-number-large">24/7</h3>
-                    <p class="stat-label-large">Support Available</p>
-                    <p class="stat-description">Round-the-clock technical support for our clients</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  </main>
 
-    <!-- Call to Action -->
-    <section class="section cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Work With Us?</h2>
-                <p class="cta-description">Let's start a conversation about how we can help your business succeed.</p>
-                <a href="contact.html" class="btn btn-white">Get In Touch</a>
-            </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/images/klyperlogo.webp" alt="" width="48" height="48" />
+            <span class="logo__text">Klyper Technology</span>
+          </a>
+          <p>Empowering businesses with innovative software solutions and cutting-edge technology.</p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="footer-title">Klyper Technology</h3>
-                    <p class="footer-description">Empowering businesses with innovative software solutions and cutting-edge technology.</p>
-                    <div class="footer-social">
-                        <h4 class="footer-social-title">Follow Us</h4>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            </a>
-                            <a href="https://www.instagram.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            </a>
-                            <a href="https://www.facebook.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                            </a>
-                            <a href="https://x.com/KlyperTech" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                            </a>
-                            <a href="https://www.youtube.com/@klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">Custom Software</a></li>
-                        <li><a href="services.html">SaaS Development</a></li>
-                        <li><a href="services.html">Web & Mobile Apps</a></li>
-                        <li><a href="services.html">Support & Maintenance</a></li>
-                        <li><a href="services.html">Custom AI Agents</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><a href="tel:+917855079698">+91 78550 79698</a></li>
-                        <li><a href="mailto:klypertechnology@gmail.com">klypertechnology@gmail.com</a></li>
-                        <li><a href="contact.html">Contact Form</a></li>
-                    </ul>
-                    <div style="margin-top: 1.5rem;">
-                        <h4 class="footer-heading">Office Address</h4>
-                        <p class="footer-address">
-                            <span class="footer-address-icon">📍</span>
-                            Plot No:- 2377/9633,<br>
-                            Near SR Valley, Elegance Villa,<br>
-                            Puri Bypass, NH-316, Badagada,<br>
-                            Bhubaneswar, India, 751018
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Klyper Technology. All rights reserved.</p>
-            </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#customSoftware">Custom Software</a></li>
+            <li><a href="services.html#webMobile">Web &amp; Mobile Apps</a></li>
+            <li><a href="services.html#aiAgents">Custom AI Agents</a></li>
+            <li><a href="services.html#automation">Business Automation</a></li>
+            <li><a href="services.html#maintenance">Support &amp; Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:+917855079698">+91 78550 79698</a></li>
+            <li><a href="mailto:info@klypertechnology.com">info@klypertechnology.com</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+          <address style="margin-top: 1rem;">
+            Plot No:- 2377/9633,<br />
+            Near SR Valley, Elegance Villa,<br />
+            Puri Bypass, NH-316, Badagada,<br />
+            Bhubaneswar, India, 751018
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Klyper Technology. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=167"></script>
 </body>
 </html>
-

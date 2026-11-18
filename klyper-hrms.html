@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klyper HRMS | Human Resource Management System | Klyper Technology</title>
+  <meta name="description" content="Klyper HRMS &mdash; a complete HR management platform to streamline employee operations, attendance, payroll, and performance tracking." />
+  <script>
+    (function () {
+      document.documentElement.setAttribute("data-theme", "light");
+      try { localStorage.setItem("klyper-theme", "light"); } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css?v=88" />
+  <link rel="stylesheet" href="css/ote-hero.css?v=210" />
+  <link rel="stylesheet" href="css/site-nav.css?v=6" />
+  <link rel="stylesheet" href="css/hrms-hero.css?v=211" />
+  <link rel="stylesheet" href="css/page-hero-mobile.css?v=5" />
+  <link rel="stylesheet" href="css/hrms-about.css?v=141" />
+  <link rel="stylesheet" href="css/hrms-overview.css?v=179" />
+  <link rel="stylesheet" href="css/hrms-features.css?v=9" />
+  <link rel="stylesheet" href="css/hrms-platform.css?v=12" />
+  <link rel="stylesheet" href="css/hrms-security.css?v=3" />
+  <link rel="stylesheet" href="css/theme.css?v=213" />
+  <link rel="stylesheet" href="css/no-glow.css?v=15" />
+  <link rel="stylesheet" href="css/product-buttons.css?v=2" />
+  <link rel="icon" href="assets/images/klyperlogo.webp" type="image/webp" />
+  <style>
+    html, body { overflow-x: hidden; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; color: #0a1628; }
+    .site-footer .logo-text, .site-footer .logo__text { color: #fff; }
+    @media (max-width: 640px) {
+      .page-hrms .container { padding-left: 16px; padding-right: 16px; }
+    }
+    @media (max-width: 400px) {
+      .page-hrms .container { padding-left: 14px; padding-right: 14px; }
+    }
+  </style>
+</head>
+<body class="page-hrms">
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="index.html" aria-label="Klyper Technology Home">
+          <img class="logo-icon" src="assets/images/klyperlogo.webp" alt="Klyper Technology Logo" />
+          <span class="logo-text">Klyper Technology</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li class="has-dropdown">
+            <a href="products.html" class="nav-link active">Products
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="products.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 3.5 7.5v9L12 21l8.5-4.5v-9L12 3Z"/><path d="M12 12 3.5 7.5M12 12l8.5-4.5M12 12v9"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">All Products</span>
+                    <span class="dropdown-desc">Explore our full product suite.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-hrms.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper HRMS</span>
+                    <span class="dropdown-desc">Attendance, payroll &amp; workforce ops.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-crm.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v4H4V4Zm2 6h12l-2 10H8L6 10Z"/><path d="M9 14h6"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper CRM</span>
+                    <span class="dropdown-desc">Capture, track &amp; convert leads.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-inventory-manager.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper Inventory Manager</span>
+                    <span class="dropdown-desc">Inventory &amp; stock management.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-ecommerce.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H7"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper E-commerce</span>
+                    <span class="dropdown-desc">Online store &amp; ecommerce platform.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+          <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-mobile-cta"><a href="contact.html">Get in Touch</a></li>
+        </ul>
+
+        <a class="btn btn-nav" href="contact.html">
+          Get in Touch
+          <span class="btn-arrow-circle">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hrms-hero" id="hrmsHero" aria-labelledby="hrmsHeroHeading">
+      <div class="hrms-hero__media" aria-hidden="true">
+        <img
+          class="hrms-hero__media-img"
+          src="assets/images/products/hrms_hero_bg.webp"
+          alt=""
+          width="1754"
+          height="897"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="hrms-hero__media-shade"></div>
+      </div>
+
+      <div class="container hrms-hero__content">
+        <div class="hrms-hero__copy">
+          <p class="hrms-hero__badge reveal">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.7"/>
+              <circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75" stroke="currentColor" stroke-width="1.7"/>
+            </svg>
+            Klyper HRMS
+          </p>
+
+          <h1 class="hrms-hero__title reveal reveal-delay-1" id="hrmsHeroHeading">
+            Complete HR &amp; Workforce Management,
+            <span class="hrms-hero__title-accent">
+              <span class="hrms-hero__title-text">Simplified.</span>
+            </span>
+          </h1>
+
+          <p class="hrms-hero__lead reveal reveal-delay-2">
+            A customizable HRMS platform to manage your people, attendance, payroll, and operations.
+          </p>
+
+          <div class="hrms-hero__actions reveal reveal-delay-3">
+            <a class="hrms-hero__btn hrms-hero__btn--primary" href="contact.html">
+              Request a Demo
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="hrms-hero__btn hrms-hero__btn--ghost" href="#hrmsFeatures">
+              <span class="hrms-hero__play" aria-hidden="true">
+                <svg width="9" height="9" viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.8v8.4L10.2 6 3 1.8Z"/></svg>
+              </span>
+              Explore Features
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hrms-about" id="aboutProduct" aria-labelledby="hrmsAboutHeading">
+      <div class="hrms-about__deco" aria-hidden="true">
+        <div class="hrms-about__curve hrms-about__curve--tl"></div>
+        <div class="hrms-about__curve hrms-about__curve--br"></div>
+      </div>
+
+      <div class="container">
+        <div class="hrms-about__grid">
+          <div class="hrms-about__copy reveal">
+            <p class="hrms-about__badge">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7.5 4h9l2 3.2V20H5.5V7.2L7.5 4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                <path d="M10 4v3.2h4V4" stroke="currentColor" stroke-width="1.7"/>
+              </svg>
+              About the Product
+            </p>
+
+            <h2 class="hrms-about__title" id="hrmsAboutHeading">
+              Klyper
+              <span class="hrms-about__title-accent">
+                HRMS
+              </span>
+            </h2>
+
+            <p class="hrms-about__subtitle">HR &amp; Workforce Management</p>
+
+            <p class="hrms-about__lead">
+              A customizable HRMS platform to manage employees, attendance, field teams, leaves, shifts, payroll, and expenses &mdash; all in one place.
+            </p>
+
+            <div class="hrms-about__points">
+              <article class="ha-point">
+                <span class="ha-point__icon ha-point__icon--blue" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2 4.5 13.2h6.2L11 22l8.5-11.2h-6.2L13 2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <h3 class="ha-point__title">Automate Workflows</h3>
+                <p class="ha-point__desc">Save time and reduce manual work.</p>
+              </article>
+
+              <article class="ha-point">
+                <span class="ha-point__icon ha-point__icon--violet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="9" cy="8" r="2.6" stroke="currentColor" stroke-width="1.7"/>
+                    <circle cx="16.2" cy="9" r="2.1" stroke="currentColor" stroke-width="1.7"/>
+                    <path d="M3.8 18.5c.7-2.8 2.9-4.4 5.2-4.4s4.5 1.6 5.2 4.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                    <path d="M14.2 18.5c.35-1.7 1.5-2.8 3.2-2.8 1.5 0 2.5 1 2.9 2.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <h3 class="ha-point__title">Improve Productivity</h3>
+                <p class="ha-point__desc">Empower teams with self-service tools.</p>
+              </article>
+
+              <article class="ha-point">
+                <span class="ha-point__icon ha-point__icon--blue" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3.2 19.2 6v5.2c0 4.4-2.9 7.4-7.2 9.1-4.3-1.7-7.2-4.7-7.2-9.1V6L12 3.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                    <path d="m9.2 12 2 2 4-4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <h3 class="ha-point__title">Ensure Compliance</h3>
+                <p class="ha-point__desc">Stay policy-ready with audit trails.</p>
+              </article>
+
+              <article class="ha-point">
+                <span class="ha-point__icon ha-point__icon--violet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M5 18.5V11M10.5 18.5V7M16 18.5v-5.5M21 18.5V9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M3.5 18.5h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <h3 class="ha-point__title">Get Real-time Insights</h3>
+                <p class="ha-point__desc">Make faster, data-driven decisions.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="hrms-about__visual reveal reveal-delay-1" aria-hidden="true">
+            <div class="ha-eco">
+              <div class="ha-eco__wash"></div>
+              <svg class="ha-orbit" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+                <circle class="ha-orbit__ring ha-orbit__ring--outer" cx="200" cy="200" r="148"/>
+                <circle class="ha-orbit__ring ha-orbit__ring--mid" cx="200" cy="200" r="118"/>
+                <circle class="ha-orbit__ring ha-orbit__ring--inner" cx="200" cy="200" r="72"/>
+                <g class="ha-orbit__spokes">
+                  <line x1="200" y1="200" x2="200" y2="52"/>
+                  <line x1="200" y1="200" x2="328" y2="126"/>
+                  <line x1="200" y1="200" x2="328" y2="274"/>
+                  <line x1="200" y1="200" x2="200" y2="348"/>
+                  <line x1="200" y1="200" x2="72" y2="274"/>
+                  <line x1="200" y1="200" x2="72" y2="126"/>
+                </g>
+                <g class="ha-orbit__nodes">
+                  <circle cx="200" cy="52" r="3.5"/>
+                  <circle cx="328" cy="126" r="3.5"/>
+                  <circle cx="328" cy="274" r="3.5"/>
+                  <circle cx="200" cy="348" r="3.5"/>
+                  <circle cx="72" cy="274" r="3.5"/>
+                  <circle cx="72" cy="126" r="3.5"/>
+                </g>
+              </svg>
+
+              <div class="ha-core">
+                <div class="ha-core__body">
+                  <span class="ha-slab__edge-b"></span>
+                  <span class="ha-slab__edge-r"></span>
+                  <span class="ha-core__glow"></span>
+                  <span class="ha-core__icon">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="9" cy="7" r="3.2" fill="currentColor" stroke="none"/>
+                      <path d="M2 20.5c.6-3.6 3.4-5.8 7-5.8s6.4 2.2 7 5.8" fill="currentColor" stroke="none" opacity="0.95"/>
+                      <circle cx="17.2" cy="8.2" r="2.4" fill="currentColor" stroke="none" opacity="0.85"/>
+                      <path d="M14.2 20.5c.35-2.2 1.7-3.6 3.8-3.6 2.1 0 3.4 1.4 3.8 3.6" fill="currentColor" stroke="none" opacity="0.75"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <article class="ha-slab ha-slab--blue ha-slab--attendance">
+                <span class="ha-slab__face"><span class="ha-slab__wave"></span></span>
+                <span class="ha-slab__edge-b"></span>
+                <span class="ha-slab__edge-r"></span>
+                <span class="ha-slab__badge">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.2"/></svg>
+                </span>
+                <p class="ha-slab__label">Attendance</p>
+              </article>
+
+              <article class="ha-slab ha-slab--white ha-slab--leave">
+                <span class="ha-slab__face"><span class="ha-slab__wave"></span></span>
+                <span class="ha-slab__edge-b"></span>
+                <span class="ha-slab__edge-r"></span>
+                <span class="ha-slab__icon ha-slab__icon--violet">
+                  <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>
+                </span>
+                <p class="ha-slab__label">Leave Management</p>
+              </article>
+
+              <article class="ha-slab ha-slab--white ha-slab--payroll">
+                <span class="ha-slab__face"><span class="ha-slab__wave"></span></span>
+                <span class="ha-slab__edge-b"></span>
+                <span class="ha-slab__edge-r"></span>
+                <span class="ha-slab__icon">
+                  <svg viewBox="0 0 24 24"><path d="M12 3.2 20.2 7.4 12 11.6 3.8 7.4 12 3.2z"/><path d="m3.8 11.2 8.2 4.2 8.2-4.2"/><path d="m3.8 15 8.2 4.2 8.2-4.2"/></svg>
+                </span>
+                <p class="ha-slab__label">Payroll</p>
+              </article>
+
+              <article class="ha-slab ha-slab--blue ha-slab--reports">
+                <span class="ha-slab__face"><span class="ha-slab__wave"></span></span>
+                <span class="ha-slab__edge-b"></span>
+                <span class="ha-slab__edge-r"></span>
+                <span class="ha-slab__badge">
+                  <svg viewBox="0 0 24 24"><path d="M4 19V9M9 19V5M14 19v-7M19 19V8"/></svg>
+                </span>
+                <p class="ha-slab__label">Reports</p>
+              </article>
+
+              <article class="ha-slab ha-slab--blue ha-slab--shifts">
+                <span class="ha-slab__face"><span class="ha-slab__wave"></span></span>
+                <span class="ha-slab__edge-b"></span>
+                <span class="ha-slab__edge-r"></span>
+                <span class="ha-slab__badge">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3v2.2M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M3.5 12h2.2M18.3 12h2.2M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6"/></svg>
+                </span>
+                <p class="ha-slab__label">Shift Management</p>
+              </article>
+
+              <article class="ha-slab ha-slab--white ha-slab--expenses">
+                <span class="ha-slab__face"><span class="ha-slab__wave"></span></span>
+                <span class="ha-slab__edge-b"></span>
+                <span class="ha-slab__edge-r"></span>
+                <span class="ha-slab__icon ha-slab__icon--violet">
+                  <svg viewBox="0 0 24 24"><path d="M8 3.5h7.2L19 7.2V20.5H8V3.5z"/><path d="M15.2 3.5V7H19"/><path d="M11.2 12.2h2.2a1.4 1.4 0 0 1 0 2.8h-1.4a1.4 1.4 0 0 0 0 2.8H14"/><path d="M12.5 11.4v.8M12.5 17.8v.8"/></svg>
+                </span>
+                <p class="ha-slab__label">Expenses</p>
+              </article>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hrms-about__features" id="hrmsFeatures">
+          <div class="hrms-overview__cards">
+            <article class="ho-card reveal">
+              <span class="ho-card__wave" aria-hidden="true"></span>
+              <span class="ho-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none">
+                  <path d="M20 5.5c-3.6 0-6.5 2.8-6.5 6.2 0 6.2 6.5 13 6.5 13s6.5-6.8 6.5-13c0-3.4-2.9-6.2-6.5-6.2Z"/>
+                  <circle cx="20" cy="11.5" r="2.6" fill="currentColor" stroke="none" opacity="0.95"/>
+                  <path d="M11 30.2c2.4-3.4 5.6-5.1 9-5.1s6.6 1.7 9 5.1" stroke-dasharray="2.4 2.6"/>
+                  <circle cx="9.8" cy="32.8" r="1.6" fill="currentColor" stroke="none"/>
+                  <circle cx="20" cy="34" r="1.6" fill="currentColor" stroke="none"/>
+                  <circle cx="30.2" cy="32.8" r="1.6" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <h2 class="ho-card__title">Built for Office &amp; Field Teams</h2>
+              <p class="ho-card__desc">Face-verified attendance, live location tracking, and route history for field employees.</p>
+            </article>
+
+            <article class="ho-card ho-card--accent reveal reveal-delay-1">
+              <span class="ho-card__glow" aria-hidden="true"></span>
+              <span class="ho-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="15" r="5.2" fill="currentColor" stroke="none" opacity="0.95"/>
+                  <path d="M10.5 31.8c.9-4.6 4.6-7.4 9.5-7.4s8.6 2.8 9.5 7.4" fill="currentColor" stroke="none" opacity="0.9"/>
+                  <path d="M8.5 12.5a6.5 6.5 0 0 1 5.2-5.8"/>
+                  <path d="M31.5 12.5a6.5 6.5 0 0 0-5.2-5.8"/>
+                  <path d="M6.2 28.5c-1.4-2.2-1.6-4.4-.6-6.2"/>
+                  <path d="M33.8 28.5c1.4-2.2 1.6-4.4.6-6.2"/>
+                </svg>
+              </span>
+              <h2 class="ho-card__title">End-to-End HR Operations</h2>
+              <p class="ho-card__desc">Employee onboarding, roles &amp; permissions, shifts, leave, overtime, payroll, reimbursements, and salary advances.</p>
+            </article>
+
+            <article class="ho-card reveal reveal-delay-2">
+              <span class="ho-card__wave" aria-hidden="true"></span>
+              <span class="ho-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none">
+                  <path d="M20 5 34 12.2 20 19.4 6 12.2 20 5Z" fill="currentColor" stroke="none" opacity="0.95"/>
+                  <path d="m6 17.6 14 7.2 14-7.2" opacity="0.85"/>
+                  <path d="m6 24.4 14 7.2 14-7.2" opacity="0.7"/>
+                  <path d="M20 5v14.4" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+                </svg>
+              </span>
+              <h2 class="ho-card__title">Dedicated Deployment, Customized for You</h2>
+              <p class="ho-card__desc">Isolated deployment for each organization, with customized workflows, role-based access, and audit trails.</p>
+            </article>
+          </div>
+
+          <div class="hrms-overview__meta reveal" role="list">
+            <div class="ho-meta" role="listitem">
+              <span class="ho-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.8" fill="currentColor" stroke="none" opacity="0.95"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.8" fill="currentColor" stroke="none" opacity="0.7"/></svg>
+              </span>
+              <p class="ho-meta__label">Category</p>
+              <p class="ho-meta__value">HR &amp; Workforce Management</p>
+            </div>
+            <div class="ho-meta" role="listitem">
+              <span class="ho-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3.5" width="13.5" height="10.5" rx="2" fill="currentColor" stroke="none" opacity="0.9"/><path d="M5.5 18h6.5"/><rect x="16.2" y="7" width="5.5" height="9.5" rx="1.4"/><path d="M17.8 14.8h2.2"/></svg>
+              </span>
+              <p class="ho-meta__label">Platforms</p>
+              <p class="ho-meta__value">Web App + Android Mobile App</p>
+            </div>
+            <div class="ho-meta" role="listitem">
+              <span class="ho-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.8" rx="7.2" ry="2.5" fill="currentColor" stroke="none" opacity="0.95"/><path d="M4.8 5.8v4.2c0 1.4 3.2 2.5 7.2 2.5s7.2-1.1 7.2-2.5V5.8"/><path d="M4.8 10v4.2c0 1.4 3.2 2.5 7.2 2.5s7.2-1.1 7.2-2.5V10"/><path d="M4.8 14.2v4.2c0 1.4 3.2 2.5 7.2 2.5s7.2-1.1 7.2-2.5v-4.2"/></svg>
+              </span>
+              <p class="ho-meta__label">Deployment</p>
+              <p class="ho-meta__value">Dedicated Instance Per Client</p>
+            </div>
+            <div class="ho-meta" role="listitem">
+              <span class="ho-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 7.5h11"/><circle cx="17.5" cy="7.5" r="2.4" fill="currentColor" stroke="none"/><path d="M4 16.5h5"/><circle cx="11.5" cy="16.5" r="2.4" fill="currentColor" stroke="none"/><path d="M16 16.5h4"/></svg>
+              </span>
+              <p class="ho-meta__label">Customization</p>
+              <p class="ho-meta__value">Tailored to Client Needs</p>
+            </div>
+            <div class="ho-meta" role="listitem">
+              <span class="ho-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3.2 20.6 12 12 20.8 3.4 12 12 3.2Z" fill="currentColor" stroke="none" opacity="0.92"/><circle cx="12" cy="12" r="2.4" fill="#fff" stroke="none" opacity="0.95"/></svg>
+              </span>
+              <p class="ho-meta__label">Pricing</p>
+              <p class="ho-meta__value">Subscription Model</p>
+            </div>
+            <div class="ho-meta" role="listitem">
+              <span class="ho-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4.2 14.2v-2.2a7.8 7.8 0 0 1 15.6 0v2.2"/><path d="M4.2 14.2a2.2 2.2 0 0 0 0 4.4H7v-4.4H4.2Z" fill="currentColor" stroke="none" opacity="0.9"/><path d="M19.8 14.2a2.2 2.2 0 0 1 0 4.4H17v-4.4h2.8Z" fill="currentColor" stroke="none" opacity="0.9"/><path d="M12 21.2a3.2 3.2 0 0 0 3.2-3.2v-1"/></svg>
+              </span>
+              <p class="ho-meta__label">Support</p>
+              <p class="ho-meta__value">Dedicated Onboarding &amp; Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hrms-features" id="keyFeatures" aria-labelledby="hrmsFeaturesHeading">
+      <div class="hrms-features__deco" aria-hidden="true">
+        <div class="hrms-features__wave hrms-features__wave--tl"></div>
+        <div class="hrms-features__wave hrms-features__wave--br"></div>
+      </div>
+
+      <div class="container">
+        <header class="hrms-features__head reveal">
+          <p class="hrms-features__badge">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3.2 20.2 7.4 12 11.6 3.8 7.4 12 3.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="m3.8 11.2 8.2 4.2 8.2-4.2M3.8 15 12 19.2 20.2 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Key Features
+          </p>
+          <h2 class="hrms-features__title" id="hrmsFeaturesHeading">
+            Everything your workforce needs.
+            <span class="hrms-features__title-accent">
+              Connected.
+            </span>
+          </h2>
+          <p class="hrms-features__lead">
+            Manage attendance, field teams, leave, shifts, payroll and operational insights in one platform.
+          </p>
+        </header>
+
+        <div class="hrms-features__grid">
+          <!-- 1 Face-Verified Attendance -->
+          <article class="hf-card hf-card--dark hf-card--wide reveal">
+            <span class="hf-card__wave" aria-hidden="true"></span>
+            <div class="hf-card__visual" aria-hidden="true">
+              <svg class="hf-illu hf-illu--face" viewBox="0 0 160 160" fill="none">
+                <defs>
+                  <linearGradient id="hfF1" x1="20" y1="16" x2="130" y2="130" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3b6ef5"/><stop offset=".45" stop-color="#1d4ed8"/><stop offset="1" stop-color="#0b2a7a"/>
+                  </linearGradient>
+                  <linearGradient id="hfF2" x1="55" y1="40" x2="100" y2="105" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#e0f2fe"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <linearGradient id="hfF3" x1="0" y1="0" x2="0" y2="1">
+                    <stop stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                  </linearGradient>
+                  <filter id="hfFs" x="-25%" y="-25%" width="150%" height="150%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#020617" flood-opacity=".5"/>
+                  </filter>
+                </defs>
+                <!-- extrusion base -->
+                <rect x="28" y="34" width="108" height="108" rx="28" fill="#061230"/>
+                <g filter="url(#hfFs)">
+                  <rect x="20" y="18" width="108" height="108" rx="28" fill="url(#hfF1)"/>
+                  <rect x="20" y="18" width="108" height="108" rx="28" fill="url(#hfF3)"/>
+                  <rect x="20" y="18" width="108" height="108" rx="28" stroke="#93c5fd" stroke-width="1.6" fill="none" opacity=".55"/>
+                  <!-- scanner corners -->
+                  <path d="M42 36h-14v14M106 36h14v14M42 108h-14v-14M106 108h14v-14" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- 3D wire head -->
+                  <ellipse cx="74" cy="68" rx="26" ry="32" fill="#1e3a8a" opacity=".35"/>
+                  <ellipse cx="74" cy="68" rx="26" ry="32" stroke="url(#hfF2)" stroke-width="2.4" fill="none"/>
+                  <path d="M54 62c4-12 12-18 20-18s16 6 20 18" stroke="#bae6fd" stroke-width="1.8" fill="none"/>
+                  <path d="M52 70c6 3 12 4.5 22 4.5s16-1.5 22-4.5" stroke="#7dd3fc" stroke-width="1.5" opacity=".9"/>
+                  <path d="M58 84c3 6 10 10 16 10s13-4 16-10" stroke="#93c5fd" stroke-width="1.8" fill="none"/>
+                  <path d="M74 36v64M48 68h52" stroke="#38bdf8" stroke-width="1.1" opacity=".4"/>
+                  <ellipse cx="74" cy="68" rx="18" ry="22" stroke="#7dd3fc" stroke-width="1" opacity=".45" fill="none"/>
+                  <path d="M60 52c3-4 7-6 11-6M77 46c4 0 8 2 11 6" stroke="#e0f2fe" stroke-width="1.7" stroke-linecap="round"/>
+                  <circle cx="64" cy="64" r="3.2" fill="#e0f2fe"/>
+                  <circle cx="84" cy="64" r="3.2" fill="#e0f2fe"/>
+                  <path d="M64 80c4 4.5 12 4.5 16 0" stroke="#e0f2fe" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M58 100c6 8 16 12 26 12" stroke="#60a5fa" stroke-width="1.6" opacity=".55"/>
+                </g>
+                <!-- verified badge -->
+                <circle cx="118" cy="118" r="20" fill="#15803d"/>
+                <circle cx="118" cy="118" r="17" fill="#22c55e"/>
+                <path d="m108.5 118.5 6.2 6.2 13-14.5" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="hf-card__body">
+              <h3 class="hf-card__title">Face-Verified Attendance</h3>
+              <p class="hf-card__desc">Selfie-based punch-in/out with on-device face recognition, reducing buddy punching without dedicated biometric hardware.</p>
+            </div>
+          </article>
+
+          <!-- 2 Live Field-Force Tracking -->
+          <article class="hf-card hf-card--light hf-card--side reveal reveal-delay-1">
+            <span class="hf-card__wave" aria-hidden="true"></span>
+            <div class="hf-card__visual" aria-hidden="true">
+              <svg class="hf-illu hf-illu--map" viewBox="0 0 200 160" fill="none">
+                <defs>
+                  <linearGradient id="hfM1" x1="10" y1="8" x2="186" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff"/><stop offset="1" stop-color="#dbeafe"/>
+                  </linearGradient>
+                  <filter id="hfMs" x="-20%" y="-20%" width="140%" height="150%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#1e3a5f" flood-opacity=".2"/>
+                  </filter>
+                </defs>
+                <rect x="18" y="20" width="172" height="104" rx="22" fill="#b6cce8" opacity=".45"/>
+                <g filter="url(#hfMs)">
+                  <rect x="10" y="8" width="172" height="104" rx="22" fill="url(#hfM1)" stroke="#b6d0ef" stroke-width="1.4"/>
+                  <path d="M10 36h172M10 62h172M10 88h172" stroke="#c5d8f0" stroke-width="1.2"/>
+                  <path d="M48 8v104M86 8v104M124 8v104M162 8v104" stroke="#c5d8f0" stroke-width="1.2"/>
+                  <rect x="30" y="24" width="38" height="24" rx="7" fill="#93c5fd" opacity=".55"/>
+                  <rect x="102" y="52" width="44" height="30" rx="8" fill="#60a5fa" opacity=".28"/>
+                  <rect x="56" y="68" width="30" height="22" rx="6" fill="#a5b4fc" opacity=".35"/>
+                  <path d="M32 84C52 54 68 74 94 48s34 12 56-10 22 26 30 10" stroke="#1d4ed8" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+                  <path d="M32 84C52 54 68 74 94 48s34 12 56-10 22 26 30 10" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                  <!-- 3D pins -->
+                  <ellipse cx="58" cy="78" rx="10" ry="4" fill="#1e3a5f" opacity=".2"/>
+                  <path d="M44 52c0-9.4 7.2-17 16-17s16 7.6 16 17c0 12-16 26-16 26S44 64 44 52Z" fill="#1d5eff"/>
+                  <path d="M44 52c0-9.4 7.2-17 16-17" fill="#60a5fa" opacity=".45"/>
+                  <circle cx="60" cy="50" r="6" fill="#fff"/>
+                  <ellipse cx="136" cy="62" rx="10" ry="4" fill="#1e3a5f" opacity=".2"/>
+                  <path d="M122 36c0-9.4 7.2-17 16-17s16 7.6 16 17c0 12-16 26-16 26S122 48 122 36Z" fill="#7c3aed"/>
+                  <path d="M122 36c0-9.4 7.2-17 16-17" fill="#a78bfa" opacity=".5"/>
+                  <circle cx="138" cy="34" r="6" fill="#fff"/>
+                </g>
+                <g filter="url(#hfMs)">
+                  <rect x="12" y="126" width="86" height="28" rx="14" fill="#fff" stroke="#c7dbf5" stroke-width="1.3"/>
+                  <circle cx="30" cy="140" r="8" fill="none" stroke="#1d5eff" stroke-width="2"/>
+                  <circle cx="30" cy="140" r="2.6" fill="#1d5eff"/>
+                  <path d="M30 132v2.6M30 145.4V148M21.5 140H24M36 140h2.5" stroke="#1d5eff" stroke-width="1.4" stroke-linecap="round"/>
+                  <text x="44" y="145" font-family="Poppins,sans-serif" font-size="10.5" font-weight="700" fill="#0f2744">Live Tracking</text>
+                  <rect x="108" y="126" width="78" height="28" rx="14" fill="#ecfdf5" stroke="#86efac" stroke-width="1.3"/>
+                  <circle cx="126" cy="140" r="5" fill="#22c55e"/>
+                  <text x="138" y="145" font-family="Poppins,sans-serif" font-size="10.5" font-weight="700" fill="#14532d">On Duty</text>
+                </g>
+              </svg>
+            </div>
+            <div class="hf-card__body">
+              <h3 class="hf-card__title">Live Field-Force Tracking</h3>
+              <p class="hf-card__desc">Live map location for on-duty field employees, route history, distance and tracking-quality insights.</p>
+            </div>
+          </article>
+
+          <!-- 3 Leave Management -->
+          <article class="hf-card hf-card--light hf-card--third reveal">
+            <span class="hf-card__wave" aria-hidden="true"></span>
+            <div class="hf-card__visual" aria-hidden="true">
+              <svg class="hf-illu hf-illu--cal" viewBox="0 0 150 140" fill="none">
+                <defs>
+                  <linearGradient id="hfC1" x1="22" y1="12" x2="128" y2="124" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff"/><stop offset="1" stop-color="#e8f1ff"/>
+                  </linearGradient>
+                  <linearGradient id="hfC2" x1="22" y1="12" x2="128" y2="44" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3b82f6"/><stop offset="1" stop-color="#1d4ed8"/>
+                  </linearGradient>
+                  <filter id="hfCs" x="-25%" y="-25%" width="150%" height="150%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="7" flood-color="#1e3a5f" flood-opacity=".2"/>
+                  </filter>
+                </defs>
+                <rect x="32" y="28" width="108" height="100" rx="20" fill="#9eb6d4" opacity=".4"/>
+                <g filter="url(#hfCs)">
+                  <rect x="20" y="14" width="108" height="102" rx="20" fill="url(#hfC1)" stroke="#c5d8f2" stroke-width="1.3"/>
+                  <rect x="20" y="14" width="108" height="32" rx="20" fill="url(#hfC2)"/>
+                  <rect x="20" y="30" width="108" height="16" fill="#1d4ed8"/>
+                  <circle cx="44" cy="24" r="5.5" fill="#bfdbfe"/>
+                  <circle cx="44" cy="24" r="2.2" fill="#1e3a8a"/>
+                  <circle cx="104" cy="24" r="5.5" fill="#bfdbfe"/>
+                  <circle cx="104" cy="24" r="2.2" fill="#1e3a8a"/>
+                  <text x="36" y="40" font-family="Poppins,sans-serif" font-size="10" font-weight="800" fill="#dbeafe">Leave Balance</text>
+                  <rect x="34" y="56" width="18" height="18" rx="5" fill="#e8f0fe"/>
+                  <rect x="58" y="56" width="18" height="18" rx="5" fill="#1d5eff"/>
+                  <path d="m62 65 3.4 3.4 6.4-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="82" y="56" width="18" height="18" rx="5" fill="#e8f0fe"/>
+                  <rect x="106" y="56" width="18" height="18" rx="5" fill="#a78bfa"/>
+                  <rect x="34" y="80" width="18" height="18" rx="5" fill="#e8f0fe"/>
+                  <rect x="58" y="80" width="18" height="18" rx="5" fill="#dbeafe"/>
+                  <rect x="82" y="80" width="18" height="18" rx="5" fill="#e8f0fe"/>
+                  <rect x="106" y="80" width="18" height="18" rx="5" fill="#e8f0fe"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hf-card__body">
+              <h3 class="hf-card__title">Leave Management</h3>
+              <p class="hf-card__desc">Configurable leave types, automatic accruals, financial-year balances, holiday calendars and multi-level approvals.</p>
+            </div>
+          </article>
+
+          <!-- 4 Shifts & Weekly Offs -->
+          <article class="hf-card hf-card--dark hf-card--third reveal reveal-delay-1">
+            <span class="hf-card__wave" aria-hidden="true"></span>
+            <div class="hf-card__visual" aria-hidden="true">
+              <svg class="hf-illu hf-illu--shift" viewBox="0 0 168 140" fill="none">
+                <defs>
+                  <linearGradient id="hfS1" x1="8" y1="10" x2="160" y2="128" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1e4bb8"/><stop offset="1" stop-color="#0a1f52"/>
+                  </linearGradient>
+                  <filter id="hfSs" x="-20%" y="-20%" width="140%" height="150%">
+                    <feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#020617" flood-opacity=".45"/>
+                  </filter>
+                </defs>
+                <rect x="16" y="22" width="148" height="112" rx="20" fill="#041028" opacity=".55"/>
+                <g filter="url(#hfSs)">
+                  <rect x="8" y="10" width="148" height="114" rx="20" fill="url(#hfS1)" stroke="rgba(147,197,253,.4)" stroke-width="1.3"/>
+                  <rect x="8" y="10" width="148" height="36" rx="20" fill="#fff" opacity=".08"/>
+                  <rect x="18" y="22" width="128" height="30" rx="12" fill="rgba(59,130,246,.4)"/>
+                  <circle cx="36" cy="37" r="9" fill="#fbbf24"/>
+                  <circle cx="36" cy="37" r="4" fill="#fef3c7"/>
+                  <text x="52" y="34" font-family="Poppins,sans-serif" font-size="11" font-weight="800" fill="#f8fafc">Day Shift</text>
+                  <rect x="52" y="40" width="82" height="6" rx="3" fill="rgba(15,23,42,.4)"/>
+                  <rect x="52" y="40" width="58" height="6" rx="3" fill="#60a5fa"/>
+                  <rect x="18" y="58" width="128" height="30" rx="12" fill="rgba(15,23,42,.5)"/>
+                  <path d="M30 65a9 9 0 1 0 6.2 15.4A10.5 10.5 0 0 1 30 65Z" fill="#c4b5fd"/>
+                  <text x="52" y="70" font-family="Poppins,sans-serif" font-size="11" font-weight="800" fill="#f8fafc">Night Shift</text>
+                  <rect x="52" y="76" width="82" height="6" rx="3" fill="rgba(15,23,42,.45)"/>
+                  <rect x="52" y="76" width="46" height="6" rx="3" fill="#a78bfa"/>
+                  <rect x="18" y="94" width="128" height="22" rx="11" fill="rgba(56,189,248,.22)"/>
+                  <circle cx="36" cy="105" r="8" fill="none" stroke="#67e8f9" stroke-width="2.2"/>
+                  <path d="M40 99.5 43 97M32 110.5 29 113" stroke="#67e8f9" stroke-width="1.7" stroke-linecap="round"/>
+                  <text x="52" y="109" font-family="Poppins,sans-serif" font-size="10.5" font-weight="800" fill="#bae6fd">Cross Midnight</text>
+                </g>
+              </svg>
+            </div>
+            <div class="hf-card__body">
+              <h3 class="hf-card__title">Shifts &amp; Weekly Offs</h3>
+              <p class="hf-card__desc">Day/night and cross-midnight shifts, grace periods, late rules and flexible weekly-off patterns.</p>
+            </div>
+          </article>
+
+          <!-- 5 Payroll & Compensation -->
+          <article class="hf-card hf-card--light hf-card--third reveal reveal-delay-2">
+            <span class="hf-card__wave" aria-hidden="true"></span>
+            <div class="hf-card__visual" aria-hidden="true">
+              <svg class="hf-illu hf-illu--pay" viewBox="0 0 150 140" fill="none">
+                <defs>
+                  <linearGradient id="hfP1" x1="18" y1="14" x2="128" y2="120" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff"/><stop offset="1" stop-color="#e8f1ff"/>
+                  </linearGradient>
+                  <filter id="hfPs" x="-25%" y="-25%" width="150%" height="150%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="7" flood-color="#1e3a5f" flood-opacity=".2"/>
+                  </filter>
+                </defs>
+                <rect x="30" y="28" width="112" height="98" rx="18" fill="#9eb6d4" opacity=".4"/>
+                <g filter="url(#hfPs)">
+                  <rect x="18" y="14" width="114" height="100" rx="18" fill="url(#hfP1)" stroke="#c7dbf5" stroke-width="1.3"/>
+                  <text x="30" y="36" font-family="Poppins,sans-serif" font-size="10" font-weight="800" fill="#64748b">PAYROLL</text>
+                  <circle cx="44" cy="62" r="18" fill="#dbeafe"/>
+                  <circle cx="44" cy="57" r="7.5" fill="#1d5eff"/>
+                  <path d="M30 75c2.6-6 8.2-9 14-9s11.4 3 14 9" fill="#1d5eff"/>
+                  <rect x="72" y="48" width="48" height="8" rx="4" fill="#e2e8f0"/>
+                  <rect x="72" y="62" width="36" height="8" rx="4" fill="#bfdbfe"/>
+                  <rect x="72" y="76" width="42" height="8" rx="4" fill="#e2e8f0"/>
+                  <rect x="30" y="92" width="24" height="14" rx="5" fill="#1d5eff"/>
+                  <rect x="58" y="92" width="24" height="14" rx="5" fill="#3b82f6"/>
+                  <rect x="86" y="92" width="24" height="14" rx="5" fill="#60a5fa"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hf-card__body">
+              <h3 class="hf-card__title">Payroll &amp; Compensation</h3>
+              <p class="hf-card__desc">Salary structures, overtime, attendance-linked payroll periods, revision history and payroll-ready reports.</p>
+            </div>
+          </article>
+
+          <!-- 6 Expenses & Advances -->
+          <article class="hf-card hf-card--dark hf-card--third reveal">
+            <span class="hf-card__wave" aria-hidden="true"></span>
+            <div class="hf-card__visual" aria-hidden="true">
+              <svg class="hf-illu hf-illu--exp" viewBox="0 0 176 130" fill="none">
+                <defs>
+                  <filter id="hfEs" x="-25%" y="-25%" width="150%" height="150%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#020617" flood-opacity=".45"/>
+                  </filter>
+                </defs>
+                <g filter="url(#hfEs)">
+                  <rect x="14" y="36" width="46" height="60" rx="12" fill="#e2e8f0"/>
+                  <rect x="10" y="28" width="46" height="60" rx="12" fill="#f8fafc"/>
+                  <rect x="18" y="38" width="30" height="18" rx="5" fill="#bfdbfe"/>
+                  <path d="M20 64h26M20 74h18M20 84h22" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/>
+                  <path d="M62 58h18" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M76 51l9 7-9 7" fill="none" stroke="#cbd5e1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="108" cy="58" r="22" fill="#0f766e"/>
+                  <circle cx="108" cy="58" r="19" fill="#14b8a6"/>
+                  <path d="m98 58.5 6.5 6.5 14-15.5" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M134 58h16" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M146 51l9 7-9 7" fill="none" stroke="#cbd5e1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <ellipse cx="162" cy="42" rx="16" ry="8" fill="#7dd3fc"/>
+                  <path d="M146 42v24c0 4.4 7.2 8 16 8s16-3.6 16-8V42" fill="#0284c7"/>
+                  <ellipse cx="162" cy="42" rx="16" ry="8" fill="#38bdf8"/>
+                  <path d="M146 54c0 4.4 7.2 8 16 8s16-3.6 16-8M146 66c0 4.4 7.2 8 16 8s16-3.6 16-8" stroke="#bae6fd" stroke-width="1.4" fill="none"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hf-card__body">
+              <h3 class="hf-card__title">Expenses &amp; Advances</h3>
+              <p class="hf-card__desc">Receipt-based reimbursements and salary advances with configurable policies and approval workflows connected to payroll.</p>
+            </div>
+          </article>
+
+          <!-- 7 Roles & Access Control -->
+          <article class="hf-card hf-card--light hf-card--third reveal reveal-delay-1">
+            <span class="hf-card__wave" aria-hidden="true"></span>
+            <div class="hf-card__visual" aria-hidden="true">
+              <svg class="hf-illu hf-illu--roles" viewBox="0 0 168 140" fill="none">
+                <defs>
+                  <linearGradient id="hfR1" x1="18" y1="20" x2="78" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#60a5fa"/><stop offset=".5" stop-color="#2563eb"/><stop offset="1" stop-color="#1e40af"/>
+                  </linearGradient>
+                  <filter id="hfRs" x="-25%" y="-25%" width="150%" height="150%">
+                    <feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#1e3a5f" flood-opacity=".2"/>
+                  </filter>
+                </defs>
+                <g filter="url(#hfRs)">
+                  <path d="M22 34 54 20l32 14v30c0 22-14 36-32 42-18-6-32-20-32-42V34Z" fill="#93c5fd" opacity=".35" transform="translate(4 6)"/>
+                  <path d="M18 28 52 14l34 14v32c0 22-15 37-34 44-19-7-34-22-34-44V28Z" fill="url(#hfR1)"/>
+                  <path d="M18 28 52 14l34 14v10c0 0-14-5-34-5S18 38 18 38V28Z" fill="#93c5fd" opacity=".4"/>
+                  <rect x="44" y="52" width="18" height="16" rx="3.5" fill="#fff"/>
+                  <path d="M49 52v-6a5 5 0 0 1 10 0v6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+                  <circle cx="53" cy="60" r="2.4" fill="#1d4ed8"/>
+                  <text x="92" y="36" font-family="Poppins,sans-serif" font-size="12" font-weight="800" fill="#0a1c3d">Admin</text>
+                  <circle cx="152" cy="31" r="9" fill="#1d5eff"/><path d="m147.8 31 2.8 2.8 5.8-6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                  <text x="92" y="62" font-family="Poppins,sans-serif" font-size="12" font-weight="800" fill="#0a1c3d">HR</text>
+                  <circle cx="152" cy="57" r="9" fill="#1d5eff"/><path d="m147.8 57 2.8 2.8 5.8-6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                  <text x="92" y="88" font-family="Poppins,sans-serif" font-size="12" font-weight="800" fill="#0a1c3d">Manager</text>
+                  <circle cx="152" cy="83" r="9" fill="#1d5eff"/><path d="m147.8 83 2.8 2.8 5.8-6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                  <text x="92" y="114" font-family="Poppins,sans-serif" font-size="12" font-weight="800" fill="#0a1c3d">Employee</text>
+                  <circle cx="152" cy="109" r="9" fill="#1d5eff"/><path d="m147.8 109 2.8 2.8 5.8-6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hf-card__body">
+              <h3 class="hf-card__title">Roles &amp; Access Control</h3>
+              <p class="hf-card__desc">Granular permissions for admins, HR, managers and employees, protected super-admin access and audit logging.</p>
+            </div>
+          </article>
+
+          <!-- 8 Reports & Analytics -->
+          <article class="hf-card hf-card--dark hf-card--third reveal reveal-delay-2">
+            <span class="hf-card__wave" aria-hidden="true"></span>
+            <div class="hf-card__visual" aria-hidden="true">
+              <svg class="hf-illu hf-illu--chart" viewBox="0 0 176 130" fill="none">
+                <defs>
+                  <linearGradient id="hfA1" x1="8" y1="16" x2="100" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1e40af"/><stop offset="1" stop-color="#0f2358"/>
+                  </linearGradient>
+                  <linearGradient id="hfA2" x1="24" y1="90" x2="24" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#93c5fd"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <filter id="hfAs" x="-20%" y="-20%" width="140%" height="150%">
+                    <feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#020617" flood-opacity=".45"/>
+                  </filter>
+                </defs>
+                <g filter="url(#hfAs)">
+                  <rect x="14" y="24" width="96" height="88" rx="18" fill="#041028" opacity=".5"/>
+                  <rect x="8" y="14" width="96" height="90" rx="18" fill="url(#hfA1)" stroke="rgba(147,197,253,.35)"/>
+                  <rect x="22" y="68" width="14" height="26" rx="4" fill="url(#hfA2)"/>
+                  <rect x="40" y="52" width="14" height="42" rx="4" fill="#60a5fa"/>
+                  <rect x="58" y="38" width="14" height="56" rx="4" fill="#3b82f6"/>
+                  <rect x="76" y="56" width="14" height="38" rx="4" fill="#93c5fd"/>
+                  <ellipse cx="140" cy="92" rx="28" ry="8" fill="#041028" opacity=".35"/>
+                  <circle cx="140" cy="58" r="30" fill="#1e3a8a"/>
+                  <path d="M140 28a30 30 0 0 1 26 15L140 58Z" fill="#38bdf8"/>
+                  <path d="M166 43a30 30 0 0 1-11 35L140 58Z" fill="#6366f1"/>
+                  <path d="M155 78a30 30 0 1 1-30.5-48L140 58Z" fill="#2563eb"/>
+                  <circle cx="140" cy="58" r="11" fill="#0b1f4a"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hf-card__body">
+              <h3 class="hf-card__title">Reports &amp; Analytics</h3>
+              <p class="hf-card__desc">Filtered and exportable attendance, leave, overtime, correction, expense and advance reports.</p>
+            </div>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hrms-platform" id="hrmsPlatform" aria-labelledby="hrmsPlatformHeading">
+      <div class="hrms-platform__media" aria-hidden="true">
+        <img
+          class="hrms-platform__media-img"
+          src="assets/images/products/hrms_mob+web.webp?v=2"
+          alt=""
+          width="1024"
+          height="512"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="container">
+        <div class="hrms-platform__grid">
+          <div class="hrms-platform__copy reveal">
+            <div class="hrms-platform__pills">
+              <p class="hrms-platform__pill">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 0v2" stroke="currentColor" stroke-width="1.7"/>
+                  <circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+                For Every Employee
+              </p>
+              <p class="hrms-platform__pill">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="M8 21h8M12 18v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+                Mobile + Web
+              </p>
+            </div>
+
+            <h2 class="hrms-platform__title" id="hrmsPlatformHeading">
+              A Web Console for HR,<br />
+              a Mobile App
+              <span class="hrms-platform__title-accent">
+                for Everyone
+              </span>
+            </h2>
+
+            <p class="hrms-platform__lead">
+              HR and administrators get a powerful web console for policies, approvals, payroll, and live tracking. Employees get a fast mobile app for daily punches, leave requests, expense claims, and their own records.
+            </p>
+
+            <ul class="hrms-platform__list">
+              <li class="hrms-platform__item">
+                <span class="hrms-platform__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.7"/>
+                    <circle cx="12" cy="11" r="3" stroke="currentColor" stroke-width="1.7"/>
+                    <path d="M8 17c1.2-1.5 2.5-2.2 4-2.2s2.8.7 4 2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                    <path d="M4 8h2M18 8h2M4 16h2M18 16h2M8 4v2M16 4v2M8 18v2M16 18v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <p>Selfie punch with face verification and offline punch support</p>
+              </li>
+              <li class="hrms-platform__item">
+                <span class="hrms-platform__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="5" width="18" height="16" rx="2.5" stroke="currentColor" stroke-width="1.7"/>
+                    <path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                    <rect x="7" y="13" width="3" height="3" rx="0.6" fill="currentColor"/>
+                    <rect x="11" y="13" width="3" height="3" rx="0.6" fill="currentColor" opacity=".55"/>
+                  </svg>
+                </span>
+                <p>Apply for leave, corrections, overtime, and advances on the go</p>
+              </li>
+              <li class="hrms-platform__item">
+                <span class="hrms-platform__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.7"/>
+                    <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/>
+                  </svg>
+                </span>
+                <p>Live map, route history, and team dashboards for managers</p>
+              </li>
+              <li class="hrms-platform__item">
+                <span class="hrms-platform__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9a6 6 0 1 1 12 0c0 4.2 1.4 5.8 1.4 5.8H4.6S6 13.2 6 9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                    <path d="M10 19a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <p>Push notifications for approvals and important updates</p>
+              </li>
+            </ul>
+
+            <a class="hrms-platform__cta" href="contact.html">
+              Book a Walkthrough
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <div class="hrms-platform__visual" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hrms-security" id="hrmsSecurity" aria-labelledby="hrmsSecurityHeading">
+      <div class="hrms-security__deco" aria-hidden="true">
+        <div class="hrms-security__wave hrms-security__wave--tl"></div>
+        <div class="hrms-security__wave hrms-security__wave--br"></div>
+      </div>
+
+      <div class="container">
+        <header class="hrms-security__head reveal">
+          <p class="hrms-security__badge">Trust</p>
+          <h2 class="hrms-security__title" id="hrmsSecurityHeading">
+            Security &amp; Privacy
+            <span class="hrms-security__title-accent">
+              by Design
+            </span>
+          </h2>
+          <p class="hrms-security__lead">
+            Workforce data is sensitive. Klyper HRMS treats it that way.
+          </p>
+          <div class="hrms-security__rule" aria-hidden="true"><span></span></div>
+        </header>
+
+        <div class="hrms-security__grid">
+          <article class="hs-item reveal reveal-delay-1">
+            <div class="hs-item__visual" aria-hidden="true">
+              <svg class="hs-illu" viewBox="0 0 72 72" fill="none">
+                <defs>
+                  <linearGradient id="hsPinA" x1="16" y1="8" x2="56" y2="64" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#60a5fa"/><stop offset="1" stop-color="#1d4ed8"/>
+                  </linearGradient>
+                  <linearGradient id="hsPinB" x1="22" y1="48" x2="50" y2="66" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#93c5fd"/><stop offset="1" stop-color="#2563eb"/>
+                  </linearGradient>
+                  <linearGradient id="hsPinC" x1="28" y1="14" x2="44" y2="36" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#e0f2fe"/><stop offset="1" stop-color="#38bdf8"/>
+                  </linearGradient>
+                  <filter id="hsPinS" x="-25%" y="-20%" width="150%" height="160%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="4.5" flood-color="#0f2358" flood-opacity=".35"/>
+                  </filter>
+                </defs>
+                <ellipse cx="36" cy="60" rx="18" ry="5" fill="#041028" opacity=".18"/>
+                <g filter="url(#hsPinS)">
+                  <path d="M18 52h36l-4 10H22l-4-10Z" fill="url(#hsPinB)"/>
+                  <path d="M20 50h32l-2 6H22l-2-6Z" fill="#dbeafe"/>
+                  <rect x="16" y="44" width="40" height="8" rx="3" fill="url(#hsPinA)"/>
+                  <path d="M36 8c9.4 0 17 7.4 17 16.6 0 12.2-14.2 26.2-16.2 28.1a1.2 1.2 0 0 1-1.6 0C33.2 50.8 19 36.8 19 24.6 19 15.4 26.6 8 36 8Z" fill="url(#hsPinA)"/>
+                  <path d="M36 10.5c8 0 14.5 6.3 14.5 14.1 0 10.2-11.6 22.4-13.8 24.5a1 1 0 0 1-1.4 0C33.1 46.9 21.5 34.8 21.5 24.6c0-7.8 6.5-14.1 14.5-14.1Z" fill="#3b82f6" opacity=".55"/>
+                  <circle cx="36" cy="24" r="7.5" fill="url(#hsPinC)"/>
+                  <circle cx="36" cy="24" r="3.4" fill="#1e3a8a"/>
+                  <ellipse cx="33" cy="14" rx="5" ry="2.2" fill="#fff" opacity=".35"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hs-item__body">
+              <h3 class="hs-item__title">Consent-First Tracking</h3>
+              <p class="hs-item__desc">Location tracking runs only for on-duty field employees, with an in-app disclosure and consent before it ever starts.</p>
+            </div>
+          </article>
+
+          <article class="hs-item reveal reveal-delay-2">
+            <div class="hs-item__visual" aria-hidden="true">
+              <svg class="hs-illu" viewBox="0 0 72 72" fill="none">
+                <defs>
+                  <linearGradient id="hsFaceA" x1="12" y1="10" x2="60" y2="62" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#93c5fd"/><stop offset="1" stop-color="#1d4ed8"/>
+                  </linearGradient>
+                  <linearGradient id="hsFaceB" x1="26" y1="22" x2="46" y2="50" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dbeafe"/><stop offset="1" stop-color="#3b82f6"/>
+                  </linearGradient>
+                  <filter id="hsFaceS" x="-25%" y="-20%" width="150%" height="160%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="4.5" flood-color="#0f2358" flood-opacity=".35"/>
+                  </filter>
+                </defs>
+                <ellipse cx="36" cy="62" rx="17" ry="4.5" fill="#041028" opacity=".16"/>
+                <g filter="url(#hsFaceS)">
+                  <rect x="14" y="12" width="44" height="44" rx="12" fill="#0b1f4a" opacity=".35"/>
+                  <rect x="12" y="10" width="44" height="44" rx="12" fill="url(#hsFaceA)"/>
+                  <path d="M20 18h8M48 18h-8M20 46h8M48 46h-8M20 18v8M48 18v8M20 46v-8M48 46v-8" stroke="#e0f2fe" stroke-width="3.2" stroke-linecap="round"/>
+                  <circle cx="34" cy="28" r="8" fill="url(#hsFaceB)"/>
+                  <path d="M22 48c2.8-7 7.2-10.5 12-10.5S43.2 41 46 48" fill="#1e40af"/>
+                  <ellipse cx="30" cy="18" rx="8" ry="3" fill="#fff" opacity=".28"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hs-item__body">
+              <h3 class="hs-item__title">On-Device Face Matching</h3>
+              <p class="hs-item__desc">Face verification runs on the employee's own device. Raw photos aren't used for anything beyond attendance verification.</p>
+            </div>
+          </article>
+
+          <article class="hs-item reveal reveal-delay-3">
+            <div class="hs-item__visual" aria-hidden="true">
+              <svg class="hs-illu" viewBox="0 0 72 72" fill="none">
+                <defs>
+                  <linearGradient id="hsSrvA" x1="18" y1="10" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#7dd3fc"/><stop offset="1" stop-color="#1d4ed8"/>
+                  </linearGradient>
+                  <linearGradient id="hsSrvB" x1="20" y1="20" x2="52" y2="36" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#bfdbfe"/><stop offset="1" stop-color="#2563eb"/>
+                  </linearGradient>
+                  <filter id="hsSrvS" x="-25%" y="-20%" width="150%" height="160%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="4.5" flood-color="#0f2358" flood-opacity=".35"/>
+                  </filter>
+                </defs>
+                <ellipse cx="36" cy="62" rx="18" ry="4.5" fill="#041028" opacity=".16"/>
+                <g filter="url(#hsSrvS)">
+                  <ellipse cx="48" cy="48" rx="12" ry="7" fill="#93c5fd" opacity=".55"/>
+                  <ellipse cx="48" cy="46" rx="10" ry="5.5" fill="#e0f2fe"/>
+                  <path d="M40 44c0-5 4-9 9-9s9 4 9 9" fill="#60a5fa"/>
+                  <rect x="18" y="42" width="28" height="12" rx="3" fill="#1e3a8a"/>
+                  <rect x="16" y="40" width="28" height="12" rx="3" fill="url(#hsSrvA)"/>
+                  <circle cx="22" cy="46" r="1.6" fill="#86efac"/>
+                  <rect x="27" y="44.5" width="12" height="3" rx="1.5" fill="#dbeafe" opacity=".8"/>
+                  <rect x="20" y="28" width="28" height="12" rx="3" fill="#1e3a8a"/>
+                  <rect x="18" y="26" width="28" height="12" rx="3" fill="url(#hsSrvB)"/>
+                  <circle cx="24" cy="32" r="1.6" fill="#86efac"/>
+                  <rect x="29" y="30.5" width="12" height="3" rx="1.5" fill="#eff6ff" opacity=".85"/>
+                  <rect x="22" y="14" width="28" height="12" rx="3" fill="#1e3a8a"/>
+                  <rect x="20" y="12" width="28" height="12" rx="3" fill="url(#hsSrvA)"/>
+                  <circle cx="26" cy="18" r="1.6" fill="#fde68a"/>
+                  <rect x="31" y="16.5" width="12" height="3" rx="1.5" fill="#e0f2fe" opacity=".85"/>
+                  <ellipse cx="28" cy="14" rx="7" ry="2.2" fill="#fff" opacity=".3"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hs-item__body">
+              <h3 class="hs-item__title">Isolated Deployments</h3>
+              <p class="hs-item__desc">Each organization runs on its own isolated instance and database &mdash; your data is never mixed with anyone else's.</p>
+            </div>
+          </article>
+
+          <article class="hs-item reveal reveal-delay-4">
+            <div class="hs-item__visual" aria-hidden="true">
+              <svg class="hs-illu" viewBox="0 0 72 72" fill="none">
+                <defs>
+                  <linearGradient id="hsShA" x1="16" y1="8" x2="56" y2="62" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#93c5fd"/><stop offset="1" stop-color="#1e40af"/>
+                  </linearGradient>
+                  <linearGradient id="hsShB" x1="28" y1="26" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#bbf7d0"/><stop offset="1" stop-color="#16a34a"/>
+                  </linearGradient>
+                  <filter id="hsShS" x="-25%" y="-20%" width="150%" height="160%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="4.5" flood-color="#0f2358" flood-opacity=".35"/>
+                  </filter>
+                </defs>
+                <ellipse cx="36" cy="62" rx="17" ry="4.5" fill="#041028" opacity=".16"/>
+                <g filter="url(#hsShS)">
+                  <path d="M36 8 58 16v18c0 14.5-9.5 24.5-22 28.8C23.5 58.5 14 48.5 14 34V16L36 8Z" fill="#041028" opacity=".35" transform="translate(2 3)"/>
+                  <path d="M36 8 58 16v18c0 14.5-9.5 24.5-22 28.8C23.5 58.5 14 48.5 14 34V16L36 8Z" fill="url(#hsShA)"/>
+                  <path d="M36 12.5 52.5 18.5v15c0 11.5-7.4 19.4-16.5 23.2C27 53 19.5 45 19.5 33.5v-15L36 12.5Z" fill="#3b82f6" opacity=".45"/>
+                  <circle cx="36" cy="34" r="11" fill="url(#hsShB)"/>
+                  <path d="m30.5 34 3.4 3.4 7.6-7.6" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <ellipse cx="30" cy="16" rx="8" ry="3" fill="#fff" opacity=".32"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hs-item__body">
+              <h3 class="hs-item__title">Encrypted &amp; Audited</h3>
+              <p class="hs-item__desc">HTTPS everywhere, role-based access, session controls, and audit trails on sensitive operations.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="hrms-security__actions reveal">
+          <a class="hrms-security__cta" href="products/klyper-hrms/privacy-policy/index.html">
+            Read the Klyper HRMS Privacy Policy
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/images/klyperlogo.webp" alt="" width="48" height="48" />
+            <span class="logo__text">Klyper Technology</span>
+          </a>
+          <p>Empowering businesses with innovative software solutions and cutting-edge technology.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Klyper HRMS</h4>
+          <ul>
+            <li><a href="klyper-hrms.html">Product Overview</a></li>
+            <li><a href="products/klyper-hrms/privacy-policy/index.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Request Demo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:+917855079698">+91 78550 79698</a></li>
+            <li><a href="mailto:info@klypertechnology.com">info@klypertechnology.com</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+          <address style="margin-top: 1rem;">
+            Plot No:- 2377/9633,<br />
+            Near SR Valley, Elegance Villa,<br />
+            Puri Bypass, NH-316, Badagada,<br />
+            Bhubaneswar, India, 751018
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Klyper Technology. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=167"></script>
+</body>
+</html>

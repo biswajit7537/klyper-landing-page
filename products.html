@@ -1,605 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Klyper Technology Products - Real-Estate Lead Management System and other innovative software solutions for businesses.">
-    <meta name="keywords" content="real estate software, lead management system, CRM, software products, property management">
-    <meta name="author" content="Klyper Technology">
-    <title>Our Products - Klyper Technology</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
-    <meta name="theme-color" content="#fafbff" />
-    <script>
-      (function () {
-        var t = localStorage.getItem("theme");
-        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", t);
-        var m = document.querySelector('meta[name="theme-color"]');
-        if (m) m.content = t === "dark" ? "#020817" : "#fafbff";
-      })();
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products | Klyper Technology</title>
+  <meta name="description" content="Explore Klyper Technology products &mdash; HRMS, Klyper CRM, Klyper Inventory Manager, and more cloud SaaS solutions." />
+  <script>
+    (function () {
+      document.documentElement.setAttribute("data-theme", "light");
+      try { localStorage.setItem("klyper-theme", "light"); } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css?v=88" />
+  <link rel="stylesheet" href="css/ote-hero.css?v=210" />
+  <link rel="stylesheet" href="css/site-nav.css?v=6" />
+  <link rel="stylesheet" href="css/products-hero.css?v=111" />
+  <link rel="stylesheet" href="css/page-hero-mobile.css?v=5" />
+  <link rel="stylesheet" href="css/products-explore.css?v=2" />
+  <link rel="stylesheet" href="css/products-ecosystem.css?v=2" />
+  <link rel="stylesheet" href="css/theme.css?v=213" />
+  <link rel="stylesheet" href="css/no-glow.css?v=15" />
+  <link rel="icon" href="assets/images/klyperlogo.webp" type="image/webp" />
+  <style>
+    html, body { overflow-x: hidden; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; color: #0a1628; }
+    .site-footer .logo-text, .site-footer .logo__text { color: #fff; }
+  </style>
 </head>
-<body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="index.html" class="logo">
-                        <div class="logo-icon">
-                            <img src="assets/images/klyperlogo.png" alt="Klyper Technology Logo" class="logo-svg">
-                        </div>
-                        <span class="logo-text">Klyper Technology</span>
-                    </a>
-                    
-                    <ul class="nav-menu" id="navMenu">
-                        <li><a href="index.html" class="nav-link">
-                            <span>Home</span>
-                        </a></li>
-                        <li class="nav-item-dropdown">
-                            <a href="services.html" class="nav-link">
-                                <span>Services</span>
-                                <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li><a href="products.html" class="nav-link active">
-                            <span>Products</span>
-                        </a></li>
-                        <li><a href="industries.html" class="nav-link">
-                            <span>Industries</span>
-                        </a></li>
-                        <li><a href="about.html" class="nav-link">
-                            <span>About</span>
-                        </a></li>
-                        <li><a href="contact.html" class="btn-nav">
-                            <span>Contact Us</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a></li>
-                    </ul>
-                    
-                    <div class="nav-actions">
-                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
-                            </svg>
-                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z"/>
-                            </svg>
-                        </button>
-                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                            <span class="menu-bar"></span>
-                            <span class="menu-bar"></span>
-                            <span class="menu-bar"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
-    </header>
+<body class="page-products">
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="index.html" aria-label="Klyper Technology Home">
+          <img class="logo-icon" src="assets/images/klyperlogo.webp" alt="Klyper Technology Logo" />
+          <span class="logo-text">Klyper Technology</span>
+        </a>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Our Products</h1>
-            <p class="page-subtitle">Innovative cloud-based solutions designed to transform your business operations</p>
+        <ul class="nav-links" id="navLinks">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li class="has-dropdown">
+            <a href="products.html" class="nav-link active">Products
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="products.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 3.5 7.5v9L12 21l8.5-4.5v-9L12 3Z"/><path d="M12 12 3.5 7.5M12 12l8.5-4.5M12 12v9"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">All Products</span>
+                    <span class="dropdown-desc">Explore our full product suite.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-hrms.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper HRMS</span>
+                    <span class="dropdown-desc">Attendance, payroll &amp; workforce ops.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-crm.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v4H4V4Zm2 6h12l-2 10H8L6 10Z"/><path d="M9 14h6"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper CRM</span>
+                    <span class="dropdown-desc">Capture, track &amp; convert leads.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-inventory-manager.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper Inventory Manager</span>
+                    <span class="dropdown-desc">Inventory &amp; stock management.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="klyper-ecommerce.html">
+                  <span class="dropdown-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H7"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+                  </span>
+                  <span class="dropdown-text">
+                    <span class="dropdown-title">Klyper E-commerce</span>
+                    <span class="dropdown-desc">Online store &amp; ecommerce platform.</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+          <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-mobile-cta"><a href="contact.html">Get in Touch</a></li>
+        </ul>
+
+        <a class="btn btn-nav" href="contact.html">
+          Get in Touch
+          <span class="btn-arrow-circle">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="products-hero" id="productsHero" aria-labelledby="productsHeroHeading">
+      <div class="products-hero__media" aria-hidden="true">
+        <img
+          class="products-hero__media-img"
+          src="assets/images/products/products-hero-visual.webp?v=107"
+          alt=""
+          width="1024"
+          height="512"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="products-hero__media-shade"></div>
+      </div>
+
+      <div class="container products-hero__content">
+        <div class="products-hero__copy">
+          <p class="products-hero__badge reveal">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3 3.5 7.5v9L12 21l8.5-4.5v-9L12 3Z" stroke="currentColor" stroke-width="1.55" stroke-linejoin="round"/>
+              <path d="M12 12 3.5 7.5M12 12l8.5-4.5M12 12v9" stroke="currentColor" stroke-width="1.55" stroke-linejoin="round"/>
+            </svg>
+            Our Products
+          </p>
+
+          <h1 class="products-hero__title reveal reveal-delay-1" id="productsHeroHeading">
+            Our
+            <span class="products-hero__title-accent">
+              <span class="products-hero__title-text">Products</span>
+            </span>
+          </h1>
+
+          <p class="products-hero__lead reveal reveal-delay-1">
+            Innovative cloud-based solutions designed to transform your business operations.
+          </p>
+
+          <div class="products-hero__features reveal reveal-delay-2" role="list">
+            <div class="products-hero__feature" role="listitem">
+              <span class="products-hero__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M7 18a5 5 0 0 1 1-9.9A6 6 0 0 1 19 11a4 4 0 0 1 0 8H7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Cloud-Based</span>
+            </div>
+            <span class="products-hero__feature-sep" aria-hidden="true"></span>
+            <div class="products-hero__feature" role="listitem">
+              <span class="products-hero__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7l8 4 8-4-8-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m4 12 8 4 8-4M4 17l8 4 8-4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Scalable</span>
+            </div>
+            <span class="products-hero__feature-sep" aria-hidden="true"></span>
+            <div class="products-hero__feature" role="listitem">
+              <span class="products-hero__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Secure</span>
+            </div>
+            <span class="products-hero__feature-sep" aria-hidden="true"></span>
+            <div class="products-hero__feature" role="listitem">
+              <span class="products-hero__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 10-14h-7l1-6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Business Ready</span>
+            </div>
+          </div>
+
+          <div class="products-hero__actions reveal reveal-delay-3">
+            <a class="products-hero__btn products-hero__btn--primary" href="#exploreProducts">
+              Explore Products
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="products-hero__btn products-hero__btn--ghost" href="contact.html">
+              <span class="products-hero__play" aria-hidden="true">
+                <svg width="9" height="9" viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.8v8.4L10.2 6 3 1.8Z"/></svg>
+              </span>
+              Request a Demo
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Products Showcase -->
-    <section class="section products-showcase">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <h2 class="section-title">Explore Our Products</h2>
-                <p class="section-description">Innovative software products for modern businesses</p>
-            </div>
-            
-            <div class="products-grid-modern">
-                <div class="product-card-modern animate-on-scroll">
-                    <div class="product-badge-modern new">New</div>
-                    <div class="product-card-head">
-                        <div class="product-icon-tile">🧑‍💼</div>
-                        <div>
-                            <h3 class="product-title-modern">Klyper HRMS</h3>
-                            <span class="product-category-modern">HR & Workforce Management</span>
-                        </div>
-                    </div>
-                    <p class="product-desc-modern">Complete workforce management platform with face-verified attendance, live field-force tracking, leave, payroll, and expense workflows — customized and deployed per client.</p>
-                    <div class="product-features-modern">
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Face-Verified Attendance</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Live Field-Force Tracking</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Leave, Shifts & Payroll</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Web Console + Mobile App</div>
-                    </div>
-                    <div class="product-tags-modern">
-                        <span class="tag-modern">HRMS</span>
-                        <span class="tag-modern">Attendance</span>
-                        <span class="tag-modern">Payroll</span>
-                    </div>
-                    <div class="product-card-footer">
-                        <a href="products/klyper-hrms/" class="btn-view-details">
-                            <span>View Details</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+    <section class="products-explore" id="exploreProducts" aria-labelledby="exploreProductsHeading">
+      <div class="products-explore__decor" aria-hidden="true">
+        <svg class="products-explore__wave products-explore__wave--tl" viewBox="0 0 420 180" fill="none">
+          <path d="M-20 140C40 90 90 40 160 55c70 15 90 80 160 70s110-90 160-70" stroke="rgba(59,130,246,0.16)" stroke-width="1.35"/>
+          <path d="M-10 160C50 110 110 55 175 68c65 13 95 78 155 68s100-80 150-55" stroke="rgba(37,99,235,0.1)" stroke-width="1.15"/>
+        </svg>
+        <svg class="products-explore__wave products-explore__wave--tr" viewBox="0 0 420 180" fill="none">
+          <path d="M440 140C380 90 330 40 260 55c-70 15-90 80-160 70S-10 35 40 55" stroke="rgba(59,130,246,0.14)" stroke-width="1.35"/>
+          <path d="M430 165C370 115 310 60 245 72c-65 12-95 76-155 66S-20 55 30 75" stroke="rgba(14,165,233,0.1)" stroke-width="1.15"/>
+        </svg>
+      </div>
 
-                <div class="product-card-modern animate-on-scroll">
-                    <div class="product-badge-modern featured">Featured</div>
-                    <div class="product-card-head">
-                        <div class="product-icon-tile">🏡</div>
-                        <div>
-                            <h3 class="product-title-modern">Real-Estate Lead Management System</h3>
-                            <span class="product-category-modern">Sales & CRM</span>
-                        </div>
-                    </div>
-                    <p class="product-desc-modern">Transform how you capture, manage, and convert real estate leads with intelligent automation and analytics.</p>
-                    <div class="product-features-modern">
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Lead Capture & Distribution</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Advanced CRM Integration</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Real-time Analytics</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Mobile-friendly Interface</div>
-                    </div>
-                    <div class="product-tags-modern">
-                        <span class="tag-modern">CRM</span>
-                        <span class="tag-modern">Analytics</span>
-                        <span class="tag-modern">Automation</span>
-                    </div>
-                    <div class="product-card-footer">
-                        <a href="#product-1" class="btn-view-details">
-                            <span>View Details</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <header class="products-explore__header reveal">
+          <p class="products-explore__eyebrow">
+            <span class="products-explore__eyebrow-line" aria-hidden="true"></span>
+            Our Products
+            <span class="products-explore__eyebrow-line" aria-hidden="true"></span>
+          </p>
+          <h2 class="products-explore__title" id="exploreProductsHeading">
+            Explore Our
+            <span class="products-explore__title-accent">
+              <span class="products-explore__title-text">Products</span>
+            </span>
+          </h2>
+          <p class="products-explore__subtitle">
+            Our powerful and scalable digital solutions are built to simplify operations, improve efficiency and drive business growth.
+          </p>
+        </header>
 
-                <div class="product-card-modern animate-on-scroll">
-                    <div class="product-card-head">
-                        <div class="product-icon-tile">📦</div>
-                        <div>
-                            <h3 class="product-title-modern">Real Estate Inventory Management</h3>
-                            <span class="product-category-modern">Property Operations</span>
-                        </div>
-                    </div>
-                    <p class="product-desc-modern">Complete property inventory tracking and management solution with real-time updates and intelligent analytics.</p>
-                    <div class="product-features-modern">
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Property Tracking</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Real-time Updates</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Smart Analytics</div>
-                        <div class="feature-item-modern"><span class="feature-check">✓</span>Cloud-based Access</div>
-                    </div>
-                    <div class="product-tags-modern">
-                        <span class="tag-modern">Inventory</span>
-                        <span class="tag-modern">Tracking</span>
-                        <span class="tag-modern">Cloud</span>
-                    </div>
-                    <div class="product-card-footer">
-                        <a href="#product-2" class="btn-view-details">
-                            <span>View Details</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.33337 8H12.6667M12.6667 8L8.66671 4M12.6667 8L8.66671 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+        <div class="products-explore__grid">
+          <!-- 1. HRMS &mdash; blue -->
+          <article class="pe-card pe-card--blue reveal" id="product-hrms">
+            <div class="pe-card__head">
+              <span class="pe-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75" stroke="currentColor" stroke-width="1.8"/></svg>
+              </span>
+              <h3 class="pe-card__name">Klyper <span>HRMS</span></h3>
+              <a class="pe-card__arrow" href="klyper-hrms.html" aria-label="Explore Klyper HRMS">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
+            <p class="pe-card__desc">
+              A complete HR management platform to streamline employee operations, attendance, payroll, and performance tracking.
+            </p>
+            <ul class="pe-card__features">
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="15" r="2" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Employee Management</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                <span>Attendance &amp; Leave</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7l8 4 8-4-8-4Z" stroke="currentColor" stroke-width="1.6"/><path d="m4 12 8 4 8-4M4 17l8 4 8-4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Payroll &amp; Compliance</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5M8 19V9M12 19v-6M16 19V7M20 19v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                <span>Performance Tracking</span>
+              </li>
+            </ul>
+            <span class="pe-card__swoosh" aria-hidden="true"></span>
+          </article>
+
+          <!-- 2. Klyper CRM &mdash; green -->
+          <article class="pe-card pe-card--green reveal reveal-delay-1" id="product-leads">
+            <div class="pe-card__head">
+              <span class="pe-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v4H4V4Zm2 6h12l-2 10H8L6 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              </span>
+              <h3 class="pe-card__name">Klyper <span>CRM</span></h3>
+              <a class="pe-card__arrow" href="klyper-crm.html" aria-label="Explore Klyper CRM">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+            <p class="pe-card__desc">
+              Real estate CRM and lead management software to capture, track, and convert leads with automated workflows.
+            </p>
+            <ul class="pe-card__features">
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Lead Capture &amp; Nurturing</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="17" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 8.5 10.5 15M16 8.5 13.5 15" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Sales Pipeline</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                <span>CRM Integration</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5M8 19V9M12 19v-6M16 19V7M20 19v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                <span>Analytics &amp; Reporting</span>
+              </li>
+            </ul>
+            <span class="pe-card__swoosh" aria-hidden="true"></span>
+          </article>
+
+          <!-- 3. Inventory &mdash; purple -->
+          <article class="pe-card pe-card--purple reveal reveal-delay-2" id="product-inventory">
+            <div class="pe-card__head">
+              <span class="pe-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5Z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </span>
+              <h3 class="pe-card__name">Klyper <span>Inventory Manager</span></h3>
+              <a class="pe-card__arrow" href="klyper-inventory-manager.html" aria-label="Explore Klyper Inventory Manager">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+            <p class="pe-card__desc">
+              Inventory management and stock management software to track materials, purchases, transfers, and stock across projects and sites.
+            </p>
+            <ul class="pe-card__features">
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7l8 4 8-4-8-4Z" stroke="currentColor" stroke-width="1.6"/><path d="m4 12 8 4 8-4M4 17l8 4 8-4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Multi-project Inventory</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16v13H4V7Zm2-3h12l1 3H5l1-3Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                <span>Stock Management</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Location &amp; Unit Management</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5M8 19V9M12 19v-6M16 19V7M20 19v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                <span>Reports &amp; Insights</span>
+              </li>
+            </ul>
+            <span class="pe-card__swoosh" aria-hidden="true"></span>
+          </article>
+
+          <!-- 4. E-Commerce &mdash; orange -->
+          <article class="pe-card pe-card--orange reveal reveal-delay-3" id="product-ecommerce">
+            <div class="pe-card__head">
+              <span class="pe-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3 5h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="17" cy="20" r="1.4" fill="currentColor"/></svg>
+              </span>
+              <h3 class="pe-card__name">Klyper <span>E-commerce</span></h3>
+              <a class="pe-card__arrow" href="klyper-ecommerce.html" aria-label="Explore Klyper E-commerce">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+            <p class="pe-card__desc">
+              Ecommerce platform software to launch and scale online stores with catalog management, secure checkout, and real-time order operations.
+            </p>
+            <ul class="pe-card__features">
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Product &amp; Catalog Management</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Cart, Checkout &amp; Payments</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16v13H4V7Zm2-3h12l1 3H5l1-3Z" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Order &amp; Inventory</span>
+              </li>
+              <li>
+                <span class="pe-card__feat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>Customer Management</span>
+              </li>
+            </ul>
+            <span class="pe-card__swoosh" aria-hidden="true"></span>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Featured Product: Real-Estate Lead Management System -->
-    <section class="section product-hero" id="product-1">
-        <div class="container">
-            <div class="product-hero-content">
-                <span class="product-badge-large">Featured Product</span>
-                <h2 class="product-hero-title">Real-Estate Lead Management System</h2>
-                <p class="product-hero-tagline">Transform how you capture, manage, and convert real estate leads</p>
+    <section class="products-eco" id="product-ecosystem" aria-labelledby="ecoHeading">
+      <div class="container">
+        <div class="products-eco__layout">
+          <aside class="products-eco__intro reveal">
+            <span class="products-eco__accent" aria-hidden="true"></span>
+            <h2 class="products-eco__title" id="ecoHeading">
+              Klyper <span class="products-eco__title-accent">Product Ecosystem</span>
+            </h2>
+            <p class="products-eco__lead">
+              A unified suite of business solutions designed to streamline operations and drive growth.
+            </p>
+
+            <div class="products-eco__badges">
+              <div class="eco-badge">
+                <span class="eco-badge__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>
+                </span>
+                <p class="eco-badge__text">Customizable &amp; Configurable</p>
+              </div>
+              <div class="eco-badge">
+                <span class="eco-badge__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 18a5 5 0 0 1 .4-9.9A6.5 6.5 0 0 1 20 11.5 4 4 0 0 1 19 19H7z"/></svg>
+                </span>
+                <p class="eco-badge__text">Cloud-Based &amp; Secure</p>
+              </div>
+              <div class="eco-badge">
+                <span class="eco-badge__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.2 20.2 7.4 12 11.6 3.8 7.4 12 3.2z"/><path d="m3.8 11.2 8.2 4.2 8.2-4.2"/><path d="m3.8 15 8.2 4.2 8.2-4.2"/></svg>
+                </span>
+                <p class="eco-badge__text">Scalable for Growing Businesses</p>
+              </div>
             </div>
+          </aside>
+
+          <div class="products-eco__panels">
+            <article class="eco-panel reveal" aria-labelledby="ecoHrms">
+              <span class="eco-panel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a3 3 0 0 1 0 5.75"/></svg>
+              </span>
+              <div class="eco-panel__body">
+                <h3 class="eco-panel__title" id="ecoHrms">Klyper <span>HRMS</span></h3>
+                <p class="eco-panel__desc">A complete HR management platform to streamline employee operations, attendance, payroll, and performance tracking.</p>
+                <ul class="eco-panel__tags">
+                  <li>Attendance &amp; Leave</li>
+                  <li>Payroll &amp; Compliance</li>
+                  <li>Performance Tracking</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="eco-panel reveal reveal-delay-1" aria-labelledby="ecoLeads">
+              <span class="eco-panel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v4H4V4Zm2 6h12l-2 10H8L6 10Z"/></svg>
+              </span>
+              <div class="eco-panel__body">
+                <h3 class="eco-panel__title" id="ecoLeads">Klyper <span>CRM</span></h3>
+                <p class="eco-panel__desc">Real estate CRM software to capture, track, and convert leads with automated workflows and lead management tools.</p>
+                <ul class="eco-panel__tags">
+                  <li>Lead Capture</li>
+                  <li>Sales Pipeline</li>
+                  <li>Analytics &amp; Reporting</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="eco-panel reveal reveal-delay-2" aria-labelledby="ecoInv">
+              <span class="eco-panel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5Z"/></svg>
+              </span>
+              <div class="eco-panel__body">
+                <h3 class="eco-panel__title" id="ecoInv">Klyper <span>Inventory Manager</span></h3>
+                <p class="eco-panel__desc">Inventory and stock management application for multi-site teams&mdash;purchases, transfers, returns, and live stock control.</p>
+                <ul class="eco-panel__tags">
+                  <li>Inventory Management</li>
+                  <li>Stock Management</li>
+                  <li>Reports &amp; Insights</li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Product Overview -->
-    <section class="section product-overview">
-        <div class="container">
-            <div class="product-layout">
-                <div class="product-main">
-                    <h2 class="section-subtitle">About the Product</h2>
-                    <p class="product-intro">Our Real-Estate Lead Management System is a comprehensive, cloud-based platform designed specifically for real estate professionals, agencies, and property developers. It streamlines your entire lead lifecycle from capture to conversion, helping you close more deals and grow your business.</p>
-                    
-                    <div class="product-highlights">
-                        <div class="highlight-item">
-                            <h3>Subscription-Based Model</h3>
-                            <p>Flexible pricing plans that scale with your business needs. No large upfront costs, just predictable monthly subscriptions.</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h3>Built for Real Estate</h3>
-                            <p>Every feature is designed with real estate professionals in mind, addressing the unique challenges of the industry.</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h3>Cloud-Based & Accessible</h3>
-                            <p>Access your leads and data from anywhere, on any device. Perfect for agents on the go.</p>
-                        </div>
-                    </div>
-                </div>
+  </main>
 
-                <div class="product-sidebar">
-                    <div class="product-info-card">
-                        <h3>Product Details</h3>
-                        <ul class="product-info-list">
-                            <li><strong>Industry:</strong> Real Estate</li>
-                            <li><strong>Deployment:</strong> Cloud-Based</li>
-                            <li><strong>Pricing:</strong> Subscription Model</li>
-                            <li><strong>Support:</strong> 24/7 Customer Support</li>
-                            <li><strong>Integration:</strong> API Available</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary btn-block">Request Demo</a>
-                    </div>
-                </div>
-            </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/images/klyperlogo.webp" alt="" width="48" height="48" />
+            <span class="logo__text">Klyper Technology</span>
+          </a>
+          <p>Empowering businesses with innovative software solutions and cutting-edge technology.</p>
         </div>
-    </section>
 
-    <!-- Key Features -->
-    <section class="section features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Key Features</h2>
-                <p class="section-description">Everything you need to manage real estate leads effectively</p>
-            </div>
-            
-            <div class="features-grid-large">
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="8.5" cy="7" r="4" />
-                            <polyline points="17 11 19 13 23 9" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Automated Lead Capture</h3>
-                    <p class="feature-card-description">Automatically capture leads from your website, social media, property portals, and other sources. Never miss an opportunity again.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Intelligent Lead Distribution</h3>
-                    <p class="feature-card-description">Automatically assign leads to the right agents based on territory, availability, expertise, or custom rules you define.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Lead Scoring & Prioritization</h3>
-                    <p class="feature-card-description">Smart algorithms score and prioritize leads based on engagement, budget, timeline, and behavior, so you focus on the hottest prospects.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                            <line x1="9" y1="9" x2="15" y2="15" />
-                            <line x1="15" y1="9" x2="9" y2="15" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Complete Lead Timeline</h3>
-                    <p class="feature-card-description">Track every interaction, call, email, meeting, and property viewing in one centralized timeline for each lead.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="1" x2="12" y2="23" />
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Pipeline Management</h3>
-                    <p class="feature-card-description">Visual sales pipeline with customizable stages. Drag and drop leads through your sales process and forecast revenue.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7 10 12 15 17 10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Email & SMS Automation</h3>
-                    <p class="feature-card-description">Create automated follow-up sequences, send property alerts, and nurture leads with personalized communication campaigns.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="20" x2="18" y2="10" />
-                            <line x1="12" y1="20" x2="12" y2="4" />
-                            <line x1="6" y1="20" x2="6" y2="14" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Advanced Analytics & Reporting</h3>
-                    <p class="feature-card-description">Real-time dashboards, conversion metrics, agent performance reports, and insights to make data-driven decisions.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-                            <line x1="6" y1="6" x2="6.01" y2="6" />
-                            <line x1="6" y1="18" x2="6.01" y2="18" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">CRM Integration</h3>
-                    <p class="feature-card-description">Seamlessly integrate with popular CRM systems, email platforms, calendars, and other tools you already use.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                            <line x1="12" y1="18" x2="12.01" y2="18" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Mobile App Access</h3>
-                    <p class="feature-card-description">Native mobile apps for iOS and Android. Manage leads, schedule appointments, and update information on the go.</p>
-                </div>
-            </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
         </div>
-    </section>
 
-    <!-- Industry Focus -->
-    <section class="section industry-focus">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Perfect for Real Estate Professionals</h2>
-                <p class="section-description">Designed to meet the needs of various real estate segments</p>
-            </div>
-            
-            <div class="industry-types-grid">
-                <div class="industry-type-card">
-                    <h3>Real Estate Agents</h3>
-                    <p>Manage your personal pipeline and never let a lead slip through the cracks.</p>
-                </div>
-                <div class="industry-type-card">
-                    <h3>Real Estate Agencies</h3>
-                    <p>Centralize lead management across your entire team with proper oversight and reporting.</p>
-                </div>
-                <div class="industry-type-card">
-                    <h3>Property Developers</h3>
-                    <p>Track interest in new developments and nurture prospects from inquiry to purchase.</p>
-                </div>
-                <div class="industry-type-card">
-                    <h3>Commercial Real Estate</h3>
-                    <p>Handle complex commercial deals with long sales cycles and multiple stakeholders.</p>
-                </div>
-            </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#customSoftware">Custom Software</a></li>
+            <li><a href="services.html#webMobile">Web &amp; Mobile Apps</a></li>
+            <li><a href="services.html#aiAgents">Custom AI Agents</a></li>
+            <li><a href="services.html#automation">Business Automation</a></li>
+            <li><a href="services.html#maintenance">Support &amp; Maintenance</a></li>
+          </ul>
         </div>
-    </section>
 
-    <!-- Product 2: Real Estate Inventory Management -->
-    <section class="section product-hero alt-bg" id="product-2">
-        <div class="container">
-            <div class="product-hero-content">
-                <span class="product-badge-large">New Product</span>
-                <h2 class="product-hero-title">Real Estate Inventory Management Application</h2>
-                <p class="product-hero-tagline">Complete property inventory tracking and management solution for real estate businesses</p>
-            </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:+917855079698">+91 78550 79698</a></li>
+            <li><a href="mailto:info@klypertechnology.com">info@klypertechnology.com</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+          <address style="margin-top: 1rem;">
+            Plot No:- 2377/9633,<br />
+            Near SR Valley, Elegance Villa,<br />
+            Puri Bypass, NH-316, Badagada,<br />
+            Bhubaneswar, India, 751018
+          </address>
         </div>
-    </section>
+      </div>
 
-    <!-- Product 2 Overview -->
-    <section class="section product-overview">
-        <div class="container">
-            <div class="product-layout">
-                <div class="product-main">
-                    <h2 class="section-subtitle">About the Product</h2>
-                    <p class="product-intro">Our Real Estate Inventory Management Application is a powerful, cloud-based platform designed to help real estate businesses efficiently track, manage, and optimize their property portfolios. From residential to commercial properties, manage your entire inventory with real-time updates, automated reporting, and intelligent analytics.</p>
-                    
-                    <div class="product-highlights">
-                        <div class="highlight-item">
-                            <h3>Comprehensive Property Tracking</h3>
-                            <p>Track all property details including location, size, amenities, pricing, availability status, and historical data in one centralized system.</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h3>Real-Time Inventory Updates</h3>
-                            <p>Instant synchronization across all channels when properties are listed, reserved, sold, or rented, ensuring accurate availability data.</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h3>Advanced Search & Filtering</h3>
-                            <p>Powerful search capabilities with multiple filters to quickly find properties matching specific criteria for clients.</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Klyper Technology. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
 
-                <div class="product-sidebar">
-                    <div class="product-info-card">
-                        <h3>Product Details</h3>
-                        <ul class="product-info-list">
-                            <li><strong>Industry:</strong> Real Estate</li>
-                            <li><strong>Deployment:</strong> Cloud-Based</li>
-                            <li><strong>Pricing:</strong> Subscription Model</li>
-                            <li><strong>Support:</strong> 24/7 Customer Support</li>
-                            <li><strong>Integration:</strong> MLS & CRM Integration</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary btn-block">Request Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Features for Product 2 -->
-    <section class="section features-section alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Key Features</h2>
-                <p class="section-description">Everything you need to manage your real estate inventory effectively</p>
-            </div>
-            
-            <div class="features-grid-large">
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Property Portfolio Management</h3>
-                    <p class="feature-card-description">Centralized database for all properties with comprehensive details, photos, documents, and status tracking.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Document Management</h3>
-                    <p class="feature-card-description">Store and organize all property-related documents including deeds, certificates, contracts, and compliance records.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" />
-                            <path d="M9 3v18" />
-                            <path d="M15 3v18" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Availability Calendar</h3>
-                    <p class="feature-card-description">Visual calendar showing property availability, viewing schedules, reservation dates, and occupancy status.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Analytics & Reporting</h3>
-                    <p class="feature-card-description">Comprehensive insights on inventory turnover, pricing trends, demand patterns, and performance metrics.</p>
-                </div>
-
-                <div class="feature-card-large">
-                    <div class="feature-icon-wrapper">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card-title">Pricing Optimization</h3>
-                    <p class="feature-card-description">AI-driven pricing recommendations based on market trends, location analysis, and competitive data.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="section cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Streamline Your Property Management?</h2>
-                <p class="cta-description">Discover how our solutions can transform your real estate business operations.</p>
-                <a href="contact.html" class="btn btn-white">Request a Demo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="footer-title">Klyper Technology</h3>
-                    <p class="footer-description">Empowering businesses with innovative software solutions and cutting-edge technology.</p>
-                    <div class="footer-social">
-                        <h4 class="footer-social-title">Follow Us</h4>
-                       <div class="social-icons">
-                            <a href="https://www.linkedin.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            </a>
-                            <a href="https://www.instagram.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            </a>
-                            <a href="https://www.facebook.com/klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                            </a>
-                            <a href="https://x.com/KlyperTech" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                            </a>
-                            <a href="https://www.youtube.com/@klypertechnology" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">Custom Software</a></li>
-                        <li><a href="services.html">SaaS Development</a></li>
-                        <li><a href="services.html">Web & Mobile Apps</a></li>
-                        <li><a href="services.html">Support & Maintenance</a></li>
-                        <li><a href="services.html">Custom AI Agents</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><a href="tel:+917855079698">+91 78550 79698</a></li>
-                        <li><a href="mailto:klypertechnology@gmail.com">klypertechnology@gmail.com</a></li>
-                        <li><a href="contact.html">Contact Form</a></li>
-                    </ul>
-                    <div style="margin-top: 1.5rem;">
-                        <h4 class="footer-heading">Office Address</h4>
-                        <p class="footer-address">
-                            <span class="footer-address-icon">📍</span>
-                            Plot No:- 2377/9633,<br>
-                            Near SR Valley, Elegance Villa,<br>
-                            Puri Bypass, NH-316, Badagada,<br>
-                            Bhubaneswar, India, 751018
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Klyper Technology. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="js/main.js?v=167"></script>
 </body>
 </html>
-
